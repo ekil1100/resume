@@ -1,0 +1,126 @@
+{
+  "name": "郑力可",
+  "gender": "男",
+  "birthday": "1992-12-12",
+  "phone": "13588144781",
+  "email": "me@likemail.io",
+  "blog": "https://blog.ekil.io",
+  "github": "ekilzen",
+  "linkedin": "likezheng",
+  "job": "前端开发工程师",
+  "location": "远程",
+  "summary": "全栈工程师，偏前端。带过前端团队，也带过敏捷团队，人数在 5～10 人之间。前后端技术都有涉猎，对 DevOps 有一定的了解，平时喜欢关注前沿技术。",
+  "skills": [
+    {
+      "name": "language",
+      "stacks": ["JavaScript", "CSS", "HTML", "TypeScript", "Dart", "Graphql"]
+    },
+    {
+      "name": "framework",
+      "stacks": [
+        "React",
+        "Vue",
+        "Flutter",
+        "Taro",
+        "Next.js",
+        "Node.js",
+        "Apollo"
+      ]
+    },
+    {
+      "name": "tool",
+      "stacks": [
+        "git",
+        "rollup",
+        "github actions",
+        "Docker",
+        "prisma",
+        "emotion"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "name": "杭州慕锐科技有限公司",
+      "startDate": "2021-03",
+      "endDate": "2021-07",
+      "role": ["前端负责人"],
+      "description": "以高级前端工程师身份入职。试用期期间，帮助公司完善了 Git 使用规范（基于 Truck Based Development），推进设计体系搭建。转正后晋升为前端负责人，管理团队人数 5 人，负责前端工程化规划；规范文档书写；业务梳理；前端系统架构设计。"
+    },
+    {
+      "name": "杭州字节方舟科技有限公司",
+      "startDate": "2019-02",
+      "endDate": "2021-02",
+      "role": ["前端负责人", "敏捷教练"],
+      "description": "以前端工程师身份入职，转正后直接晋升为前端负责人。负责前端团队的搭建；规范文档书写。并带领团队负责公司旗下 APP、小程序以及 Web 端开发，团队规模 8 人。期间对敏捷开发进行了深入调研，输出了 10000+ 字相关文档，并进行了小规模实践。"
+    },
+    {
+      "name": "宁波港信息通信有限公司",
+      "startDate": "2018-08",
+      "endDate": "2019-01",
+      "role": ["前端开发"],
+      "description": "毕业回国后，通过校招进入了「浙江省海港集团、宁波舟山港集团」，并分配到了子公司「宁波港信息通信有限公司」。主要负责港口报单系统网站的开发、维护工作，使用的技术栈是 Java + ExtJS。"
+    }
+  ],
+  "projects": [
+    {
+      "name": "米绘 - AI 智能花型设计服务平台",
+      "startDate": "2021-03",
+      "endDate": "2021-07",
+      "roles": ["前端负责人"],
+      "stacks": ["React", "directus", "react-query", "emotion", "Next.js"],
+      "brief": "基于 AI 算法，帮助设计师提高生产效率，实现半自动化花型设计。设计师可以通过平台发布花型，帮助设计师提高变现能力。企业可以通过线上花型商城购买花型。",
+      "description": "**难点：**因项目初期架构不完善，导致项目维护难；可扩展性，可靠性低；模块之间耦合性强。通过渐进式重构，把项目从 umi.js 迁移到 next.js。舍弃了原来的全局状态管理方式，通过 react-query 管理 API 状态，提高开发体验。引入了 Dynamic Content 的概念，通过 Headless CMS 把数据层和展示层解耦，赋能运营，提高了业务交付效率。\n\n**职责：**需求分析、评估，分配任务。架构调整，代码重构，以及页面优化。",
+      "link": ""
+    },
+    {
+      "name": "DCPool - Filecoin 存力平台",
+      "startDate": "2020-11",
+      "endDate": "2021-02",
+      "roles": ["前端负责人", "敏捷教练"],
+      "stacks": [],
+      "brief": "服务于购买矿机用户的 Filecoin 存力平台，功能包括：查看收益、分发收益、查看存力、扇区分配、经销商管理、订单管理等等。",
+      "description": "**职责：**作为敏捷教练，对项目进行敏捷化管理。帮助团队理解敏捷，通过讨论的方式达成共识。通过 Scrum 框架进行项目管理，帮助 PO 和市场运营达成优先级共识。观察并发现问题点，帮助团队进行改善，交付更多有价值的增量。",
+      "link": ""
+    },
+    {
+      "name": "Dragonfly - Docker 镜像储存服务",
+      "startDate": "2020-10",
+      "endDate": "2020-11",
+      "roles": ["前端负责人"],
+      "stacks": ["vue3", "node.js", "go", "powergate", "IPFS", "lotus"],
+      "brief": "参加 Filecoin Slingshot 比赛期间，基于 Powergate 开发的 Docker 镜像储存服务。用户可以通过上传镜像文件到 IPFS 网络，并在需要的时候拉取镜像。比赛中，团队在 Phase 1 获得第一。",
+      "description": "**难点：**因为直接通过 powergate 进行冷存储需要经过外网访问 lotus，数据传输会非常的慢，所以我们选择在本地进行冷储存数据交易。这就造成 powergate 是对交易无感知的，需要额外手动导入这部分交易。初期版本 powergate 没有暴露对应的 API。最后对源码进行了修改达到了预期的功能。\n\n**职责：**前期对 powergate 进行了调研，源码阅读，功能分析。中期向团队提供对应的理论支持，功能可行性分析。后期参加了 [Closing Ceremony](https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s) 线上演讲，讲解应用。",
+      "link": ""
+    },
+    {
+      "name": "Matrix - 矿机设备管理系统",
+      "startDate": "2019-09",
+      "endDate": "2020-01",
+      "roles": ["前端负责人"],
+      "stacks": ["Flutter", "Taro", "React", "fastlane"],
+      "brief": "矿机设备管理系统，通过阿里云物联网平台连接设备，用户可以实时查看矿机设备的运行情况，跟踪设备状态。设备会自动捕获错误，并上报异常信息。机房运维可以通过微信小程序上架设备。",
+      "description": "**职责：**负责前端技术选型和架构设计，参与系统设计，独立构建自动化应用发布流程。",
+      "link": ""
+    },
+    {
+      "name": "Arc - 设计体系",
+      "startDate": "2019-09",
+      "endDate": "2020-01",
+      "roles": ["项目负责人"],
+      "stacks": ["React", "rollup", "Jest", "emotion"],
+      "brief": "公司内部设计体系探索和尝试。通过对市面上 10 款设计体系的调研、分析和对比，基于公司价值观，与 UI 协作创建了一套设计体系，并搭建了配套的 React 组件库。",
+      "description": "**难点：**关于设计体系的书籍、文章非常有限，并且理论基础不是很成熟，需要自己分析并总结。",
+      "link": ""
+    }
+  ],
+  "education": [
+    {
+      "name": "加拿大圭尔夫大学",
+      "major": "计算机工程",
+      "degree": "本科",
+      "startDate": "2012-09-01",
+      "endDate": "2017-12-01"
+    }
+  ]
+}

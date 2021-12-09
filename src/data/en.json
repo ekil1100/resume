@@ -1,0 +1,34 @@
+{
+  "name": "Like Zheng",
+  "phone": "135-8814-4781",
+  "email": "me@likemail.io",
+  "blog": "https://blog.ekil.io",
+  "github": "ekilzen",
+  "linkedin": "likezheng",
+  "job": "front-end developer",
+  "location": "remote",
+  "summary": "全栈工程师，偏前端。带过前端团队，也带过敏捷团队，人数在 5～10 人之间。前后端技术都有涉猎，对 DevOps 有一定的了解，平时喜欢关注前沿技术。",
+  "skills": {
+    "language": ["JavaScript", "CSS", "HTML", "TypeScript", "Dart", "Graphql"],
+    "framework": [
+      "React",
+      "Vue",
+      "Flutter",
+      "Taro",
+      "Next.js",
+      "Node.js",
+      "Apollo"
+    ],
+    "tool": ["git", "rollup", "github actions", "Docker", "prisma", "emotion"]
+  },
+  "projects": [],
+  "companies": [],
+  "education": [
+    {
+      "name": "清华大学",
+      "major": "计算机科学与技术",
+      "degree": "本科",
+      "time": "2019.09 - 2020.06"
+    }
+  ]
+}
