@@ -98,7 +98,7 @@ function App() {
   return (
     <>
       <Button
-        className='absolute top-4 right-4 no-print <md:hidden'
+        className='absolute top-4 right-4 no-print'
         onClick={() => setIsDarkMode(!isDarkMode)}
       >
         {isDarkMode ? <Icon.Moon /> : <Icon.Sun />}
