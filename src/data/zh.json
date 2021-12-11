@@ -2,23 +2,23 @@
   "name": "郑力可",
   "gender": "男",
   "birthday": "1992-12-12",
-  "phone": "13588144781",
+  "phone": "13588134781",
   "email": "me@likemail.io",
-  "blog": "https://blog.ekil.io",
+  "blog": "blog.ekil.io",
   "github": "ekilzen",
   "linkedin": "likezheng",
   "job": "前端开发工程师",
   "location": "远程",
   "summary": "全栈工程师，偏前端。带过前端团队，也带过敏捷团队，人数在 5～10 人之间。前后端技术都有涉猎，对 DevOps 有一定的了解，平时喜欢关注前沿技术。",
   "skills": {
-    "name": "技能",
+    "name": "专业技能",
     "items": [
       {
-        "name": "language",
+        "name": "语言：",
         "stacks": ["JavaScript", "CSS", "HTML", "TypeScript", "Dart", "Graphql"]
       },
       {
-        "name": "framework",
+        "name": "框架：",
         "stacks": [
           "React",
           "Vue",
@@ -30,7 +30,7 @@
         ]
       },
       {
-        "name": "tool",
+        "name": "工具：",
         "stacks": [
           "git",
           "rollup",

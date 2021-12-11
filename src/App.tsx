@@ -1,42 +1,95 @@
 import data from './data/zh.json'
-import {
-  FiGithub,
-  FiLink2,
-  FiLinkedin,
-  FiMail,
-  FiSmartphone,
-} from 'react-icons/fi'
-import { FaMobileAlt, FaEnvelope } from 'react-icons/fa'
+import * as Icon from 'react-feather'
 import { useEffect } from 'react'
+import { styled } from '@stitches/react'
+import { css, darkTheme } from '../stitches.config'
+import { rem } from 'polished'
+import { Link } from './components/Link'
+import dayjs from 'dayjs'
+import { toDate } from './_utils/parseDate'
 
-function InfoWithIcon({ icon, text }: { icon: JSX.Element; text: string }) {
-  return (
-    <div className='grid grid-flow-col gap-1 place-items-center'>
-      {icon}
-      {text}
-    </div>
-  )
-}
+const InfoWithIcon = styled('div', {
+  display: 'grid',
+  gridAutoFlow: 'column',
+  gap: rem(8),
+  alignItems: 'center',
+  svg: {
+    width: rem(16),
+    height: rem(16),
+  },
+})
+
+const Tag = styled('div', {
+  display: 'inline-block',
+  borderRadius: rem(4),
+  padding: `0 ${rem(8)}`,
+  fontSize: rem(14),
+
+  variants: {
+    variant: {
+      primary: {
+        color: '$primary',
+        background: '$primaryBackground',
+        border: '1px solid $primaryBorder',
+      },
+      secondary: {
+        color: '$secondary',
+        background: '$secondaryBackground',
+        border: '1px solid $secondaryBorder',
+      },
+    },
+  },
+
+  defaultVariants: {
+    variant: 'primary',
+  },
+})
 
 function App() {
   const { skills, experience, projects, education } = data
 
-  useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-      document.documentElement.classList.add('dark')
-    else document.documentElement.classList.add('light')
-  })
+  // useEffect(() => {
+  //   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  //     document.documentElement.classList.add(darkTheme)
+  //   } else {
+  //     document.documentElement.classList.remove(darkTheme)
+  //   }
+  // })
 
   return (
-    <div className='w-screen-md mx-auto my-5 py-12 px-10'>
-      <header className='grid justify-center justify-items-center grid-cols-1'>
-        <h1 className='text-teal-600'>{data.name}</h1>
+    <div className='w-screen-lg mx-auto my-5 py-12 px-10'>
+      <header className='grid place-items-center grid-cols-1 px-5'>
+        <h1>{data.name}</h1>
         <div className='w-full grid grid-flow-col justify-between content-center'>
-          <InfoWithIcon icon={<FaMobileAlt />} text={data.phone} />
-          <InfoWithIcon icon={<FaEnvelope />} text={data.email} />
-          <InfoWithIcon icon={<FiLink2 />} text={data.blog} />
-          <InfoWithIcon icon={<FiGithub />} text={data.github} />
-          <InfoWithIcon icon={<FiLinkedin />} text={data.linkedin} />
+          <InfoWithIcon>
+            <Icon.Smartphone />
+            {data.phone}
+          </InfoWithIcon>
+          <InfoWithIcon>
+            <Icon.Mail />
+            <Link href={`mailto:${data.email}`}>{data.email}</Link>
+          </InfoWithIcon>
+          <InfoWithIcon>
+            <Icon.Link2 />
+            <Link href={`https://${data.blog}`} target='_blank'>
+              {data.blog}
+            </Link>
+          </InfoWithIcon>
+          <InfoWithIcon>
+            <Icon.GitHub />
+            <Link href={`https://github.com/${data.github}`} target='_blank'>
+              {data.github}
+            </Link>
+          </InfoWithIcon>
+          <InfoWithIcon>
+            <Icon.Linkedin />
+            <Link
+              href={`https://www.linkedin.com/in/${data.linkedin}`}
+              target='_blank'
+            >
+              {data.linkedin}
+            </Link>
+          </InfoWithIcon>
         </div>
       </header>
       <main className=''>
@@ -44,8 +97,18 @@ function App() {
           <h2>{skills.name}</h2>
           {skills.items.map((item, index) => {
             return (
-              <div key={index}>
-                <span>{item.name}</span>：<span>{item.stacks}</span>
+              <div
+                className='my-2 grid grid-flow-col justify-start content-center gap-2'
+                key={index}
+              >
+                <span>{item.name}</span>
+                {item.stacks.map((stack, index) => {
+                  return (
+                    <Tag variant='secondary' key={index}>
+                      {stack}
+                    </Tag>
+                  )
+                })}
               </div>
             )
           })}
@@ -56,11 +119,15 @@ function App() {
             return (
               <div key={index}>
                 <h3>{item.name}</h3>
-                <div>
-                  {item.startDate} ~ {item.endDate}
+                <div className='grid gap-2 grid-flow-col justify-start mb-4'>
+                  <Tag>
+                    {toDate(item.startDate)} ~ {toDate(item.endDate)}
+                  </Tag>
+                  {item.roles.map((role, index) => {
+                    return <Tag key={index}>{role}</Tag>
+                  })}
                 </div>
-                <div>{item.roles}</div>
-                <div>{item.description}</div>
+                <p>{item.description}</p>
               </div>
             )
           })}
@@ -71,13 +138,23 @@ function App() {
             return (
               <div key={index}>
                 <h3>{item.name}</h3>
-                <div>
-                  {item.startDate} ~ {item.endDate}
+                <div className='grid gap-2 grid-flow-col justify-start mb-4'>
+                  <Tag>
+                    {toDate(item.startDate)} ~ {toDate(item.endDate)}
+                  </Tag>
+                  {item.roles.map((role, index) => {
+                    return <Tag key={index}>{role}</Tag>
+                  })}
+                  {item.stacks.map((stack, index) => {
+                    return (
+                      <Tag variant='secondary' key={index}>
+                        {stack}
+                      </Tag>
+                    )
+                  })}
                 </div>
-                <div>{item.roles}</div>
-                <div>{item.stacks}</div>
-                <div>{item.brief}</div>
-                <div>{item.description}</div>
+                <p>{item.brief}</p>
+                <p>{item.description}</p>
               </div>
             )
           })}
@@ -88,11 +165,13 @@ function App() {
             return (
               <div key={index}>
                 <h3>{item.name}</h3>
-                <div>
-                  {item.startDate} ~ {item.endDate}
+                <div className='grid gap-2 grid-flow-col justify-start mb-4'>
+                  <Tag>
+                    {toDate(item.startDate)} ~ {toDate(item.endDate)}
+                  </Tag>
+                  <Tag>{item.major}</Tag>
+                  <Tag>{item.degree}</Tag>
                 </div>
-                <div>{item.major}</div>
-                <div>{item.degree}</div>
               </div>
             )
           })}

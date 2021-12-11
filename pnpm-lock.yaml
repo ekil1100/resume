@@ -6,8 +6,11 @@ specifiers:
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0
   '@vitejs/plugin-react': ^1.0.0
+  dayjs: ^1.10.7
+  polished: ^4.1.3
   react: ^17.0.0
   react-dom: ^17.0.0
+  react-feather: ^2.0.9
   react-icons: ^4.3.1
   sanitize.css: ^13.0.0
   typescript: ^4.3.2
@@ -18,8 +21,11 @@ specifiers:
 dependencies:
   '@radix-ui/colors': 0.1.8
   '@stitches/react': 1.2.6_react@17.0.2
+  dayjs: 1.10.7
+  polished: 4.1.3
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-feather: 2.0.9_react@17.0.2
   react-icons: 4.3.1_react@17.0.2
   sanitize.css: 13.0.0
 
@@ -285,6 +291,13 @@ packages:
       '@babel/types': 7.16.0
     dev: true
 
+  /@babel/runtime/7.16.3:
+    resolution: {integrity: sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.9
+    dev: false
+
   /@babel/template/7.16.0:
     resolution: {integrity: sha512-MnZdpFD/ZdYhXwiunMqqgyZyucaYsbL0IrjoGjaVhGilz+x8YB++kRfygSOIj1yOtWKPlx7NBp+9I1RQSgsd5A==}
     engines: {node: '>=6.9.0'}
@@ -484,6 +497,10 @@ packages:
   /csstype/3.0.10:
     resolution: {integrity: sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==}
     dev: true
+
+  /dayjs/1.10.7:
+    resolution: {integrity: sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==}
+    dev: false
 
   /debug/4.3.3:
     resolution: {integrity: sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==}
@@ -851,6 +868,13 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /polished/4.1.3:
+    resolution: {integrity: sha512-ocPAcVBUOryJEKe0z2KLd1l9EBa1r5mSwlKpExmrLzsnIzJo4axsoU9O2BjOTkDGDT4mZ0WFE5XKTlR3nLnZOA==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@babel/runtime': 7.16.3
+    dev: false
+
   /postcss/8.4.4:
     resolution: {integrity: sha512-joU6fBsN6EIer28Lj6GDFoC/5yOZzLCfn0zHAn/MYXI7aPt4m4hK5KC5ovEZXy+lnCjmYIbQWngvju2ddyEr8Q==}
     engines: {node: ^10 || ^12 || >=14}
@@ -859,6 +883,14 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.1
     dev: true
+
+  /prop-types/15.7.2:
+    resolution: {integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==}
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+    dev: false
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
@@ -875,12 +907,25 @@ packages:
       scheduler: 0.20.2
     dev: false
 
+  /react-feather/2.0.9_react@17.0.2:
+    resolution: {integrity: sha512-yMfCGRkZdXwIs23Zw/zIWCJO3m3tlaUvtHiXlW+3FH7cIT6fiK1iJ7RJWugXq7Fso8ZaQyUm92/GOOHXvkiVUw==}
+    peerDependencies:
+      react: ^16.8.6 || ^17
+    dependencies:
+      prop-types: 15.7.2
+      react: 17.0.2
+    dev: false
+
   /react-icons/4.3.1_react@17.0.2:
     resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
     peerDependencies:
       react: '*'
     dependencies:
       react: 17.0.2
+    dev: false
+
+  /react-is/16.13.1:
+    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
   /react-refresh/0.11.0:
@@ -894,6 +939,10 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: false
+
+  /regenerator-runtime/0.13.9:
+    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
     dev: false
 
   /resolve/1.20.0:

@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'virtual:windi.css'
+import 'virtual:windi-devtools'
 import 'sanitize.css'
 import './index.css'
 import App from './App'

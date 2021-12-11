@@ -1,5 +1,3 @@
 import { defineConfig } from 'windicss/helpers'
 
-export default defineConfig({
-  dartMode: 'class',
-})
+export default defineConfig({})
