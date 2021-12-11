@@ -67,7 +67,6 @@ function Markdown({ children }: { children: string }) {
 }
 
 const Button = styled('button', {
-  display: 'inline-block',
   background: '$background',
   color: '$text',
   cursor: 'pointer',
@@ -99,15 +98,15 @@ function App() {
   return (
     <>
       <Button
-        className='absolute top-4 right-4 no-print'
+        className='absolute top-4 right-4 no-print <md:hidden'
         onClick={() => setIsDarkMode(!isDarkMode)}
       >
         {isDarkMode ? <Icon.Moon /> : <Icon.Sun />}
       </Button>
-      <div className='w-screen-lg mx-auto py-12 px-10'>
-        <header className='grid place-items-center grid-cols-1 px-5'>
+      <div className='max-w-screen-lg mx-auto py-12 px-10'>
+        <header className='grid place-items-center grid-cols-1 px-4'>
           <h1>{data.name}</h1>
-          <div className='w-full grid grid-flow-col justify-between content-center'>
+          <div className='w-full flex flex-wrap gap-4 justify-between'>
             <InfoWithIcon>
               <Icon.Smartphone />
               {data.phone}
@@ -145,7 +144,7 @@ function App() {
             {skills.items.map((item, index) => {
               return (
                 <div
-                  className='my-2 grid grid-flow-col justify-start content-center gap-2'
+                  className='my-2 flex flex-wrap justify-start content-center gap-2'
                   key={index}
                 >
                   <span>{item.name}</span>
@@ -166,7 +165,7 @@ function App() {
               return (
                 <div key={index}>
                   <h3>{item.name}</h3>
-                  <div className='grid gap-2 grid-flow-col justify-start mb-4'>
+                  <div className='flex flex-wrap gap-2 justify-start mb-4'>
                     <Tag>
                       {toDate(item.startDate)} ~ {toDate(item.endDate)}
                     </Tag>
@@ -185,7 +184,7 @@ function App() {
               return (
                 <div key={index}>
                   <h3>{item.name}</h3>
-                  <div className='grid gap-2 grid-flow-col justify-start mb-4'>
+                  <div className='flex flex-wrap gap-2 justify-start mb-4'>
                     <Tag>
                       {toDate(item.startDate)} ~ {toDate(item.endDate)}
                     </Tag>
@@ -212,7 +211,7 @@ function App() {
               return (
                 <div key={index}>
                   <h3>{item.name}</h3>
-                  <div className='grid gap-2 grid-flow-col justify-start mb-4'>
+                  <div className='flex flex-wrap gap-2 justify-start mb-4'>
                     <Tag>
                       {toDate(item.startDate)} ~ {toDate(item.endDate)}
                     </Tag>
