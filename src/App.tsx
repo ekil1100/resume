@@ -5,8 +5,8 @@ import { styled } from '@stitches/react'
 import { css, darkTheme } from '../stitches.config'
 import { rem } from 'polished'
 import { Link } from './components/Link'
-import dayjs from 'dayjs'
 import { toDate } from './_utils/parseDate'
+import ReactMarkdown from 'react-markdown'
 
 const InfoWithIcon = styled('div', {
   display: 'grid',
@@ -45,6 +45,27 @@ const Tag = styled('div', {
   },
 })
 
+function Markdown({ children }: { children: string }) {
+  return (
+    <ReactMarkdown
+      components={{
+        a: (props) => (
+          <Link
+            href={props.href}
+            target='_blank'
+            className='inline-grid grid-flow-col justify-start gap-1 items-center'
+          >
+            {props.children}
+            <Icon.ExternalLink size={16} />
+          </Link>
+        ),
+      }}
+    >
+      {children}
+    </ReactMarkdown>
+  )
+}
+
 function App() {
   const { skills, experience, projects, education } = data
 
@@ -57,7 +78,7 @@ function App() {
   // })
 
   return (
-    <div className='w-screen-lg mx-auto my-5 py-12 px-10'>
+    <div className='w-screen-lg mx-auto py-12 px-10'>
       <header className='grid place-items-center grid-cols-1 px-5'>
         <h1>{data.name}</h1>
         <div className='w-full grid grid-flow-col justify-between content-center'>
@@ -127,7 +148,7 @@ function App() {
                     return <Tag key={index}>{role}</Tag>
                   })}
                 </div>
-                <p>{item.description}</p>
+                <ReactMarkdown>{item.description}</ReactMarkdown>
               </div>
             )
           })}
@@ -153,8 +174,8 @@ function App() {
                     )
                   })}
                 </div>
-                <p>{item.brief}</p>
-                <p>{item.description}</p>
+                <ReactMarkdown>{item.brief}</ReactMarkdown>
+                <Markdown>{item.description}</Markdown>
               </div>
             )
           })}

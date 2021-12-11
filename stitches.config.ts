@@ -14,13 +14,16 @@ import {
   cyan,
   cyanDark,
   tomato,
+  tomatoDark,
+  violet,
+  violetDark,
 } from '@radix-ui/colors'
 import { createStitches } from '@stitches/react'
 
 export const { styled, css, createTheme } = createStitches({
   theme: {
     colors: {
-      background: sage.sage1,
+      background: sage.sage2,
       text: sage.sage12,
       primary: teal.teal11,
       primaryBorder: teal.teal6,
@@ -28,8 +31,9 @@ export const { styled, css, createTheme } = createStitches({
       secondary: tomato.tomato9,
       secondaryBorder: tomato.tomato6,
       secondaryBackground: tomato.tomato1,
-      link: sage.sage11,
-      linkHover: tomato.tomato10,
+      accent: violet.violet9,
+      link: violet.violet9,
+      linkHover: violet.violet11,
     },
     sizes: {
       sm: '640px',
