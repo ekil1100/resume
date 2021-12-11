@@ -144,7 +144,7 @@ function App() {
             {skills.items.map((item, index) => {
               return (
                 <div
-                  className='my-2 flex flex-wrap justify-start content-center gap-2'
+                  className='flex flex-wrap justify-start items-center gap-2 my-2'
                   key={index}
                 >
                   <span>{item.name}</span>
