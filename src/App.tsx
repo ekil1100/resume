@@ -104,9 +104,9 @@ function App() {
         {isDarkMode ? <Icon.Moon /> : <Icon.Sun />}
       </Button>
       <div className='max-w-screen-lg mx-auto py-12 px-10'>
-        <header className='grid place-items-center grid-cols-1 px-4'>
+        <header className='grid place-items-center grid-cols-1 px-8'>
           <h1>{data.name}</h1>
-          <div className='w-full flex flex-wrap gap-4 justify-between'>
+          <div className='w-full flex flex-wrap gap-4 justify-evenly'>
             <InfoWithIcon>
               <Icon.Smartphone />
               {data.phone}
