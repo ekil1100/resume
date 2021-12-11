@@ -1,6 +1,6 @@
 import data from './data/zh.json'
 import * as Icon from 'react-feather'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { styled } from '@stitches/react'
 import { css, darkTheme } from '../stitches.config'
 import { rem } from 'polished'
@@ -66,106 +66,89 @@ function Markdown({ children }: { children: string }) {
   )
 }
 
+const Button = styled('button', {
+  display: 'inline-block',
+  background: '$background',
+  color: '$text',
+  cursor: 'pointer',
+  padding: rem(8),
+  borderRadius: rem(8),
+  '&:hover': {
+    background: '$backgroundHover',
+  },
+  '&:active': {
+    background: '$backgroundActive',
+  },
+})
+
 function App() {
   const { skills, experience, projects, education } = data
+  const [isDarkMode, setIsDarkMode] = useState(
+    JSON.parse(localStorage.getItem('isDarkMode') ?? 'false'),
+  )
 
-  // useEffect(() => {
-  //   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  //     document.documentElement.classList.add(darkTheme)
-  //   } else {
-  //     document.documentElement.classList.remove(darkTheme)
-  //   }
-  // })
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add(darkTheme)
+    } else {
+      document.documentElement.classList.remove(darkTheme)
+    }
+    localStorage.setItem('isDarkMode', JSON.stringify(isDarkMode))
+  })
 
   return (
-    <div className='w-screen-lg mx-auto py-12 px-10'>
-      <header className='grid place-items-center grid-cols-1 px-5'>
-        <h1>{data.name}</h1>
-        <div className='w-full grid grid-flow-col justify-between content-center'>
-          <InfoWithIcon>
-            <Icon.Smartphone />
-            {data.phone}
-          </InfoWithIcon>
-          <InfoWithIcon>
-            <Icon.Mail />
-            <Link href={`mailto:${data.email}`}>{data.email}</Link>
-          </InfoWithIcon>
-          <InfoWithIcon>
-            <Icon.Link2 />
-            <Link href={`https://${data.blog}`} target='_blank'>
-              {data.blog}
-            </Link>
-          </InfoWithIcon>
-          <InfoWithIcon>
-            <Icon.GitHub />
-            <Link href={`https://github.com/${data.github}`} target='_blank'>
-              {data.github}
-            </Link>
-          </InfoWithIcon>
-          <InfoWithIcon>
-            <Icon.Linkedin />
-            <Link
-              href={`https://www.linkedin.com/in/${data.linkedin}`}
-              target='_blank'
-            >
-              {data.linkedin}
-            </Link>
-          </InfoWithIcon>
-        </div>
-      </header>
-      <main className=''>
-        <section>
-          <h2>{skills.name}</h2>
-          {skills.items.map((item, index) => {
-            return (
-              <div
-                className='my-2 grid grid-flow-col justify-start content-center gap-2'
-                key={index}
+    <>
+      <Button
+        className='absolute top-4 right-4 no-print'
+        onClick={() => setIsDarkMode(!isDarkMode)}
+      >
+        {isDarkMode ? <Icon.Moon /> : <Icon.Sun />}
+      </Button>
+      <div className='w-screen-lg mx-auto py-12 px-10'>
+        <header className='grid place-items-center grid-cols-1 px-5'>
+          <h1>{data.name}</h1>
+          <div className='w-full grid grid-flow-col justify-between content-center'>
+            <InfoWithIcon>
+              <Icon.Smartphone />
+              {data.phone}
+            </InfoWithIcon>
+            <InfoWithIcon>
+              <Icon.Mail />
+              <Link href={`mailto:${data.email}`}>{data.email}</Link>
+            </InfoWithIcon>
+            <InfoWithIcon>
+              <Icon.Link2 />
+              <Link href={`https://${data.blog}`} target='_blank'>
+                {data.blog}
+              </Link>
+            </InfoWithIcon>
+            <InfoWithIcon>
+              <Icon.GitHub />
+              <Link href={`https://github.com/${data.github}`} target='_blank'>
+                {data.github}
+              </Link>
+            </InfoWithIcon>
+            <InfoWithIcon>
+              <Icon.Linkedin />
+              <Link
+                href={`https://www.linkedin.com/in/${data.linkedin}`}
+                target='_blank'
               >
-                <span>{item.name}</span>
-                {item.stacks.map((stack, index) => {
-                  return (
-                    <Tag variant='secondary' key={index}>
-                      {stack}
-                    </Tag>
-                  )
-                })}
-              </div>
-            )
-          })}
-        </section>
-        <section>
-          <h2>{experience.name}</h2>
-          {experience.items.map((item, index) => {
-            return (
-              <div key={index}>
-                <h3>{item.name}</h3>
-                <div className='grid gap-2 grid-flow-col justify-start mb-4'>
-                  <Tag>
-                    {toDate(item.startDate)} ~ {toDate(item.endDate)}
-                  </Tag>
-                  {item.roles.map((role, index) => {
-                    return <Tag key={index}>{role}</Tag>
-                  })}
-                </div>
-                <ReactMarkdown>{item.description}</ReactMarkdown>
-              </div>
-            )
-          })}
-        </section>
-        <section>
-          <h2>{projects.name}</h2>
-          {projects.items.map((item, index) => {
-            return (
-              <div key={index}>
-                <h3>{item.name}</h3>
-                <div className='grid gap-2 grid-flow-col justify-start mb-4'>
-                  <Tag>
-                    {toDate(item.startDate)} ~ {toDate(item.endDate)}
-                  </Tag>
-                  {item.roles.map((role, index) => {
-                    return <Tag key={index}>{role}</Tag>
-                  })}
+                {data.linkedin}
+              </Link>
+            </InfoWithIcon>
+          </div>
+        </header>
+        <main className=''>
+          <section>
+            <h2>{skills.name}</h2>
+            {skills.items.map((item, index) => {
+              return (
+                <div
+                  className='my-2 grid grid-flow-col justify-start content-center gap-2'
+                  key={index}
+                >
+                  <span>{item.name}</span>
                   {item.stacks.map((stack, index) => {
                     return (
                       <Tag variant='secondary' key={index}>
@@ -174,31 +157,75 @@ function App() {
                     )
                   })}
                 </div>
-                <ReactMarkdown>{item.brief}</ReactMarkdown>
-                <Markdown>{item.description}</Markdown>
-              </div>
-            )
-          })}
-        </section>
-        <section>
-          <h2>{education.name}</h2>
-          {education.items.map((item, index) => {
-            return (
-              <div key={index}>
-                <h3>{item.name}</h3>
-                <div className='grid gap-2 grid-flow-col justify-start mb-4'>
-                  <Tag>
-                    {toDate(item.startDate)} ~ {toDate(item.endDate)}
-                  </Tag>
-                  <Tag>{item.major}</Tag>
-                  <Tag>{item.degree}</Tag>
+              )
+            })}
+          </section>
+          <section>
+            <h2>{experience.name}</h2>
+            {experience.items.map((item, index) => {
+              return (
+                <div key={index}>
+                  <h3>{item.name}</h3>
+                  <div className='grid gap-2 grid-flow-col justify-start mb-4'>
+                    <Tag>
+                      {toDate(item.startDate)} ~ {toDate(item.endDate)}
+                    </Tag>
+                    {item.roles.map((role, index) => {
+                      return <Tag key={index}>{role}</Tag>
+                    })}
+                  </div>
+                  <ReactMarkdown>{item.description}</ReactMarkdown>
                 </div>
-              </div>
-            )
-          })}
-        </section>
-      </main>
-    </div>
+              )
+            })}
+          </section>
+          <section>
+            <h2>{projects.name}</h2>
+            {projects.items.map((item, index) => {
+              return (
+                <div key={index}>
+                  <h3>{item.name}</h3>
+                  <div className='grid gap-2 grid-flow-col justify-start mb-4'>
+                    <Tag>
+                      {toDate(item.startDate)} ~ {toDate(item.endDate)}
+                    </Tag>
+                    {item.roles.map((role, index) => {
+                      return <Tag key={index}>{role}</Tag>
+                    })}
+                    {item.stacks.map((stack, index) => {
+                      return (
+                        <Tag variant='secondary' key={index}>
+                          {stack}
+                        </Tag>
+                      )
+                    })}
+                  </div>
+                  <ReactMarkdown>{item.brief}</ReactMarkdown>
+                  <Markdown>{item.description}</Markdown>
+                </div>
+              )
+            })}
+          </section>
+          <section>
+            <h2>{education.name}</h2>
+            {education.items.map((item, index) => {
+              return (
+                <div key={index}>
+                  <h3>{item.name}</h3>
+                  <div className='grid gap-2 grid-flow-col justify-start mb-4'>
+                    <Tag>
+                      {toDate(item.startDate)} ~ {toDate(item.endDate)}
+                    </Tag>
+                    <Tag>{item.major}</Tag>
+                    <Tag>{item.degree}</Tag>
+                  </div>
+                </div>
+              )
+            })}
+          </section>
+        </main>
+      </div>
+    </>
   )
 }
 

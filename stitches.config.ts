@@ -24,6 +24,8 @@ export const { styled, css, createTheme } = createStitches({
   theme: {
     colors: {
       background: sage.sage2,
+      backgroundHover: sage.sage4,
+      backgroundActive: sage.sage5,
       text: sage.sage12,
       primary: teal.teal11,
       primaryBorder: teal.teal6,
@@ -47,13 +49,18 @@ export const { styled, css, createTheme } = createStitches({
 
 export const darkTheme = createTheme({
   colors: {
-    ...sageDark,
-    ...mintDark,
-    ...greenDark,
-    ...tealDark,
-    ...redDark,
-    ...yellowDark,
-    ...cyanDark,
-    primary: tealDark.teal9,
+    background: sageDark.sage2,
+    backgroundHover: sageDark.sage4,
+    backgroundActive: sageDark.sage5,
+    text: sageDark.sage12,
+    primary: tealDark.teal11,
+    primaryBorder: tealDark.teal6,
+    primaryBackground: tealDark.teal2,
+    secondary: tomatoDark.tomato9,
+    secondaryBorder: tomatoDark.tomato6,
+    secondaryBackground: tomatoDark.tomato1,
+    accent: violetDark.violet9,
+    link: violetDark.violet9,
+    linkHover: violetDark.violet11,
   },
 })

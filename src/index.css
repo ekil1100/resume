@@ -57,3 +57,10 @@ small,
 .text_small {
   font-size: 0.833rem;
 }
+
+@media print {
+  .no-print,
+  .no-print * {
+    display: none;
+  }
+}
