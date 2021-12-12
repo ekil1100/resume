@@ -2,7 +2,7 @@
   "name": "郑力可",
   "gender": "男",
   "birthday": "1992-12-12",
-  "phone": "13588134781",
+  "phone": "+86-13588134781",
   "email": "me@likemail.io",
   "blog": "blog.ekil.io",
   "github": "ekilzen",
@@ -30,7 +30,7 @@
         ]
       },
       {
-        "name": "工具：",
+        "name": "其他：",
         "stacks": [
           "git",
           "rollup",

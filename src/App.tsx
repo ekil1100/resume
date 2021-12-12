@@ -179,31 +179,36 @@ function App() {
             })}
           </section>
           <section>
-            <h2>{projects.name}</h2>
-            {projects.items.map((item, index) => {
-              return (
-                <div key={index}>
-                  <h3>{item.name}</h3>
-                  <div className='flex flex-wrap gap-2 justify-start mb-4'>
-                    <Tag>
-                      {toDate(item.startDate)} ~ {toDate(item.endDate)}
-                    </Tag>
-                    {item.roles.map((role, index) => {
-                      return <Tag key={index}>{role}</Tag>
-                    })}
-                    {item.stacks.map((stack, index) => {
-                      return (
-                        <Tag variant='secondary' key={index}>
-                          {stack}
+            {projects.items.length ? (
+              <>
+                <h2>{projects.name}</h2>
+                {projects.items.map((item, index) => {
+                  return (
+                    <div key={index}>
+                      <h3>{item.name}</h3>
+                      <div className='flex flex-wrap gap-2 justify-start mb-4'>
+                        <Tag>
+                          {toDate(item.startDate)} ~ {toDate(item.endDate)}
                         </Tag>
-                      )
-                    })}
-                  </div>
-                  <ReactMarkdown>{item.brief}</ReactMarkdown>
-                  <Markdown>{item.description}</Markdown>
-                </div>
-              )
-            })}
+                        {item.roles.map((role, index) => {
+                          return <Tag key={index}>{role}</Tag>
+                        })}
+                        {item.stacks.map((stack, index) => {
+                          return (
+                            <Tag variant='secondary' key={index}>
+                              {stack}
+                            </Tag>
+                          )
+                        })}
+                      </div>
+                      <ReactMarkdown>{item.brief}</ReactMarkdown>
+                      <Markdown>{item.description}</Markdown>
+                    </div>
+                  )
+                })}
+              </>
+            ) : null}
+            {}
           </section>
           <section>
             <h2>{education.name}</h2>

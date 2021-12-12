@@ -1,34 +1,87 @@
 {
   "name": "Like Zheng",
-  "phone": "135-8814-4781",
+  "gender": "Male",
+  "birthday": "1992-12-12",
+  "phone": "+86-13588134781",
   "email": "me@likemail.io",
-  "blog": "https://blog.ekil.io",
+  "blog": "blog.ekil.io",
   "github": "ekilzen",
   "linkedin": "likezheng",
-  "job": "front-end developer",
-  "location": "remote",
-  "summary": "全栈工程师，偏前端。带过前端团队，也带过敏捷团队，人数在 5～10 人之间。前后端技术都有涉猎，对 DevOps 有一定的了解，平时喜欢关注前沿技术。",
+  "job": "Front-end Developer",
+  "location": "Remote",
+  "summary": "Full-stack developer, prefer front-end. He has led the front-end team and agile team, with a number of 5 ~ 10 people. Both front and rear end technologies are involved, and they have a certain understanding of Devops. They usually like to pay attention to cutting-edge technologies.",
   "skills": {
-    "language": ["JavaScript", "CSS", "HTML", "TypeScript", "Dart", "Graphql"],
-    "framework": [
-      "React",
-      "Vue",
-      "Flutter",
-      "Taro",
-      "Next.js",
-      "Node.js",
-      "Apollo"
-    ],
-    "tool": ["git", "rollup", "github actions", "Docker", "prisma", "emotion"]
+    "name": "Skills",
+    "items": [
+      {
+        "name": "Languages: ",
+        "stacks": ["JavaScript", "CSS", "HTML", "TypeScript", "Dart", "Graphql"]
+      },
+      {
+        "name": "Frameworks: ",
+        "stacks": [
+          "React",
+          "Vue",
+          "Flutter",
+          "Taro",
+          "Next.js",
+          "Node.js",
+          "Apollo"
+        ]
+      },
+      {
+        "name": "Others: ",
+        "stacks": [
+          "git",
+          "rollup",
+          "github actions",
+          "Docker",
+          "prisma",
+          "emotion"
+        ]
+      }
+    ]
   },
-  "projects": [],
-  "companies": [],
-  "education": [
-    {
-      "name": "清华大学",
-      "major": "计算机科学与技术",
-      "degree": "本科",
-      "time": "2019.09 - 2020.06"
-    }
-  ]
+  "experience": {
+    "name": "Experience",
+    "items": [
+      {
+        "name": "杭州慕锐科技有限公司",
+        "startDate": "2021-03",
+        "endDate": "2021-07",
+        "roles": ["前端负责人"],
+        "description": "以高级前端工程师身份入职。试用期期间，帮助公司完善了 Git 使用规范（基于 Truck Based Development），推进设计体系搭建。转正后晋升为前端负责人，管理团队人数 5 人，负责前端工程化规划；规范文档书写；业务梳理；前端系统架构设计。"
+      },
+      {
+        "name": "杭州字节方舟科技有限公司",
+        "startDate": "2019-02",
+        "endDate": "2021-02",
+        "roles": ["前端负责人", "敏捷教练"],
+        "description": "以前端工程师身份入职，转正后直接晋升为前端负责人。负责前端团队的搭建；规范文档书写。并带领团队负责公司旗下 APP、小程序以及 Web 端开发，团队规模 8 人。期间对敏捷开发进行了深入调研，输出了 10000+ 字相关文档，并进行了小规模实践。"
+      },
+      {
+        "name": "宁波港信息通信有限公司",
+        "startDate": "2018-08",
+        "endDate": "2019-01",
+        "roles": ["前端开发"],
+        "description": "毕业回国后，通过校招进入了「浙江省海港集团、宁波舟山港集团」，并分配到了子公司「宁波港信息通信有限公司」。主要负责港口报单系统网站的开发、维护工作，使用的技术栈是 Java + ExtJS。"
+      }
+    ]
+  },
+  "projects": {
+    "name": "Projects",
+    "items": []
+  },
+  "education": {
+    "name": "Education",
+    "items": [
+      {
+        "name": "University of Guelph",
+        "startDate": "2012-09",
+        "endDate": "2017-12",
+        "major": "Computer Engineering",
+        "degree": "Bachelor"
+      }
+    ]
+  }
 }
