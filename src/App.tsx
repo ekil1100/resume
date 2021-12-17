@@ -107,10 +107,12 @@ function App() {
         <header className='grid place-items-center grid-cols-1 px-8'>
           <h1>{data.name}</h1>
           <div className='w-full flex flex-wrap gap-4 justify-evenly'>
-            <InfoWithIcon>
-              <Icon.Smartphone />
-              {data.phone}
-            </InfoWithIcon>
+            {import.meta.env.DEV ? (
+              <InfoWithIcon>
+                <Icon.Smartphone />
+                {data.phone}
+              </InfoWithIcon>
+            ) : null}
             <InfoWithIcon>
               <Icon.Mail />
               <Link href={`mailto:${data.email}`}>{data.email}</Link>
