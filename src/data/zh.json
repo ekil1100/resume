@@ -26,19 +26,15 @@
           "Taro",
           "Next.js",
           "Node.js",
-          "Apollo"
+          "Apollo",
+          "emotion",
+          "prisma",
+          "Jest"
         ]
       },
       {
         "name": "其他：",
-        "stacks": [
-          "git",
-          "rollup",
-          "github actions",
-          "Docker",
-          "prisma",
-          "emotion"
-        ]
+        "stacks": ["Git", "Rollup", "Github Actions", "Docker"]
       }
     ]
   },
