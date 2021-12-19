@@ -83,7 +83,8 @@ const Button = styled('button', {
 function App() {
   const { skills, experience, projects, education } = data
   const [isDarkMode, setIsDarkMode] = useState(
-    JSON.parse(localStorage.getItem('isDarkMode') ?? 'false'),
+    window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches,
   )
 
   useEffect(() => {
@@ -92,8 +93,27 @@ function App() {
     } else {
       document.documentElement.classList.remove(darkTheme)
     }
-    localStorage.setItem('isDarkMode', JSON.stringify(isDarkMode))
-  })
+  }, [isDarkMode])
+
+  useEffect(() => {
+    const enableDarkMode: EventListener = () => {
+      document.documentElement.classList.add(darkTheme)
+    }
+
+    const disableDarkMode = () => {
+      document.documentElement.classList.remove(darkTheme)
+    }
+
+    if (isDarkMode) {
+      window.addEventListener('beforeprint', disableDarkMode)
+      window.addEventListener('afterprint', enableDarkMode)
+    }
+
+    return () => {
+      window.removeEventListener('beforeprint', disableDarkMode)
+      window.removeEventListener('afterprint', enableDarkMode)
+    }
+  }, [isDarkMode])
 
   return (
     <>
