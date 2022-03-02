@@ -1,11 +1,11 @@
-import data from './data/zh.json'
+import json from './data/zh.json'
 import * as Icon from 'react-feather'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { styled } from '@stitches/react'
 import { darkTheme } from '../stitches.config'
 import { rem } from 'polished'
 import { Link } from './components/Link'
-import { toDate } from './_utils/parseDate'
+import { formatDate } from './_utils/parseDate'
 import ReactMarkdown from 'react-markdown'
 
 const InfoWithIcon = styled('div', {
@@ -80,12 +80,25 @@ const Button = styled('button', {
     },
 })
 
+type Data = typeof json
+
 function App() {
-    const { skills, experience, projects, education } = data
     const [isDarkMode, setIsDarkMode] = useState(
         window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches,
+        window.matchMedia('(prefers-color-scheme: dark)').matches,
     )
+    const [isEn, setIsEn] = useState(true)
+    const [data, setDate] = useState<Data>(json)
+    const { skills, experience, projects, education } = data
+    const lang = useMemo(() => (isEn ? 'en' : 'zh'), [isEn])
+    const date = useMemo(() => formatDate(lang), [isEn])
+
+    useEffect(() => {
+        fetch(`src/data/${isEn ? 'en' : 'zh'}.json`).then(res => res.json())
+            .then((data: Data) => {
+                setDate(data)
+            })
+    }, [isEn])
 
     useEffect(() => {
         if (isDarkMode) {
@@ -118,12 +131,19 @@ function App() {
 
     return (
         <>
-            <Button
-                className="absolute top-4 right-4 no-print"
-                onClick={() => setIsDarkMode(!isDarkMode)}
-            >
-                {isDarkMode ? <Icon.Moon /> : <Icon.Sun />}
-            </Button>
+            <div className="absolute top-4 right-4 no-print flex content-center">
+                <Button
+                    className="font-bold w-12"
+                    onClick={() => setIsEn(!isEn)}
+                >
+                    {isEn ? '中文' : 'EN'}
+                </Button>
+                <Button
+                    onClick={() => setIsDarkMode(!isDarkMode)}
+                >
+                    {isDarkMode ? <Icon.Moon /> : <Icon.Sun />}
+                </Button>
+            </div>
             <div className="max-w-screen-lg mx-auto py-12 px-10">
                 <header className="grid place-items-center grid-cols-1 px-8">
                     <h1>{data.name}</h1>
@@ -141,7 +161,7 @@ function App() {
                             <Link href={`mailto:${data.email}`}>{data.email}</Link>
                         </InfoWithIcon>
                         <InfoWithIcon>
-                            <Icon.Link2 />
+                            <Icon.Link />
                             <Link href={`https://${data.blog}`} target="_blank">
                                 {data.blog}
                             </Link>
@@ -192,7 +212,7 @@ function App() {
                                     <h3>{item.name}</h3>
                                     <div className="flex flex-wrap gap-2 justify-start mb-4">
                                         <Tag>
-                                            {toDate(item.startDate)} ~ {toDate(item.endDate)}
+                                            {date(item.startDate)(item.endDate)}
                                         </Tag>
                                         {item.roles.map((role, index) => {
                                             return <Tag key={index}>{role}</Tag>
@@ -214,7 +234,7 @@ function App() {
                                                 <h3>{item.name}</h3>
                                                 <div className="flex flex-wrap gap-2 justify-start mb-4">
                                                     <Tag>
-                                                        {toDate(item.startDate)} ~ {toDate(item.endDate)}
+                                                        {date(item.startDate)(item.endDate)}
                                                     </Tag>
                                                     {item.roles.map((role, index) => {
                                                         return <Tag key={index}>{role}</Tag>
@@ -245,7 +265,7 @@ function App() {
                                     <h3>{item.name}</h3>
                                     <div className="flex flex-wrap gap-2 justify-start mb-4">
                                         <Tag>
-                                            {toDate(item.startDate)} ~ {toDate(item.endDate)}
+                                            {date(item.startDate)(item.endDate)}
                                         </Tag>
                                         <Tag>{item.major}</Tag>
                                         <Tag>{item.degree}</Tag>
