@@ -1,0 +1,239 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Like Zheng",
+    "label": "Software Engineer",
+    "email": "like@ekil.sh",
+    "summary": "Hi, my name is Like Zheng, and I am a software engineer passionate about developing user-friendly and maintainable software. With experience in both software development and management, I have played various roles across different projects, including product manager, project manager, and scrum master. My focus is on ensuring exceptional user experience, sound architectural design, and high code quality.",
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "ekil1100",
+        "url": "https://github.com/ekil1100/"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "likezheng",
+        "url": "https://www.linkedin.com/in/likezheng/"
+      },
+      {
+        "network": "Twitter",
+        "username": "ekil1100",
+        "url": "https://twitter.com/ekil1100/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "GreaterHeat Ltd.",
+      "location": "Remote",
+      "position": "Product & Community Manager",
+      "startDate": "2022-08-01",
+      "url": "https://www.greaterheat.com/",
+      "summary": "After the successful expansion of the company to Singapore, I shifted my focus to product and community management to improve the company's community influence, which included communicating with the Filecoin community and designing product prototypes.",
+      "highlights": [
+        "Designed and developed a Filecoin Sealing-as-a-Service platform.",
+        "Published a weekly newsletter about Filecoin and IPFS within the company with over 100 views. Newsletter was issued for 9 weeks as of this resume update."
+      ]
+    },
+    {
+      "name": "ByteArk Tech Ltd.",
+      "location": "Hangzhou, China",
+      "position": "Product Manager",
+      "startDate": "2021-08-01",
+      "endDate": "2022-07-01",
+      "url": "https://byteark.cn/",
+      "summary": "Led a team focused on developing applications based on Filecoin and IPFS.",
+      "highlights": [
+        "Managed a team of 5 people, including 2 Front-End Developers, 2 Back-End Developers, and 1 UI designer.",
+        "Build a cloud storage application based on Filecoin and IPFS."
+      ]
+    },
+    {
+      "name": "Muri Tech Ltd.",
+      "location": "Hangzhou, China",
+      "position": "Front-End Leader",
+      "startDate": "2021-03-01",
+      "endDate": "2021-07-01",
+      "url": "https://www.meprint.com/",
+      "summary": "Started as a Senior Front-End Engineer and established Git usage guidelines and a design system. Successfully contributed to the team, leading to early regularization and promotion to Front-End Leader.",
+      "highlights": [
+        "Led a team of 8 developers to develop and maintain web applications.",
+        "Refactored codebase to improve code quality, reduce technical debt, and increase site performance by 30%.",
+        "Established Git usage guidelines based on trunk-based development.",
+        "Developed the company's design system."
+      ]
+    },
+    {
+      "name": "ByteArk Tech Ltd.",
+      "location": "Hangzhou, China",
+      "position": "Front-End Leader",
+      "startDate": "2019-02-01",
+      "endDate": "2021-02-01",
+      "url": "https://byteark.cn/",
+      "summary": "Started as a Front-End Engineer and was promoted to Front-End Leader upon successful completion of the probation period. Spearheaded the establishment of the Front-End team, developing the team's development processes and standards.",
+      "highlights": [
+        "Managed a team of 8 developers to develop web applications, mobile apps, and WeChat mini-programs.",
+        "Established the team's development processes and standards, including Git usage guidelines, code review guidelines, and design system.",
+        "Researched Agile development methodologies, implemented best practices to improve team performance, and produced over 10,000 words of documentation."
+      ]
+    },
+    {
+      "name": "Ningbo Port Information and Communication Ltd.",
+      "location": "Ningbo, China",
+      "position": "Front-end Developer",
+      "startDate": "2018-08-01",
+      "endDate": "2019-01-01",
+      "url": "https://www.nbport.com.cn/npic/",
+      "summary": "Efficiently developed and meticulously maintained a website for port declaration system using Java and ExtJS.",
+      "highlights": [
+        "Improved developer experience by incorporating polyfills for IE11, increasing browser compatibility and enhancing functionality."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Pandarua",
+      "description": "Filecoin sealing-as-a-service platform.",
+      "roles": ["Product Manager"],
+      "highlights": [
+        "Designed a resource management system to manage the platform's underlying resources and provide a unified interface for the platform."
+      ],
+      "keywords": ["Figma", "Product Map"],
+      "startDate": "2022-08-01",
+      "endDate": "2022-09-01",
+      "entity": "ByteArk Tech Ltd.",
+      "type": "application"
+    },
+    {
+      "name": "MePrint",
+      "description": "An AI-powered pattern design platform for the apparel industry.",
+      "highlights": [
+        "Refactored the codebase from UmiJS to NextJS using a progressive model, improving the developer experience (DX) and reducing the bundle size by 10%.",
+        "Managed application state using react-query, reducing bugs in global state management.",
+        "Introduced a headless CMS to manage website content, making it faster and easier for operators to update the site."
+      ],
+      "keywords": ["React", "NextJS", "React Query", "Emotion", "Directus"],
+      "startDate": "2021-03-01",
+      "endDate": "2021-07-01",
+      "roles": ["Front-End Lead"],
+      "entity": "Muri Tech Ltd.",
+      "type": "application"
+    },
+    {
+      "name": "Dragonfly",
+      "description": "A decentralized docker image storage service developed as an entry to the Filecoin Slingshot Program.",
+      "highlights": [
+        "Awarded Phase 1 first prize in the Filecoin Slingshot Program.",
+        "Modified Powergate to support importing cold deals into its database.",
+        "Presented the project at the Closing Ceremony, link available here: https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s"
+      ],
+      "keywords": ["Vue", "NodeJS", "Go", "Powergate", "IPFS", "Lotus"],
+      "startDate": "2020-10-01",
+      "endDate": "2020-11-01",
+      "roles": ["Product Manager", "Front-End Lead"],
+      "entity": "ByteArk Tech Ltd.",
+      "type": "application"
+    },
+    {
+      "name": "Matrix",
+      "description": "Developed a miner management system for Filecoin that includes a mobile app and WeChat mini-program.",
+      "highlights": [
+        "Built multi-platform mobile applications using Flutter.",
+        "Automated the release process using Fastlane."
+      ],
+      "keywords": ["Flutter", "Taro", "React", "Fastlane"],
+      "startDate": "2019-09-01",
+      "endDate": "2020-01-01",
+      "roles": ["Front-End Lead"],
+      "entity": "ByteArk Tech Ltd.",
+      "type": "application"
+    },
+    {
+      "name": "Arc",
+      "description": "A design system focus on accessibility and usability.",
+      "highlights": [
+        "Researched over 10 design systems.",
+        "Developed over 10 components and successfully launched in production."
+      ],
+      "keywords": [
+        "TypeScript",
+        "React",
+        "Rollup",
+        "Emotion",
+        "Storybook",
+        "Jest"
+      ],
+      "startDate": "2019-09-01",
+      "endDate": "2020-01-01",
+      "roles": ["Front-End Lead"],
+      "entity": "ByteArk Tech Ltd.",
+      "type": "application"
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Guelph",
+      "url": "https://www.uoguelph.ca/",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2012-09-01",
+      "endDate": "2017-12-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Front-end Development",
+      "level": "Senior",
+      "keywords": ["JavaScript", "TypeScript", "NextJS", "ReactJS", "Graphql"]
+    },
+    {
+      "name": "Back-end Development",
+      "level": "Senior",
+      "keywords": [
+        "NodeJS",
+        "PostgreSQL",
+        "Prisma",
+        "NextJS",
+        "Serverless",
+        "Docker",
+        "Graphql"
+      ]
+    },
+    {
+      "name": "Mobile Development",
+      "level": "Intermediate",
+      "keywords": ["Flutter", "Dart"]
+    },
+    {
+      "name": "DevOps",
+      "level": "Intermediate",
+      "keywords": ["Docker", "AWS", "AliCloud", "Vercel", "Serverless"]
+    },
+    {
+      "name": "Project Management",
+      "level": "Senior",
+      "keywords": ["Agile", "Scrum", "Linear"]
+    },
+    {
+      "name": "Design",
+      "level": "Junior",
+      "keywords": ["Figma"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Chinese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}

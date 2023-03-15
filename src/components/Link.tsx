@@ -1,10 +1,17 @@
-import { styled } from '../../stitches.config'
+import { AnchorHTMLAttributes } from 'react'
 
-export const Link = styled('a', {
-  color: '$link',
-  textDecoration: 'none',
-  '&:hover': {
-    textDecoration: 'underline',
-    color: '$linkHover',
-  },
-})
+interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
+
+const Link: React.FC<LinkProps> = ({ children, href, ...props }) => {
+    return (
+        <a
+            href={href}
+            className='text-blue-600 hover:text-blue-800 hover:underline'
+            {...props}
+        >
+            {children}
+        </a>
+    )
+}
+
+export default Link
