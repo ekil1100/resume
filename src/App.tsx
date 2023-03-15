@@ -6,7 +6,10 @@ function App() {
             <section className='-ml-4 mb-8'>
                 <h1>{cv.basics.name}</h1>
                 <small className='text-gray-500'>{cv.basics.label}</small>
-                <a className='' href={`mailto:${cv.basics.email}`}>
+                <a
+                    className='block text-sm underline underline-offset-2 decoration-dashed hover:font-extrabold'
+                    href={`mailto:${cv.basics.email}`}
+                >
                     {cv.basics.email}
                 </a>
                 <div>
