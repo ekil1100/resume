@@ -45,9 +45,14 @@ function App() {
         <div className='w-[48rem] p-8 mx-auto print:p-0'>
             <main className='relative mb-4'>
                 <div className='absolute top-0 right-0 print:hidden'>
-                    <button className='p-2 rounded-sm hover:bg-gray-200 active:bg-gray-300'>
-                        <CarbonGeneratePdf className='text-xl' />
-                    </button>
+                    <a
+                        href='/resume.pdf'
+                        download={`Like_Resume_${cv.meta.lastModified}.pdf`}
+                    >
+                        <button className='p-2 rounded-sm hover:bg-gray-200 active:bg-gray-300'>
+                            <CarbonGeneratePdf className='text-xl' />
+                        </button>
+                    </a>
                 </div>
                 <section className='-ml-6 flex flex-col gap-4 print:items-center'>
                     <div className='flex flex-col gap-2 print:items-center'>
