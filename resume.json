@@ -188,25 +188,17 @@
   ],
   "skills": [
     {
-      "name": "Front-end Development",
+      "name": "Front-end",
       "level": "Senior",
       "keywords": ["JavaScript", "TypeScript", "NextJS", "ReactJS", "Graphql"]
     },
     {
-      "name": "Back-end Development",
+      "name": "Back-end",
       "level": "Senior",
-      "keywords": [
-        "NodeJS",
-        "PostgreSQL",
-        "Prisma",
-        "NextJS",
-        "Serverless",
-        "Docker",
-        "Graphql"
-      ]
+      "keywords": ["NodeJS", "PostgreSQL", "Prisma", "NextJS", "Graphql"]
     },
     {
-      "name": "Mobile Development",
+      "name": "Mobile",
       "level": "Intermediate",
       "keywords": ["Flutter", "Dart"]
     },
@@ -217,7 +209,7 @@
     },
     {
       "name": "Project Management",
-      "level": "Senior",
+      "level": "Intermediate",
       "keywords": ["Agile", "Scrum", "Linear"]
     },
     {

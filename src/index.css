@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,18 +10,22 @@ body {
 }
 
 h1 {
-    @apply text-2xl font-bold;
+    @apply text-3xl font-semibold;
 }
 
 h2 {
-    @apply text-lg font-bold;
-    @apply mb-4;
+    @apply text-lg font-semibold;
+    @apply mb-6;
     @apply -ml-6;
     @apply text-white bg-black w-max px-2;
 }
 
 h3 {
-    @apply text-lg font-bold;
+    @apply text-lg font-semibold;
+}
+
+h4 {
+    @apply font-semibold;
 }
 
 section {
@@ -36,4 +40,34 @@ li {
     @apply list-disc;
     @apply ml-8;
     @apply mb-2;
+}
+
+.text-with-slashes {
+    position: relative;
+    display: inline-block;
+    /* padding-left: 15px; */
+}
+
+.text-with-slashes::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -2px;
+    width: 2px;
+    height: 6px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+.text-with-slashes::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -5px;
+    width: 2px;
+    height: 12px;
+    background-color: black;
+    transform: rotate(45deg);
+    margin-top: 4px;
+    margin-left: 4px;
 }

@@ -79,7 +79,7 @@ function App() {
                             <h3>
                                 <Link
                                     href={job.url}
-                                    className='underline-offset-4'
+                                    className='underline-offset-4 text-with-slashes'
                                 >
                                     {job.name}
                                 </Link>
@@ -112,7 +112,9 @@ function App() {
                         className='mb-6'
                     >
                         <div className='flex justify-between items-center mb-1'>
-                            <h3>{project.name}</h3>
+                            <h3 className='text-with-slashes'>
+                                {project.name}
+                            </h3>
                             <div className='text-gray-500 text-sm'>
                                 <Time
                                     startDate={project.startDate}
@@ -144,51 +146,71 @@ function App() {
                 ))}
             </section>
             <section>
-                <h2>Skills</h2>
-                <ul>
-                    {cv.skills.map((skill) => (
-                        <li key={skill.name}>
-                            <h3 className='text-lg'>{skill.name}</h3>
-                            <ul>
-                                {skill.keywords.map((keyword) => (
-                                    <li key={keyword}>{keyword}</li>
-                                ))}
-                            </ul>
-                        </li>
-                    ))}
-                </ul>
-            </section>
-            <section>
                 <h2>Education</h2>
                 {cv.education.map((school) => (
-                    <div key={school.institution}>
-                        <h3 className='text-lg'>{school.institution}</h3>
-                        <div className='text-gray-500 text-sm'>
-                            {school.area}
+                    <div key={school.institution} className='mb-6'>
+                        <div className='flex justify-between items-center mb-1'>
+                            <h3 className='text-with-slashes'>
+                                <Link
+                                    href={school.url}
+                                    className='underline-offset-4 text-with-slashes'
+                                >
+                                    {school.institution}
+                                </Link>
+                            </h3>
+                            <div className='text-gray-500 text-sm'>
+                                <Time
+                                    startDate={school.startDate}
+                                    endDate={school.endDate}
+                                />
+                            </div>
                         </div>
                         <div className='text-gray-500 text-sm'>
-                            {school.startDate} - {school.endDate}
+                            {school.studyType} of {school.area}
                         </div>
-                        {/* <ul>
-                            {school.courses.map((course) => (
-                                <li key={course}>{course}</li>
-                            ))}
-                        </ul> */}
                     </div>
                 ))}
             </section>
             <section>
-                <h2>Languages</h2>
-                <ul>
-                    {cv.languages.map((language) => (
-                        <li key={language.language}>
-                            <h3 className='text-lg'>{language.language}</h3>
-                            <div className='text-gray-500 text-sm'>
-                                {language.fluency}
+                <h2>Skills</h2>
+                <div>
+                    {cv.skills.map((skill) => (
+                        <div key={skill.name} className='mb-4'>
+                            <div className='flex gap-2 items-baseline mb-1'>
+                                <h4>{skill.name}</h4>
+                                <small className='text-gray-500'>
+                                    {skill.level}
+                                </small>
                             </div>
-                        </li>
+                            <div>
+                                {skill.keywords.map((item) => (
+                                    <span
+                                        key={item}
+                                        className='border border-black px-2 py-0.5 mr-2 text-sm'
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     ))}
-                </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Languages</h2>
+                <div>
+                    {cv.languages.map((language) => (
+                        <div
+                            key={language.language}
+                            className='flex gap-2 items-baseline mb-1'
+                        >
+                            <h4>{language.language}</h4>
+                            <small className='text-gray-500'>
+                                {language.fluency}
+                            </small>
+                        </div>
+                    ))}
+                </div>
             </section>
         </main>
     )
