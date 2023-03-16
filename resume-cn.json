@@ -1,67 +1,42 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Like Zheng",
-    "label": "Software Engineer | Product Manager",
-    "email": "like@ekil.sh",
-    "summary": "5 年的工作生涯中，前 3 年做的是软件工程，后 2 年主要是做产品经理，对于 UI 设计略知一二。业余时间会自己写写代码，尝试些新的技术。相较于后端，更加擅长前端开发，非常在意用户体验，这也是我为什么会去学习产品设计和 UI 设计的原因。注重团队协作，曾经从 0 到 1 建立了一个拥有敏捷文化的 6 人前端团队。",
-    "profiles": [
-      {
-        "network": "Github",
-        "username": "ekil1100",
-        "url": "https://github.com/ekil1100/"
-      },
-      {
-        "network": "LinkedIn",
-        "username": "likezheng",
-        "url": "https://www.linkedin.com/in/likezheng/"
-      },
-      {
-        "network": "Twitter",
-        "username": "ekil1100",
-        "url": "https://twitter.com/ekil1100/"
-      }
-    ]
+    "name": "郑力可",
+    "label": "软件工程师 || 产品经理",
+    "summary": "5 年的工作生涯中，前 3 年做的是软件工程，后 2 年主要是做产品经理，对于 UI 设计略知一二。业余时间会自己写写代码，尝试些新的技术。相较于后端，更加擅长前端开发，非常在意用户体验，这也是我为什么会去学习产品设计和 UI 设计的原因。注重团队协作，曾经从 0 到 1 建立了一个拥有敏捷文化的 6 人前端团队。"
   },
   "work": [
     {
-      "name": "GreaterHeat Ltd.",
-      "location": "Remote",
-      "position": "Product & Community Manager",
-      "startDate": "2022-08-01",
-      "url": "https://www.greaterheat.com/",
-      "summary": "After the successful expansion of the company to Singapore, I shifted my focus to product and community management to improve the company's community influence, which included communicating with the Filecoin community and designing product prototypes.",
+      "name": "杭州字节方舟科技有限公司",
+      "location": "远程",
+      "position": "社区产品经理",
+      "summary": "主要工作是处理和收集 Filecoin 社区信息，以及 Filecoin 应用的产品设计。",
       "highlights": [
-        "Designed and developed a Filecoin Sealing-as-a-Service platform.",
-        "Published a weekly newsletter about Filecoin and IPFS within the company with over 100 views. Newsletter was issued for 9 weeks as of this resume update."
+        "设计并参与开发了一个 Filecoin 远程封装平台。",
+        "公司内部发布 Filecoin Weekly 周刊，内容包括 Filecoin 的相关新闻、活动、代码更新、文章、视频等。已发布 10 期，累计阅读量超过 200。"
       ]
     },
     {
-      "name": "ByteArk Tech Ltd.",
-      "location": "Hangzhou, China",
-      "position": "Product Manager",
-      "startDate": "2021-08-01",
-      "endDate": "2022-07-01",
-      "url": "https://byteark.cn/",
-      "summary": "Led a team focused on developing applications based on Filecoin and IPFS.",
+      "name": "杭州字节方舟科技有限公司",
+      "location": "杭州",
+      "position": "产品经理",
+      "summary": "处理和收集 Filecoin 社区信息，以及基于 Filecoin 的应用设计。",
       "highlights": [
-        "Managed a team of 5 people, including 2 Front-End Developers, 2 Back-End Developers, and 1 UI designer.",
-        "Build a cloud storage application based on Filecoin and IPFS."
+        "管理 5 人的小团队，2 个前端，2 个后端和 1 个 UI 设计师。",
+        "Build a cloud storage application based on Filecoin and IPFS.",
+        "一个基于 Filecoin 和 IPFS 的云存储 Demo。",
+        "设计并参与开发了一个 Filecoin 远程封装平台。"
       ]
     },
     {
-      "name": "Muri Tech Ltd.",
-      "location": "Hangzhou, China",
-      "position": "Front-End Leader",
-      "startDate": "2021-03-01",
-      "endDate": "2021-07-01",
-      "url": "https://www.meprint.com/",
-      "summary": "Started as a Senior Front-End Engineer and established Git usage guidelines and a design system. Successfully contributed to the team, leading to early regularization and promotion to Front-End Leader.",
+      "name": "杭州慕锐科技有限公司",
+      "location": "杭州",
+      "position": "前端负责人",
+      "summary": "试用期期间帮助团队优化了 Git 流程，并推进了设计体系的建设，因此提前转正并被提拔为前端负责人。",
       "highlights": [
-        "Led a team of 8 developers to develop and maintain web applications.",
-        "Refactored codebase to improve code quality, reduce technical debt, and increase site performance by 30%.",
-        "Established Git usage guidelines based on trunk-based development.",
-        "Developed the company's design system."
+        "带领 5 人的前端团队，负责开发和维护 Web 应用。",
+        "把代码从 UmiJS 迁移到 NextJS 并进行了重构，优化了 SEO，包体积减少了 10%，提升了开发体验。",
+        "基于 Trunk-Based Development 制定了 Git 流程，并书写了文档。"
       ]
     },
     {

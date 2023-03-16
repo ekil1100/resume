@@ -30,15 +30,15 @@
   },
   "work": [
     {
-      "name": "GreaterHeat Ltd.",
+      "name": "ByteArk Tech Ltd.",
       "location": "Remote",
-      "position": "Product & Community Manager",
+      "position": "Community & Product Manager",
       "startDate": "2022-08-01",
-      "url": "https://www.greaterheat.com/",
-      "summary": "After the successful expansion of the company to Singapore, I shifted my focus to product and community management to improve the company's community influence, which included communicating with the Filecoin community and designing product prototypes.",
+      "url": "https://byteark.cn/",
+      "summary": "Manage and compile information from the Filecoin community, as well as engage in the design of applications based on Filecoin.",
       "highlights": [
-        "Designed and developed a Filecoin Sealing-as-a-Service platform.",
-        "Published a weekly newsletter about Filecoin and IPFS within the company with over 100 views. Newsletter was issued for 9 weeks as of this resume update."
+        "Designed and took part in the development of a Filecoin remote sealing (Sealing-as-a-Service) platform.",
+        "Publish the internal Filecoin Weekly newsletter, which covers topics such as Filecoin-related news, events, code updates, articles, and videos. Successfully released 10 issues, accumulating views of over 200."
       ]
     },
     {
@@ -51,22 +51,21 @@
       "summary": "Led a team focused on developing applications based on Filecoin and IPFS.",
       "highlights": [
         "Managed a team of 5 people, including 2 Front-End Developers, 2 Back-End Developers, and 1 UI designer.",
-        "Build a cloud storage application based on Filecoin and IPFS."
+        "Build a prototype of cloud storage application based on Filecoin and IPFS."
       ]
     },
     {
       "name": "Muri Tech Ltd.",
       "location": "Hangzhou, China",
-      "position": "Front-End Leader",
+      "position": "Front-End Lead",
       "startDate": "2021-03-01",
       "endDate": "2021-07-01",
       "url": "https://www.meprint.com/",
-      "summary": "Started as a Senior Front-End Engineer and established Git usage guidelines and a design system. Successfully contributed to the team, leading to early regularization and promotion to Front-End Leader.",
+      "summary": "During the probationary period, assisted the team in optimizing Git workflow and advancing the development of design systems, leading to an early promotion to Front-End Team Lead.",
       "highlights": [
-        "Led a team of 8 developers to develop and maintain web applications.",
-        "Refactored codebase to improve code quality, reduce technical debt, and increase site performance by 30%.",
-        "Established Git usage guidelines based on trunk-based development.",
-        "Developed the company's design system."
+        "Led a 5-member front-end team, responsible for developing and maintaining web applications.",
+        "Migrated code from UmiJS to NextJS and conducted refactoring, improving SEO, reducing package size by 10%, and enhancing the development experience.",
+        "Developed Git workflow based on Trunk-Based Development and authored documentation."
       ]
     },
     {
@@ -100,16 +99,11 @@
     {
       "name": "Pandarua",
       "description": "Filecoin sealing-as-a-service platform.",
-      "roles": [
-        "Product Manager"
-      ],
+      "roles": ["Product Manager"],
       "highlights": [
         "Designed a resource management system to manage the platform's underlying resources and provide a unified interface for the platform."
       ],
-      "keywords": [
-        "Figma",
-        "Product Map"
-      ],
+      "keywords": ["Figma", "Product Map"],
       "startDate": "2022-08-01",
       "endDate": "2022-09-01",
       "entity": "ByteArk Tech Ltd.",
@@ -123,18 +117,10 @@
         "Managed application state using react-query, reducing bugs in global state management.",
         "Introduced a headless CMS to manage website content, making it faster and easier for operators to update the site."
       ],
-      "keywords": [
-        "React",
-        "NextJS",
-        "React Query",
-        "Emotion",
-        "Directus"
-      ],
+      "keywords": ["React", "NextJS", "React Query", "Emotion", "Directus"],
       "startDate": "2021-03-01",
       "endDate": "2021-07-01",
-      "roles": [
-        "Front-End Lead"
-      ],
+      "roles": ["Front-End Lead"],
       "entity": "Muri Tech Ltd.",
       "type": "application"
     },
@@ -146,20 +132,10 @@
         "Modified Powergate to support importing cold deals into its database.",
         "Presented the project at the Closing Ceremony, link available here: https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s"
       ],
-      "keywords": [
-        "Vue",
-        "NodeJS",
-        "Go",
-        "Powergate",
-        "IPFS",
-        "Lotus"
-      ],
+      "keywords": ["Vue", "NodeJS", "Go", "Powergate", "IPFS", "Lotus"],
       "startDate": "2020-10-01",
       "endDate": "2020-11-01",
-      "roles": [
-        "Product Manager",
-        "Front-End Lead"
-      ],
+      "roles": ["Product Manager", "Front-End Lead"],
       "entity": "ByteArk Tech Ltd.",
       "type": "application"
     },
@@ -170,17 +146,10 @@
         "Built multi-platform mobile applications using Flutter.",
         "Automated the release process using Fastlane."
       ],
-      "keywords": [
-        "Flutter",
-        "Taro",
-        "React",
-        "Fastlane"
-      ],
+      "keywords": ["Flutter", "Taro", "React", "Fastlane"],
       "startDate": "2019-09-01",
       "endDate": "2020-01-01",
-      "roles": [
-        "Front-End Lead"
-      ],
+      "roles": ["Front-End Lead"],
       "entity": "ByteArk Tech Ltd.",
       "type": "application"
     },
@@ -201,9 +170,7 @@
       ],
       "startDate": "2019-09-01",
       "endDate": "2020-01-01",
-      "roles": [
-        "Front-End Lead"
-      ],
+      "roles": ["Front-End Lead"],
       "entity": "ByteArk Tech Ltd.",
       "type": "application"
     }
@@ -222,59 +189,32 @@
     {
       "name": "Front-end",
       "level": "Senior",
-      "keywords": [
-        "JavaScript",
-        "TypeScript",
-        "NextJS",
-        "ReactJS",
-        "Graphql"
-      ]
+      "keywords": ["JavaScript", "TypeScript", "NextJS", "ReactJS", "Graphql"]
     },
     {
       "name": "Back-end",
       "level": "Senior",
-      "keywords": [
-        "NodeJS",
-        "PostgreSQL",
-        "Prisma",
-        "NextJS",
-        "Graphql"
-      ]
+      "keywords": ["NodeJS", "PostgreSQL", "Prisma", "NextJS", "Graphql"]
     },
     {
       "name": "Mobile",
       "level": "Intermediate",
-      "keywords": [
-        "Flutter",
-        "Dart"
-      ]
+      "keywords": ["Flutter", "Dart"]
     },
     {
       "name": "DevOps",
       "level": "Intermediate",
-      "keywords": [
-        "Docker",
-        "AWS",
-        "AliCloud",
-        "Vercel",
-        "Serverless"
-      ]
+      "keywords": ["Docker", "AWS", "AliCloud", "Vercel", "Serverless"]
     },
     {
       "name": "Project Management",
       "level": "Intermediate",
-      "keywords": [
-        "Agile",
-        "Scrum",
-        "Linear"
-      ]
+      "keywords": ["Agile", "Scrum", "Linear"]
     },
     {
       "name": "Design",
       "level": "Intermediate",
-      "keywords": [
-        "Figma"
-      ]
+      "keywords": ["Figma"]
     }
   ],
   "languages": [
