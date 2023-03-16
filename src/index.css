@@ -14,12 +14,14 @@ h1 {
 }
 
 h2 {
-    @apply text-lg;
+    @apply text-lg font-bold;
     @apply mb-4;
     @apply -ml-6;
-    /* @apply border-b-4 border-black; */
-    @apply text-white bg-black w-max;
-    @apply px-2;
+    @apply text-white bg-black w-max px-2;
+}
+
+h3 {
+    @apply text-lg font-bold;
 }
 
 section {
@@ -27,5 +29,11 @@ section {
 }
 
 p {
-    @apply break-words;
+    @apply mb-2;
+}
+
+li {
+    @apply list-disc;
+    @apply ml-8;
+    @apply mb-2;
 }

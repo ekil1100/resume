@@ -17,6 +17,28 @@ const icons: Record<string, ReactNode> = {
     blog: <MdiWeb className='text-xl' />,
 }
 
+function Time({ startDate, endDate }: { startDate: string; endDate?: string }) {
+    return (
+        <time dateTime={startDate}>
+            {new Date(startDate).toLocaleDateString('en-US', {
+                month: 'short',
+                year: 'numeric',
+            })}
+            {' - '}
+            {endDate ? (
+                <time dateTime={endDate}>
+                    {new Date(endDate).toLocaleDateString('en-US', {
+                        month: 'short',
+                        year: 'numeric',
+                    })}
+                </time>
+            ) : (
+                'Present'
+            )}
+        </time>
+    )
+}
+
 function App() {
     return (
         <main className='w-[48rem] p-8 m-4 mx-auto'>
@@ -52,14 +74,28 @@ function App() {
             <section>
                 <h2>Experience</h2>
                 {cv.work.map((job) => (
-                    <div key={job.name}>
-                        <h3 className='text-lg'>{job.name}</h3>
-                        <div className='text-gray-500 text-sm'>
-                            {job.position}
+                    <div key={job.startDate} className='mb-6'>
+                        <div className='flex justify-between items-center mb-1'>
+                            <h3>
+                                <Link
+                                    href={job.url}
+                                    className='underline-offset-4'
+                                >
+                                    {job.name}
+                                </Link>
+                            </h3>
+                            <div className='text-gray-500 text-sm'>
+                                <Time
+                                    startDate={job.startDate}
+                                    endDate={job.endDate}
+                                />
+                            </div>
                         </div>
-                        <div className='text-gray-500 text-sm'>
-                            {job.startDate} - {job.endDate}
+                        <div className='text-gray-500 flex justify-between'>
+                            <p>{job.position}</p>
+                            <p>{job.location}</p>
                         </div>
+                        <p className='text-gray-900'>{job.summary}</p>
                         <ul>
                             {job.highlights.map((highlight) => (
                                 <li key={highlight}>{highlight}</li>
@@ -71,11 +107,34 @@ function App() {
             <section>
                 <h2>Projects</h2>
                 {cv.projects.map((project) => (
-                    <div key={project.name}>
-                        <h3 className='text-lg'>{project.name}</h3>
-                        <div className='text-gray-500 text-sm'>
-                            {project.startDate} - {project.endDate}
+                    <div
+                        key={project.startDate + project.name}
+                        className='mb-6'
+                    >
+                        <div className='flex justify-between items-center mb-1'>
+                            <h3>{project.name}</h3>
+                            <div className='text-gray-500 text-sm'>
+                                <Time
+                                    startDate={project.startDate}
+                                    endDate={project.endDate}
+                                />
+                            </div>
                         </div>
+                        <div className='text-gray-500 flex justify-between'>
+                            <p>{project.roles.join(' & ')}</p>
+                            <p>{project.entity}</p>
+                        </div>
+                        <p>
+                            {project.keywords.map((item) => (
+                                <span
+                                    key={item}
+                                    className='border border-black px-2 py-0.5 mr-2 text-sm'
+                                >
+                                    {item}
+                                </span>
+                            ))}
+                        </p>
+                        <p className='text-gray-900'>{project.description}</p>
                         <ul>
                             {project.highlights.map((highlight) => (
                                 <li key={highlight}>{highlight}</li>
@@ -117,6 +176,19 @@ function App() {
                         </ul> */}
                     </div>
                 ))}
+            </section>
+            <section>
+                <h2>Languages</h2>
+                <ul>
+                    {cv.languages.map((language) => (
+                        <li key={language.language}>
+                            <h3 className='text-lg'>{language.language}</h3>
+                            <div className='text-gray-500 text-sm'>
+                                {language.fluency}
+                            </div>
+                        </li>
+                    ))}
+                </ul>
             </section>
         </main>
     )

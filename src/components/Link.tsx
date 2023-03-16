@@ -6,6 +6,7 @@ function Link({ children, className, ...props }: LinkProps) {
     return (
         <a
             className={`underline underline-offset-2 decoration-dashed ${className}`}
+            target='_blank'
             {...props}
         >
             {children}
