@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsx ./src/scripts/update-modified-date.ts && vite build",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
+    "puppeteer": "^19.7.5",
     "tailwindcss": "^3.2.7",
     "tsx": "^3.12.5",
     "typescript": "^4.9.5",

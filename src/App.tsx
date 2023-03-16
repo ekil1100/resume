@@ -42,15 +42,15 @@ function Time({ startDate, endDate }: { startDate: string; endDate?: string }) {
 
 function App() {
     return (
-        <>
-            <main className='w-[48rem] p-8 m-4 mx-auto relative'>
-                <div className='absolute top-8 right-8'>
+        <div className='w-[48rem] p-8 mx-auto print:p-0'>
+            <main className='relative mb-4'>
+                <div className='absolute top-0 right-0 print:hidden'>
                     <button className='p-2 rounded-sm hover:bg-gray-200 active:bg-gray-300'>
                         <CarbonGeneratePdf className='text-xl' />
                     </button>
                 </div>
-                <section className='-ml-6 flex flex-col gap-4'>
-                    <div className='flex flex-col gap-2'>
+                <section className='-ml-6 flex flex-col gap-4 print:items-center'>
+                    <div className='flex flex-col gap-2 print:items-center'>
                         <h1>{cv.basics.name}</h1>
                         <div className='text-gray-500'>{cv.basics.label}</div>
                     </div>
@@ -225,7 +225,19 @@ function App() {
                     </div>
                 </section>
             </main>
-            <footer className='mb-8 flex justify-center'>
+            <footer className='flex flex-col justify-center items-center gap-1'>
+                <Link
+                    className='text-sm text-gray-500 print:hidden'
+                    href='https://github.com/ekil1100/resume'
+                >
+                    Source Code
+                </Link>
+                <Link
+                    className='text-sm text-gray-500 hidden print:block'
+                    href='https://resume.ekil.io'
+                >
+                    https://resume.ekil.io
+                </Link>
                 <small className='text-gray-500'>
                     {new Date(cv.meta.lastModified).toLocaleDateString(
                         'en-US',
@@ -240,7 +252,7 @@ function App() {
                     )}
                 </small>
             </footer>
-        </>
+        </div>
     )
 }
 

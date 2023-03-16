@@ -12,7 +12,7 @@ fs.stat(filePath, (err, stats) => {
 
     cv.meta.lastModified = stats.mtime.toISOString()
 
-    fs.writeFile(filePath, JSON.stringify(cv), (err) => {
+    fs.writeFile(filePath, JSON.stringify(cv, null, 2), (err) => {
         if (err) {
             console.error('Error writing file:', err)
             return
