@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsx ./src/scripts/update-modified-date.ts && vite build",
-    "serve": "vite preview"
+    "build:vite": "vite build",
+    "build": "run-s update-date export-pdf build:vite",
+    "serve": "vite preview",
+    "export-pdf": "tsx ./src/scripts/export-pdf.ts",
+    "update-date": "tsx ./src/scripts/update-modified-date.ts"
   },
   "dependencies": {
     "date-fns": "^2.29.3",
@@ -20,6 +23,7 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
     "puppeteer": "^19.7.5",
     "tailwindcss": "^3.2.7",

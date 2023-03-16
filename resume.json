@@ -100,11 +100,16 @@
     {
       "name": "Pandarua",
       "description": "Filecoin sealing-as-a-service platform.",
-      "roles": ["Product Manager"],
+      "roles": [
+        "Product Manager"
+      ],
       "highlights": [
         "Designed a resource management system to manage the platform's underlying resources and provide a unified interface for the platform."
       ],
-      "keywords": ["Figma", "Product Map"],
+      "keywords": [
+        "Figma",
+        "Product Map"
+      ],
       "startDate": "2022-08-01",
       "endDate": "2022-09-01",
       "entity": "ByteArk Tech Ltd.",
@@ -118,10 +123,18 @@
         "Managed application state using react-query, reducing bugs in global state management.",
         "Introduced a headless CMS to manage website content, making it faster and easier for operators to update the site."
       ],
-      "keywords": ["React", "NextJS", "React Query", "Emotion", "Directus"],
+      "keywords": [
+        "React",
+        "NextJS",
+        "React Query",
+        "Emotion",
+        "Directus"
+      ],
       "startDate": "2021-03-01",
       "endDate": "2021-07-01",
-      "roles": ["Front-End Lead"],
+      "roles": [
+        "Front-End Lead"
+      ],
       "entity": "Muri Tech Ltd.",
       "type": "application"
     },
@@ -133,10 +146,20 @@
         "Modified Powergate to support importing cold deals into its database.",
         "Presented the project at the Closing Ceremony, link available here: https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s"
       ],
-      "keywords": ["Vue", "NodeJS", "Go", "Powergate", "IPFS", "Lotus"],
+      "keywords": [
+        "Vue",
+        "NodeJS",
+        "Go",
+        "Powergate",
+        "IPFS",
+        "Lotus"
+      ],
       "startDate": "2020-10-01",
       "endDate": "2020-11-01",
-      "roles": ["Product Manager", "Front-End Lead"],
+      "roles": [
+        "Product Manager",
+        "Front-End Lead"
+      ],
       "entity": "ByteArk Tech Ltd.",
       "type": "application"
     },
@@ -147,10 +170,17 @@
         "Built multi-platform mobile applications using Flutter.",
         "Automated the release process using Fastlane."
       ],
-      "keywords": ["Flutter", "Taro", "React", "Fastlane"],
+      "keywords": [
+        "Flutter",
+        "Taro",
+        "React",
+        "Fastlane"
+      ],
       "startDate": "2019-09-01",
       "endDate": "2020-01-01",
-      "roles": ["Front-End Lead"],
+      "roles": [
+        "Front-End Lead"
+      ],
       "entity": "ByteArk Tech Ltd.",
       "type": "application"
     },
@@ -171,7 +201,9 @@
       ],
       "startDate": "2019-09-01",
       "endDate": "2020-01-01",
-      "roles": ["Front-End Lead"],
+      "roles": [
+        "Front-End Lead"
+      ],
       "entity": "ByteArk Tech Ltd.",
       "type": "application"
     }
@@ -190,32 +222,59 @@
     {
       "name": "Front-end",
       "level": "Senior",
-      "keywords": ["JavaScript", "TypeScript", "NextJS", "ReactJS", "Graphql"]
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "NextJS",
+        "ReactJS",
+        "Graphql"
+      ]
     },
     {
       "name": "Back-end",
       "level": "Senior",
-      "keywords": ["NodeJS", "PostgreSQL", "Prisma", "NextJS", "Graphql"]
+      "keywords": [
+        "NodeJS",
+        "PostgreSQL",
+        "Prisma",
+        "NextJS",
+        "Graphql"
+      ]
     },
     {
       "name": "Mobile",
       "level": "Intermediate",
-      "keywords": ["Flutter", "Dart"]
+      "keywords": [
+        "Flutter",
+        "Dart"
+      ]
     },
     {
       "name": "DevOps",
       "level": "Intermediate",
-      "keywords": ["Docker", "AWS", "AliCloud", "Vercel", "Serverless"]
+      "keywords": [
+        "Docker",
+        "AWS",
+        "AliCloud",
+        "Vercel",
+        "Serverless"
+      ]
     },
     {
       "name": "Project Management",
       "level": "Intermediate",
-      "keywords": ["Agile", "Scrum", "Linear"]
+      "keywords": [
+        "Agile",
+        "Scrum",
+        "Linear"
+      ]
     },
     {
       "name": "Design",
       "level": "Intermediate",
-      "keywords": ["Figma"]
+      "keywords": [
+        "Figma"
+      ]
     }
   ],
   "languages": [
@@ -229,6 +288,6 @@
     }
   ],
   "meta": {
-    "lastModified": "2023-03-16T13:21:48.680Z"
+    "lastModified": "2023-03-16T13:22:17.330Z"
   }
 }
