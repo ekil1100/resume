@@ -93,7 +93,7 @@ function App() {
                         </div>
                         <div className='text-gray-500 flex justify-between'>
                             <p>{job.position}</p>
-                            <p>{job.location}</p>
+                            <p className='text-sm'>{job.location}</p>
                         </div>
                         <p className='text-gray-900'>{job.summary}</p>
                         <ul>
@@ -124,7 +124,7 @@ function App() {
                         </div>
                         <div className='text-gray-500 flex justify-between'>
                             <p>{project.roles.join(' & ')}</p>
-                            <p>{project.entity}</p>
+                            <p className='text-sm'>{project.entity}</p>
                         </div>
                         <p>
                             {project.keywords.map((item) => (
@@ -149,7 +149,7 @@ function App() {
                 <h2>Education</h2>
                 {cv.education.map((school) => (
                     <div key={school.institution} className='mb-6'>
-                        <div className='flex justify-between items-center mb-1'>
+                        <div className='flex justify-between items-center mb-2'>
                             <h3 className='text-with-slashes'>
                                 <Link
                                     href={school.url}
@@ -175,8 +175,11 @@ function App() {
                 <h2>Skills</h2>
                 <div>
                     {cv.skills.map((skill) => (
-                        <div key={skill.name} className='mb-4'>
-                            <div className='flex gap-2 items-baseline mb-1'>
+                        <div
+                            key={skill.name}
+                            className='mb-4 flex justify-between items-center'
+                        >
+                            <div className='flex gap-2 items-baseline'>
                                 <h4>{skill.name}</h4>
                                 <small className='text-gray-500'>
                                     {skill.level}
@@ -202,7 +205,7 @@ function App() {
                     {cv.languages.map((language) => (
                         <div
                             key={language.language}
-                            className='flex gap-2 items-baseline mb-1'
+                            className='flex gap-2 items-baseline mb-2'
                         >
                             <h4>{language.language}</h4>
                             <small className='text-gray-500'>
