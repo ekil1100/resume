@@ -1,0 +1,214 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "郑力可",
+    "label": "软件工程师 || 产品经理",
+    "summary": "5 年的工作生涯中，前 3 年做的是软件工程，后 2 年主要是做产品经理，对于 UI 设计略知一二。业余时间会自己写写代码，尝试些新的技术。相较于后端，更加擅长前端开发，非常在意用户体验，这也是我为什么会去学习产品设计和 UI 设计的原因。注重团队协作，曾经从 0 到 1 建立了一个拥有敏捷文化的 6 人前端团队。"
+  },
+  "work": [
+    {
+      "name": "杭州字节方舟科技有限公司",
+      "location": "远程",
+      "position": "社区产品经理",
+      "summary": "主要工作是处理和收集 Filecoin 社区信息，以及 Filecoin 应用的产品设计。",
+      "highlights": [
+        "设计并参与开发了一个 Filecoin 远程封装平台。",
+        "公司内部发布 Filecoin Weekly 周刊，内容包括 Filecoin 的相关新闻、活动、代码更新、文章、视频等。已发布 10 期，累计阅读量超过 200。"
+      ]
+    },
+    {
+      "name": "杭州字节方舟科技有限公司",
+      "location": "杭州",
+      "position": "产品经理",
+      "summary": "处理和收集 Filecoin 社区信息，以及基于 Filecoin 的应用设计。",
+      "highlights": [
+        "管理 5 人的小团队，2 个前端，2 个后端和 1 个 UI 设计师。",
+        "Build a cloud storage application based on Filecoin and IPFS.",
+        "一个基于 Filecoin 和 IPFS 的云存储 Demo。",
+        "设计并参与开发了一个 Filecoin 远程封装平台。"
+      ]
+    },
+    {
+      "name": "杭州慕锐科技有限公司",
+      "location": "杭州",
+      "position": "前端负责人",
+      "summary": "试用期期间帮助团队优化了 Git 流程，并推进了设计体系的建设，因此提前转正并被提拔为前端负责人。",
+      "highlights": [
+        "带领 5 人的前端团队，负责开发和维护 Web 应用。",
+        "把代码从 UmiJS 迁移到 NextJS 并进行了重构，优化了 SEO，包体积减少了 10%，提升了开发体验。",
+        "基于 Trunk-Based Development 制定了 Git 流程，并书写了文档。"
+      ]
+    },
+    {
+      "name": "ByteArk Tech Ltd.",
+      "location": "Hangzhou, China",
+      "position": "Front-End Leader",
+      "startDate": "2019-02-01",
+      "endDate": "2021-02-01",
+      "url": "https://byteark.cn/",
+      "summary": "Started as a Front-End Engineer and was promoted to Front-End Leader upon successful completion of the probation period. Spearheaded the establishment of the Front-End team, developing the team's development processes and standards.",
+      "highlights": [
+        "Managed a team of 8 developers to develop web applications, mobile apps, and WeChat mini-programs.",
+        "Established the team's development processes and standards, including Git usage guidelines, code review guidelines, and design system.",
+        "Researched Agile development methodologies, implemented best practices to improve team performance, and produced over 10,000 words of documentation."
+      ]
+    },
+    {
+      "name": "Ningbo Port Information and Communication Ltd.",
+      "location": "Ningbo, China",
+      "position": "Front-end Developer",
+      "startDate": "2018-08-01",
+      "endDate": "2019-01-01",
+      "url": "https://www.nbport.com.cn/npic/",
+      "summary": "Efficiently developed and meticulously maintained a website for port declaration system using Java and ExtJS.",
+      "highlights": [
+        "Improved developer experience by incorporating polyfills for IE11, increasing browser compatibility and enhancing functionality."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Pandarua",
+      "description": "Filecoin sealing-as-a-service platform.",
+      "roles": ["Product Manager"],
+      "highlights": [
+        "Designed a resource management system to manage the platform's underlying resources and provide a unified interface for the platform."
+      ],
+      "keywords": ["Figma", "Product Map"],
+      "startDate": "2022-08-01",
+      "endDate": "2022-09-01",
+      "entity": "ByteArk Tech Ltd.",
+      "type": "application"
+    },
+    {
+      "name": "MePrint",
+      "description": "An AI-powered pattern design platform for the apparel industry.",
+      "highlights": [
+        "Refactored the codebase from UmiJS to NextJS using a progressive model, improving the developer experience (DX) and reducing the bundle size by 10%.",
+        "Managed application state using react-query, reducing bugs in global state management.",
+        "Introduced a headless CMS to manage website content, making it faster and easier for operators to update the site."
+      ],
+      "keywords": ["React", "NextJS", "React Query", "Emotion", "Directus"],
+      "startDate": "2021-03-01",
+      "endDate": "2021-07-01",
+      "roles": ["Front-End Lead"],
+      "entity": "Muri Tech Ltd.",
+      "type": "application"
+    },
+    {
+      "name": "Dragonfly",
+      "description": "A decentralized docker image storage service developed as an entry to the Filecoin Slingshot Program.",
+      "highlights": [
+        "Awarded Phase 1 first prize in the Filecoin Slingshot Program.",
+        "Modified Powergate to support importing cold deals into its database.",
+        "Presented the project at the Closing Ceremony, link available here: https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s"
+      ],
+      "keywords": ["Vue", "NodeJS", "Go", "Powergate", "IPFS", "Lotus"],
+      "startDate": "2020-10-01",
+      "endDate": "2020-11-01",
+      "roles": ["Product Manager", "Front-End Lead"],
+      "entity": "ByteArk Tech Ltd.",
+      "type": "application"
+    },
+    {
+      "name": "Matrix",
+      "description": "Developed a miner management system for Filecoin that includes a mobile app and WeChat mini-program.",
+      "highlights": [
+        "Built multi-platform mobile applications using Flutter.",
+        "Automated the release process using Fastlane."
+      ],
+      "keywords": ["Flutter", "Taro", "React", "Fastlane"],
+      "startDate": "2019-09-01",
+      "endDate": "2020-01-01",
+      "roles": ["Front-End Lead"],
+      "entity": "ByteArk Tech Ltd.",
+      "type": "application"
+    },
+    {
+      "name": "Arc",
+      "description": "A design system focus on accessibility and usability.",
+      "highlights": [
+        "Researched over 10 design systems.",
+        "Developed over 10 components and successfully launched in production."
+      ],
+      "keywords": [
+        "TypeScript",
+        "React",
+        "Rollup",
+        "Emotion",
+        "Storybook",
+        "Jest"
+      ],
+      "startDate": "2019-09-01",
+      "endDate": "2020-01-01",
+      "roles": ["Front-End Lead"],
+      "entity": "ByteArk Tech Ltd.",
+      "type": "application"
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Guelph",
+      "url": "https://www.uoguelph.ca/",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2012-09-01",
+      "endDate": "2017-12-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Front-end Development",
+      "level": "Senior",
+      "keywords": ["JavaScript", "TypeScript", "NextJS", "ReactJS", "Graphql"]
+    },
+    {
+      "name": "Back-end Development",
+      "level": "Senior",
+      "keywords": [
+        "NodeJS",
+        "PostgreSQL",
+        "Prisma",
+        "NextJS",
+        "Serverless",
+        "Docker",
+        "Graphql"
+      ]
+    },
+    {
+      "name": "Mobile Development",
+      "level": "Intermediate",
+      "keywords": ["Flutter", "Dart"]
+    },
+    {
+      "name": "DevOps",
+      "level": "Intermediate",
+      "keywords": ["Docker", "AWS", "AliCloud", "Vercel", "Serverless"]
+    },
+    {
+      "name": "Project Management",
+      "level": "Senior",
+      "keywords": ["Agile", "Scrum", "Linear"]
+    },
+    {
+      "name": "Design",
+      "level": "Junior",
+      "keywords": ["Figma"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Chinese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}

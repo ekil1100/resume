@@ -1,10 +1,17 @@
-import { styled } from '../../stitches.config'
+import { AnchorHTMLAttributes } from 'react'
 
-export const Link = styled('a', {
-  color: '$link',
-  textDecoration: 'none',
-  '&:hover': {
-    textDecoration: 'underline',
-    color: '$linkHover',
-  },
-})
+interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
+
+function Link({ children, className, ...props }: LinkProps) {
+    return (
+        <a
+            className={`underline underline-offset-2 decoration-dashed ${className}`}
+            target='_blank'
+            {...props}
+        >
+            {children}
+        </a>
+    )
+}
+
+export default Link
