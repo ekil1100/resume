@@ -98,11 +98,9 @@
   "projects": [
     {
       "name": "Pandarua",
-      "description": "Filecoin sealing-as-a-service platform.",
+      "description": "A Filecoin sealing-as-a-service platform.",
       "roles": ["Product Manager"],
-      "highlights": [
-        "Designed a resource management system to manage the platform's underlying resources and provide a unified interface for the platform."
-      ],
+      "highlights": ["Designed the prototype."],
       "keywords": ["Figma", "Product Map"],
       "startDate": "2022-08-01",
       "endDate": "2022-09-01",
@@ -141,7 +139,7 @@
     },
     {
       "name": "Matrix",
-      "description": "Developed a miner management system for Filecoin that includes a mobile app and WeChat mini-program.",
+      "description": "A miner management system for Filecoin that includes a mobile app and WeChat mini-program.",
       "highlights": [
         "Built multi-platform mobile applications using Flutter.",
         "Automated the release process using Fastlane."
