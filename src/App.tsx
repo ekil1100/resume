@@ -179,7 +179,7 @@ function App() {
                                     />
                                 </div>
                             </div>
-                            <div className='text-gray-500 text-sm'>
+                            <div className='text-gray-500'>
                                 {school.studyType} of {school.area}
                             </div>
                         </div>
