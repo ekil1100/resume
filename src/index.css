@@ -10,12 +10,22 @@ body {
 }
 
 h1 {
-    @apply text-xl font-bold;
+    @apply text-2xl font-bold;
 }
 
 h2 {
     @apply text-lg;
-    @apply border-b-4 border-black;
     @apply mb-4;
-    @apply -ml-4;
+    @apply -ml-6;
+    /* @apply border-b-4 border-black; */
+    @apply text-white bg-black w-max;
+    @apply px-2;
+}
+
+section {
+    @apply mb-8;
+}
+
+p {
+    @apply break-words;
 }

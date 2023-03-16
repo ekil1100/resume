@@ -2,9 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Like Zheng",
-    "label": "Software Engineer || Product Manager",
+    "label": "Software Engineer | Product Manager",
     "email": "like@ekil.sh",
-    "summary": "Hi, my name is Like Zheng. Throughout my 5-year career, I have spent the first 3 years as a software engineer and the latter 2 years primarily working as a product manager, with a decent understanding of UI design. In my spare time, I enjoy writing code and experimenting with new technologies. My expertise leans more towards front-end development as opposed to back-end, and I have a strong focus on user experience, which is why I've taken up learning about product design and UI design. I value teamwork and have successfully built a 6-member front-end team from scratch, fostering an agile culture along the way.",
+    "summary": "5 年的工作生涯中，前 3 年做的是软件工程，后 2 年主要是做产品经理，对于 UI 设计略知一二。业余时间会自己写写代码，尝试些新的技术。相较于后端，更加擅长前端开发，非常在意用户体验，这也是我为什么会去学习产品设计和 UI 设计的原因。注重团队协作，曾经从 0 到 1 建立了一个拥有敏捷文化的 6 人前端团队。",
     "profiles": [
       {
         "network": "Github",
@@ -12,19 +12,14 @@
         "url": "https://github.com/ekil1100/"
       },
       {
-        "network": "Twitter",
-        "username": "ekil1100",
-        "url": "https://twitter.com/ekil1100/"
-      },
-      {
         "network": "LinkedIn",
         "username": "likezheng",
         "url": "https://www.linkedin.com/in/likezheng/"
       },
       {
-        "network": "Blog",
-        "username": "ekil",
-        "url": "https://blog.ekil.io/"
+        "network": "Twitter",
+        "username": "ekil1100",
+        "url": "https://twitter.com/ekil1100/"
       }
     ]
   },

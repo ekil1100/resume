@@ -2,11 +2,10 @@ import { AnchorHTMLAttributes } from 'react'
 
 interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
 
-const Link: React.FC<LinkProps> = ({ children, href, ...props }) => {
+function Link({ children, className, ...props }: LinkProps) {
     return (
         <a
-            href={href}
-            className='text-blue-600 hover:text-blue-800 hover:underline'
+            className={`underline underline-offset-2 decoration-dashed ${className}`}
             {...props}
         >
             {children}
