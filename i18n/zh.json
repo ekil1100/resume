@@ -1,0 +1,41 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "郑力可",
+    "label": "软件工程师 || 产品经理",
+    "summary": "5 年的工作经历中，我前 3 年做的是软件工程，后面 2 年主要做的是产品经理，也会参与开发，对于 UI 设计也有涉猎。业余时间会自己写写代码，尝试些新技术。相较于后端开发，我更加擅长前端开发领域。我非常在意用户体验，这也促使我去学习产品设计和 UI 设计的相关知识。我也很关注团队协作，曾经从 0 到 1 建立了一个拥有敏捷文化的 6 人前端团队。"
+  },
+  "work": [
+    {
+      "name": "杭州字节方舟科技有限公司",
+      "location": "远程",
+      "position": "社区产品经理",
+      "summary": "主要工作是处理和收集 Filecoin 社区信息以及产品设计。",
+      "highlights": [
+        "设计并参与开发了一个 Filecoin 远程封装平台。",
+        "公司内部发布 Filecoin Weekly 周刊，内容包括 Filecoin 的相关新闻、活动、代码更新、文章、视频等。已发布 10 期，累计阅读量超过 200。"
+      ]
+    },
+    {
+      "name": "杭州字节方舟科技有限公司",
+      "location": "杭州",
+      "position": "产品经理",
+      "summary": "设计和开发应用基于 Filecoin 和 IPFS。",
+      "highlights": [
+        "管理 5 人的小团队，2 个前端，2 个后端和 1 个 UI 设计师。",
+        "设计并开发了一个基于 Filecoin 和 IPFS 的云盘 Demo。"
+      ]
+    },
+    {
+      "name": "杭州慕锐科技有限公司",
+      "location": "杭州",
+      "position": "前端负责人",
+      "summary": "试用期期间帮助团队优化了 Git 流程，并推进了设计体系的建设，因此提前转正并被提拔为前端负责人。",
+      "highlights": [
+        "带领 5 人的前端团队，负责开发和维护 Web 应用。",
+        "把代码从 UmiJS 迁移到 NextJS 并进行了重构，优化了 SEO，包体积减少了 10%，提升了开发体验。",
+        "基于 Trunk-Based Development 制定了 Git 流程，并书写了文档。"
+      ]
+    }
+  ]
+}
