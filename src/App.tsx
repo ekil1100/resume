@@ -42,7 +42,7 @@ function Time({ startDate, endDate }: { startDate: string; endDate?: string }) {
 
 function App() {
     return (
-        <div className='w-[48rem] p-8 mx-auto print:p-0'>
+        <div className='w-[52rem] p-12 mx-auto print:p-0'>
             <main className='relative mb-4'>
                 <div className='absolute top-0 right-0 print:hidden'>
                     <a
