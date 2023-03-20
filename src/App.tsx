@@ -1,4 +1,4 @@
-import mutEn from '~/public/i18n/en.json'
+import initEn from '~/public/i18n/en.json'
 import Link from '@/components/Link'
 import {
     MaterialSymbolsMail,
@@ -115,10 +115,27 @@ function Markdown({ children }: { children: string }) {
 
 const cache = new Map<string, any>()
 
+function useFetch<T>(url: string, init?: RequestInit) {
+    const [data, setData] = useState<T>()
+
+    useEffect(() => {
+        setData(cache.get(url))
+        fetch(url, init)
+            .then((res) => res.json())
+            .then((data) => {
+                setData(data)
+                cache.set(url, data)
+            })
+    }, [url, init])
+
+    return data
+}
+
 function App() {
     const search = new URLSearchParams(window.location.search)
     const [lang, setLang] = useState(search.get('lang') ?? 'en')
-    const [cv, setCv] = useState(mutEn)
+    const data = useFetch<typeof initEn>(`/i18n/${lang}.json`)
+    const [cv, setCv] = useState(data ?? initEn)
 
     useEffect(() => {
         fetch('/i18n/en.json').then((res) => {
@@ -129,7 +146,7 @@ function App() {
 
         fetch('/i18n/zh.json').then((res) => {
             res.json().then((zh) => {
-                cache.set('zh', deepMerge(mutEn, zh))
+                cache.set('zh', deepMerge(initEn, zh))
             })
         })
     }, [])
@@ -137,20 +154,28 @@ function App() {
     useEffect(() => {
         if (lang === 'zh') {
             if (cache.has('zh')) {
+                console.log('zh cached')
                 setCv(cache.get('zh'))
             } else {
-                fetch('/i18n/zh.json').then((res) => {
-                    res.json().then((zh) => {
-                        const v = deepMerge(mutEn, zh)
-                        setCv(v)
-                        cache.set('zh', v)
+                console.log('zh not cached')
+                fetch('/i18n/en.json').then((res) => {
+                    res.json().then((en) => {
+                        fetch('/i18n/zh.json').then((res) => {
+                            res.json().then((zh) => {
+                                const v = deepMerge(en, zh)
+                                setCv(v)
+                                cache.set('zh', v)
+                            })
+                        })
                     })
                 })
             }
         } else {
             if (cache.has('en')) {
+                console.log('en cached')
                 setCv(cache.get('en'))
             } else {
+                console.log('en not cached')
                 fetch('/i18n/en.json').then((res) => {
                     res.json().then((en) => {
                         setCv(en)
