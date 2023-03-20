@@ -23,9 +23,14 @@ async function printPage(url: string, outputPath: string): Promise<void> {
     await browser.close()
 }
 
-const url = 'http://localhost:5173/'
-const outputPath = path.join(__dirname, '../../public/resume.pdf')
+const url = (lang: string) => 'http://localhost:5173/?lang=' + lang
+const outputPath = (lang: string) =>
+    path.join(__dirname, `../../public/resume_${lang}.pdf`)
 
-printPage(url, outputPath)
-    .then(() => console.log('PDF generated successfully'))
-    .catch((error) => console.error('Error generating PDF:', error))
+const generatePDF = (lang: string) =>
+    printPage(url(lang), outputPath(lang))
+        .then(() => console.log(`resume_${lang}.pdf generated successfully`))
+        .catch((error) => console.error('Error generating PDF:', error))
+
+generatePDF('en')
+generatePDF('zh')

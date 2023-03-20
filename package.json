@@ -7,11 +7,7 @@
     "build": "run-s update-date export-pdf build:vite",
     "serve": "vite preview",
     "export-pdf": "tsx ./src/scripts/export-pdf.ts",
-    "update-date": "tsx ./src/scripts/update-modified-date.ts",
-    "zh": "tsx ./src/scripts/merge-json.ts ./i18n/en.json ./i18n/zh.json resume.json",
-    "w:zh": "nodemon --watch i18n --exec 'tsx ./src/scripts/merge-json.ts ./i18n/en.json ./i18n/zh.json resume.json'",
-    "en": "tsx ./src/scripts/merge-json.ts ./i18n/en.json ./i18n/en.json resume.json",
-    "w:en": "nodemon --watch i18n --exec 'tsx ./src/scripts/merge-json.ts ./i18n/en.json ./i18n/en.json resume.json'"
+    "update-date": "tsx ./src/scripts/update-modified-date.ts"
   },
   "dependencies": {
     "date-fns": "^2.29.3",

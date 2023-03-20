@@ -1,4 +1,4 @@
-import cv from '~/resume.json'
+import mutEn from '~/i18n/en.json'
 import Link from '@/components/Link'
 import {
     MaterialSymbolsMail,
@@ -7,8 +7,10 @@ import {
     MdiTwitter,
     MdiWeb,
     CarbonGeneratePdf,
+    IconParkOutlineChinese,
+    IconParkOutlineEnglish,
 } from '@/icons'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useMemo, useState } from 'react'
 
 const icons: Record<string, ReactNode> = {
     mail: <MaterialSymbolsMail className='text-xl' />,
@@ -40,7 +42,65 @@ function Time({ startDate, endDate }: { startDate: string; endDate?: string }) {
     )
 }
 
+function deepMerge(target: any, source: any): any {
+    if (
+        typeof target === 'object' &&
+        target !== null &&
+        typeof source === 'object' &&
+        source !== null
+    ) {
+        if (Array.isArray(target) && Array.isArray(source)) {
+            for (let i = 0; i < source.length; i++) {
+                target[i] = deepMerge(target[i], source[i])
+            }
+        } else {
+            for (const key in source) {
+                if (source.hasOwnProperty(key)) {
+                    target[key] = deepMerge(target[key], source[key])
+                }
+            }
+        }
+    } else {
+        return source !== undefined ? source : target
+    }
+    return target
+}
+
 function App() {
+    const search = new URLSearchParams(window.location.search)
+    const [lang, setLang] = useState(search.get('lang') ?? 'en')
+    const [cv, setCv] = useState(mutEn)
+
+    useEffect(() => {
+        if (lang === 'zh') {
+            fetch('/i18n/en.json').then((res) => {
+                res.json().then((en) => {
+                    fetch('/i18n/zh.json').then((res) => {
+                        res.json().then((zh) => {
+                            setCv(deepMerge(en, zh))
+                        })
+                    })
+                })
+            })
+        } else {
+            fetch('/i18n/en.json').then((res) => {
+                res.json().then((en) => {
+                    setCv(en)
+                })
+            })
+        }
+    }, [lang])
+
+    const switchLang = () => {
+        setLang((pre) => {
+            if (pre === 'en') {
+                return 'zh'
+            } else {
+                return 'en'
+            }
+        })
+    }
+
     return (
         <div className='w-[52rem] p-12 mx-auto print:p-0'>
             <main className='relative mb-4'>
@@ -53,6 +113,16 @@ function App() {
                             <CarbonGeneratePdf className='text-xl' />
                         </button>
                     </a>
+                    <button
+                        className='p-2 rounded-sm hover:bg-gray-200 active:bg-gray-300'
+                        onClick={switchLang}
+                    >
+                        {lang === 'en' ? (
+                            <IconParkOutlineChinese className='text-xl' />
+                        ) : (
+                            <IconParkOutlineEnglish className='text-xl' />
+                        )}
+                    </button>
                 </div>
                 <section className='-ml-6 flex flex-col gap-4 print:items-center'>
                     <div className='flex flex-col gap-2 print:items-center'>
