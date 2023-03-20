@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "export-pdf": "tsx ./src/scripts/export-pdf.ts",
+    "export:pdf": "tsx ./src/scripts/export-pdf.ts",
     "update-date": "tsx ./src/scripts/update-modified-date.ts"
   },
   "dependencies": {
