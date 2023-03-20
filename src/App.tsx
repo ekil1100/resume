@@ -115,11 +115,13 @@ function Markdown({ children }: { children: string }) {
 
 const cache = new Map<string, any>()
 
-function useFetch<T>(url: string, init?: RequestInit) {
-    const [data, setData] = useState<T>()
+function useFetch(url: string, init?: RequestInit) {
+    const [data, setData] = useState(initEn)
 
     useEffect(() => {
-        setData(cache.get(url))
+        if (!cache.has(url)) {
+            setData(cache.get(url))
+        }
         fetch(url, init)
             .then((res) => res.json())
             .then((data) => {
@@ -134,7 +136,7 @@ function useFetch<T>(url: string, init?: RequestInit) {
 function App() {
     const search = new URLSearchParams(window.location.search)
     const [lang, setLang] = useState(search.get('lang') ?? 'en')
-    const data = useFetch<typeof initEn>(`/i18n/${lang}.json`)
+    const data = useFetch(`/i18n/${lang}.json`)
     const [cv, setCv] = useState(data ?? initEn)
 
     useEffect(() => {
