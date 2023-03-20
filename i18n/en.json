@@ -71,7 +71,7 @@
     {
       "name": "ByteArk Tech Ltd.",
       "location": "Hangzhou, China",
-      "position": "Front-End Leader",
+      "position": "Front-End Lead",
       "startDate": "2019-02-01",
       "endDate": "2021-02-01",
       "url": "https://byteark.cn/",
@@ -115,7 +115,7 @@
         "Managed application state using react-query, reducing bugs in global state management.",
         "Introduced a headless CMS to manage website content, making it faster and easier for operators to update the site."
       ],
-      "keywords": ["React", "NextJS", "React Query", "Emotion", "Directus"],
+      "keywords": ["React", "NextJS", "React Query", "Emotion", "DirectusCMS"],
       "startDate": "2021-03-01",
       "endDate": "2021-07-01",
       "roles": ["Front-End Lead"],

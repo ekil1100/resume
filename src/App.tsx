@@ -9,8 +9,10 @@ import {
     CarbonGeneratePdf,
     IconParkOutlineChinese,
     IconParkOutlineEnglish,
+    PrimeExternalLink,
 } from '@/icons'
 import { ReactNode, useEffect, useMemo, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 const icons: Record<string, ReactNode> = {
     mail: <MaterialSymbolsMail className='text-xl' />,
@@ -78,6 +80,26 @@ function deepMerge(target: any, source: any): any {
         return source !== undefined ? source : target
     }
     return target
+}
+
+function Markdown({ children }: { children: string }) {
+    return (
+        <ReactMarkdown
+            components={{
+                a: (props) => (
+                    <Link
+                        href={props.href}
+                        target='_blank'
+                        className='underline-offset-4'
+                    >
+                        {props.children}
+                    </Link>
+                ),
+            }}
+        >
+            {children}
+        </ReactMarkdown>
+    )
 }
 
 function App() {
@@ -195,7 +217,9 @@ function App() {
                             <p className='text-gray-900'>{job.summary}</p>
                             <ul>
                                 {job.highlights.map((highlight) => (
-                                    <li key={highlight}>{highlight}</li>
+                                    <li key={highlight}>
+                                        <Markdown>{highlight}</Markdown>
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -239,7 +263,9 @@ function App() {
                             </p>
                             <ul>
                                 {project.highlights.map((highlight) => (
-                                    <li key={highlight}>{highlight}</li>
+                                    <li key={highlight}>
+                                        <Markdown>{highlight}</Markdown>
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -267,7 +293,9 @@ function App() {
                                 </div>
                             </div>
                             <div className='text-gray-500'>
-                                {school.studyType} of {school.area}
+                                {lang === 'zh'
+                                    ? `${school.area}${school.studyType}`
+                                    : `${school.studyType} of ${school.area}`}
                             </div>
                         </div>
                     ))}
