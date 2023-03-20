@@ -22,6 +22,20 @@ const icons: Record<string, ReactNode> = {
     blog: <MdiWeb className='text-xl' />,
 }
 
+function dateString(
+    options?: Intl.DateTimeFormatOptions,
+    lang?: string,
+    date?: string,
+): string {
+    const l = lang === 'zh' ? 'zh-CN' : 'en-US'
+    const right = /([\u4e00-\u9fa5]+)([0-9a-zA-Z]+)/gm
+    const left = /([0-9a-zA-Z]+)([\u4e00-\u9fa5]+)/gm
+    return new Date(date ?? Date.now())
+        .toLocaleDateString(l, options)
+        .replace(right, '$1 $2')
+        .replace(left, '$1 $2')
+}
+
 function Time({
     startDate,
     endDate,
@@ -31,24 +45,21 @@ function Time({
     endDate?: string
     lang?: string
 }) {
-    const l = lang === 'zh' ? 'zh-CN' : 'en-US'
-    const right = /([\u4e00-\u9fa5]+)([0-9a-zA-Z]+)/gm
-    const left = /([0-9a-zA-Z]+)([\u4e00-\u9fa5]+)/gm
-    const dateString = (date: string) =>
-        new Date(date)
-            .toLocaleDateString(l, {
-                month: 'short',
-                year: 'numeric',
-            })
-            .replace(right, '$1 $2')
-            .replace(left, '$1 $2')
+    const options: Intl.DateTimeFormatOptions = {
+        year: 'numeric',
+        month: 'short',
+    }
 
     return (
         <>
-            <time dateTime={startDate}>{dateString(startDate)}</time>
+            <time dateTime={startDate}>
+                {dateString(options, lang, startDate)}
+            </time>
             {' - '}
             {endDate ? (
-                <time dateTime={endDate}>{dateString(endDate)}</time>
+                <time dateTime={endDate}>
+                    {dateString(options, lang, endDate)}
+                </time>
             ) : lang === 'zh' ? (
                 '现在'
             ) : (
@@ -359,8 +370,7 @@ function App() {
                     https://resume.ekil.io
                 </Link>
                 <small className='text-gray-500'>
-                    {new Date(cv.meta.lastModified).toLocaleDateString(
-                        'en-US',
+                    {dateString(
                         {
                             day: 'numeric',
                             month: 'long',
@@ -369,6 +379,8 @@ function App() {
                             minute: 'numeric',
                             second: 'numeric',
                         },
+                        lang,
+                        cv.meta.lastModified,
                     )}
                 </small>
             </footer>
