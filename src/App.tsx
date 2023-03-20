@@ -1,4 +1,4 @@
-import mutEn from '~/i18n/en.json'
+import mutEn from '~/public/i18n/en.json'
 import Link from '@/components/Link'
 import {
     MaterialSymbolsMail,
