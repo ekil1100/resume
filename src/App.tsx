@@ -20,25 +20,39 @@ const icons: Record<string, ReactNode> = {
     blog: <MdiWeb className='text-xl' />,
 }
 
-function Time({ startDate, endDate }: { startDate: string; endDate?: string }) {
-    return (
-        <time dateTime={startDate}>
-            {new Date(startDate).toLocaleDateString('en-US', {
+function Time({
+    startDate,
+    endDate,
+    lang,
+}: {
+    startDate: string
+    endDate?: string
+    lang?: string
+}) {
+    const l = lang === 'zh' ? 'zh-CN' : 'en-US'
+    const right = /([\u4e00-\u9fa5]+)([0-9a-zA-Z]+)/gm
+    const left = /([0-9a-zA-Z]+)([\u4e00-\u9fa5]+)/gm
+    const dateString = (date: string) =>
+        new Date(date)
+            .toLocaleDateString(l, {
                 month: 'short',
                 year: 'numeric',
-            })}
+            })
+            .replace(right, '$1 $2')
+            .replace(left, '$1 $2')
+
+    return (
+        <>
+            <time dateTime={startDate}>{dateString(startDate)}</time>
             {' - '}
             {endDate ? (
-                <time dateTime={endDate}>
-                    {new Date(endDate).toLocaleDateString('en-US', {
-                        month: 'short',
-                        year: 'numeric',
-                    })}
-                </time>
+                <time dateTime={endDate}>{dateString(endDate)}</time>
+            ) : lang === 'zh' ? (
+                '现在'
             ) : (
                 'Present'
             )}
-        </time>
+        </>
     )
 }
 
@@ -170,6 +184,7 @@ function App() {
                                     <Time
                                         startDate={job.startDate}
                                         endDate={job.endDate}
+                                        lang={lang}
                                     />
                                 </div>
                             </div>
@@ -201,6 +216,7 @@ function App() {
                                     <Time
                                         startDate={project.startDate}
                                         endDate={project.endDate}
+                                        lang={lang}
                                     />
                                 </div>
                             </div>
@@ -246,6 +262,7 @@ function App() {
                                     <Time
                                         startDate={school.startDate}
                                         endDate={school.endDate}
+                                        lang={lang}
                                     />
                                 </div>
                             </div>
