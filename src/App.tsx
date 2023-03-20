@@ -113,28 +113,51 @@ function Markdown({ children }: { children: string }) {
     )
 }
 
+const cache = new Map<string, any>()
+
 function App() {
     const search = new URLSearchParams(window.location.search)
     const [lang, setLang] = useState(search.get('lang') ?? 'en')
     const [cv, setCv] = useState(mutEn)
 
     useEffect(() => {
+        fetch('/i18n/en.json').then((res) => {
+            res.json().then((en) => {
+                cache.set('en', en)
+            })
+        })
+
+        fetch('/i18n/zh.json').then((res) => {
+            res.json().then((zh) => {
+                cache.set('zh', deepMerge(mutEn, zh))
+            })
+        })
+    }, [])
+
+    useEffect(() => {
         if (lang === 'zh') {
-            fetch('/i18n/en.json').then((res) => {
-                res.json().then((en) => {
-                    fetch('/i18n/zh.json').then((res) => {
-                        res.json().then((zh) => {
-                            setCv(deepMerge(en, zh))
-                        })
+            if (cache.has('zh')) {
+                setCv(cache.get('zh'))
+            } else {
+                fetch('/i18n/zh.json').then((res) => {
+                    res.json().then((zh) => {
+                        const v = deepMerge(mutEn, zh)
+                        setCv(v)
+                        cache.set('zh', v)
                     })
                 })
-            })
+            }
         } else {
-            fetch('/i18n/en.json').then((res) => {
-                res.json().then((en) => {
-                    setCv(en)
+            if (cache.has('en')) {
+                setCv(cache.get('en'))
+            } else {
+                fetch('/i18n/en.json').then((res) => {
+                    res.json().then((en) => {
+                        setCv(en)
+                        cache.set('en', en)
+                    })
                 })
-            })
+            }
         }
     }, [lang])
 
@@ -153,8 +176,8 @@ function App() {
             <main className='relative mb-4'>
                 <div className='absolute top-0 right-0 print:hidden'>
                     <a
-                        href='/resume.pdf'
-                        download={`Like_Resume_${cv.meta.lastModified}.pdf`}
+                        href={`/resume_${lang}.pdf`}
+                        download={`Like_Resume_${lang}_${cv.meta.lastModified}.pdf`}
                     >
                         <button className='p-2 rounded-sm hover:bg-gray-200 active:bg-gray-300'>
                             <CarbonGeneratePdf className='text-xl' />

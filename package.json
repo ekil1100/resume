@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build:vite": "vite build",
-    "build": "run-s export-pdf build:vite",
+    "build": "vite build",
     "serve": "vite preview",
     "export-pdf": "tsx ./src/scripts/export-pdf.ts",
     "update-date": "tsx ./src/scripts/update-modified-date.ts"
