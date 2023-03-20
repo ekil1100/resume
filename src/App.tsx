@@ -388,7 +388,7 @@ function App() {
                 </Link>
                 <Link
                     className='text-sm text-gray-500 hidden print:block'
-                    href='https://resume.ekil.io'
+                    href={`https://resume.ekil.io?lang=${lang}`}
                 >
                     https://resume.ekil.io
                 </Link>
