@@ -4,4 +4,5 @@ Based on [JSON Resume schema](https://jsonresume.org/schema/), style is inspired
 
 ## Download PDF
 
-- [English Resume](/public/resume.pdf)
+- [English Resume](/public/resume_en.pdf)
+- [中文简历](/public/resume_zh.pdf)
