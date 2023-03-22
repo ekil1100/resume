@@ -8,22 +8,14 @@
   "work": [
     {
       "name": "杭州字节方舟科技有限公司",
-      "location": "远程",
+      "location": "杭州｜远程办公",
       "position": "技术负责人",
-      "summary": "收集和处理 Filecoin 社区信息，Filecoin 相关的产品设计。",
-      "highlights": [
-        "设计并参与开发了 Filecoin 远程封装平台（Sealing-as-a-Service）。",
-        "发布 Filecoin Weekly 周刊（公司内部），内容包括 Filecoin 的相关新闻、线下活动、代码更新、文章、视频等。已发布 10 期，有超过 200 的累计阅读量。"
-      ]
-    },
-    {
-      "name": "杭州字节方舟科技有限公司",
-      "location": "杭州",
-      "position": "技术负责人",
-      "summary": "设计和开发基于 Filecoin 和 IPFS 的应用产品。",
+      "summary": "参与 Filecoin 社区交流并收集和处理社区信息；设计和开发基于 Filecoin 和 IPFS 的应用。",
       "highlights": [
         "管理 5 人的敏捷团队，2 个前端，2 个后端和 1 个 UI 设计师。",
-        "设计并开发了一个基于 Filecoin 和 IPFS 的网盘原型。"
+        "设计并参与开发了一个基于 Filecoin 和 IPFS 的网盘原型。",
+        "设计并参与开发了 Filecoin 远程封装平台（Sealing-as-a-Service）。",
+        "发布 Filecoin Weekly 周刊（公司内部），内容包括 Filecoin 的相关新闻、线下活动、代码更新、文章、视频等。已发布 10 期，有超过 200 的累计阅读量。"
       ]
     },
     {
@@ -63,9 +55,8 @@
     {
       "name": "Pandarua",
       "description": "Filecoin 远程封装平台（Sealing-as-a-Service）。",
-      "roles": ["项目负责人", "产品设计"],
       "highlights": ["通过资源包管理扇区的方式，减缓了底层算力供给的压力。"],
-      "keywords": ["Figma", "Product Map"],
+      "roles": ["项目负责人", "产品设计"],
       "entity": "杭州字节方舟科技有限公司"
     },
     {

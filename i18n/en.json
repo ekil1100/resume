@@ -2,9 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Like Zheng",
-    "label": "Software Engineer || Product Manager",
+    "label": "Software Engineer",
     "email": "like@ekil.sh",
-    "summary": "Hi, my name is Like Zheng. Throughout my 5-year career, I have spent the first 3 years as a software engineer and the latter 2 years primarily working as a product manager, with a decent understanding of UI design. In my spare time, I enjoy writing code and experimenting with new technologies. My expertise leans more towards front-end development as opposed to back-end, and I have a strong focus on user experience, which is why I've taken up learning about product design and UI design. I value teamwork and have successfully built a 6-member front-end team from scratch, fostering an agile culture along the way.",
+    "summary": "I have 5 years of software development experience, with a strong focus on front-end development. I also have experience in product design, and have dabbled in UX and UI design. I place great emphasis on user experience, which has driven me to learn more about design-related knowledge. I highly value teamwork and have successfully built a 6-person front-end team with an agile culture from scratch.",
     "profiles": [
       {
         "network": "Github",
@@ -31,27 +31,16 @@
   "work": [
     {
       "name": "ByteArk Tech Ltd.",
-      "location": "Remote",
-      "position": "Community & Product Manager",
-      "startDate": "2022-08-01",
-      "url": "https://byteark.cn/",
-      "summary": "Manage and compile information from the Filecoin community, as well as engage in the design of applications based on Filecoin.",
-      "highlights": [
-        "Designed and took part in the development of a Filecoin remote sealing (Sealing-as-a-Service) platform.",
-        "Publish the internal Filecoin Weekly newsletter, which covers topics such as Filecoin-related news, events, code updates, articles, and videos. Successfully released 10 issues, accumulating views of over 200."
-      ]
-    },
-    {
-      "name": "ByteArk Tech Ltd.",
-      "location": "Hangzhou, China",
-      "position": "Product Manager",
+      "location": "Hangzhou, China | Remote",
+      "position": "Technical Lead",
       "startDate": "2021-08-01",
-      "endDate": "2022-07-01",
       "url": "https://byteark.cn/",
-      "summary": "Led a team focused on developing applications based on Filecoin and IPFS.",
+      "summary": "Participate in Filecoin community interactions and collect and process community information; design and develop applications based on Filecoin and IPFS.",
       "highlights": [
-        "Managed a team of 5 people, including 2 Front-End Developers, 2 Back-End Developers, and 1 UI designer.",
-        "Build a prototype of cloud storage application based on Filecoin and IPFS."
+        "Managed an agile team of 5 members, including 2 front-end developers, 2 back-end developers, and 1 UI designer.",
+        "Designed and participated in the development of a cloud storage prototype based on Filecoin and IPFS.",
+        "Designed and participated in the development of a Filecoin Remote Sealing Platform (Sealing-as-a-Service).",
+        "Published Filecoin Weekly newsletter (internal), featuring content such as Filecoin-related news, offline events, code updates, articles, and videos. Successfully released 10 issues, with over 200 cumulative views."
       ]
     },
     {
@@ -61,11 +50,12 @@
       "startDate": "2021-03-01",
       "endDate": "2021-07-01",
       "url": "https://www.meprint.com/",
-      "summary": "During the probationary period, assisted the team in optimizing Git workflow and advancing the development of design systems, leading to an early promotion to Front-End Team Lead.",
+      "summary": "Optimized Git workflow and advanced the construction of the front-end design system, which led to an early promotion to Front-End Lead.",
       "highlights": [
-        "Led a 5-member front-end team, responsible for developing and maintaining web applications.",
-        "Migrated code from UmiJS to NextJS and conducted refactoring, improving SEO, reducing package size by 10%, and enhancing the development experience.",
-        "Developed Git workflow based on Trunk-Based Development and authored documentation."
+        "Managed a 5-person front-end team responsible for developing and maintaining web applications.",
+        "Implemented a new Git workflow (based on Trunk-Based Development), reducing bugs caused by code conflicts.",
+        "Migrated legacy UmiJS code to NextJS and performed refactoring, optimizing SEO through SSR; reduced package size by 10%; and improved development experience.",
+        "Introduced Directus CMS and NextJS Preview Mode features, reducing backend development workload by 10%; streamlined the process for updating copy and images, reducing the time from 1 day to 10 minutes."
       ]
     },
     {
@@ -75,32 +65,34 @@
       "startDate": "2019-02-01",
       "endDate": "2021-02-01",
       "url": "https://byteark.cn/",
-      "summary": "Started as a Front-End Engineer and was promoted to Front-End Leader upon successful completion of the probation period. Spearheaded the establishment of the Front-End team, developing the team's development processes and standards.",
+      "summary": "Promoted to Front-End Lead after probation, responsible for formulating front-end standards and architectural design.",
       "highlights": [
-        "Managed a team of 8 developers to develop web applications, mobile apps, and WeChat mini-programs.",
-        "Established the team's development processes and standards, including Git usage guidelines, code review guidelines, and design system.",
-        "Researched Agile development methodologies, implemented best practices to improve team performance, and produced over 10,000 words of documentation."
+        "Managed an 8-person front-end team, responsible for developing and maintaining web applications, mobile applications, and WeChat mini-programs.",
+        "Established development processes and standards, including Git workflow guidelines, code Lint rules, code review guides, and front-end design systems.",
+        "Researched agile development methodologies and put them into practice, improving team efficiency and producing over 10,000 words of documentation."
       ]
     },
     {
       "name": "Ningbo Port Information and Communication Ltd.",
       "location": "Ningbo, China",
-      "position": "Front-end Developer",
+      "position": "Front-End Developer",
       "startDate": "2018-08-01",
       "endDate": "2019-01-01",
       "url": "https://www.nbport.com.cn/npic/",
-      "summary": "Efficiently developed and meticulously maintained a website for port declaration system using Java and ExtJS.",
+      "summary": "Developed and maintained a port declaration system website, using a technology stack of Java and ExtJS.",
       "highlights": [
-        "Improved developer experience by incorporating polyfills for IE11, increasing browser compatibility and enhancing functionality."
+        "Introduced polyfills for grid and flex, ensuring compatibility with IE11 while optimizing the development experience."
       ]
     }
   ],
   "projects": [
     {
       "name": "Pandarua",
-      "description": "A Filecoin sealing-as-a-service platform.",
-      "roles": ["Product Manager"],
-      "highlights": ["Designed the prototype."],
+      "description": "A Filecoin Remote Sealing (Sealing-as-a-Service) Platform.",
+      "highlights": [
+        "Alleviated the pressure on the underlying computational power supply by managing sectors using resource packs."
+      ],
+      "roles": ["Project Lead"],
       "keywords": ["Figma", "Product Map"],
       "startDate": "2022-08-01",
       "endDate": "2022-09-01",
@@ -109,11 +101,11 @@
     },
     {
       "name": "MePrint",
-      "description": "An AI-powered pattern design platform for the apparel industry.",
+      "description": "An AI-based clothing pattern design platform.",
       "highlights": [
-        "Refactored the codebase from UmiJS to NextJS using a progressive model, improving the developer experience (DX) and reducing the bundle size by 10%.",
-        "Managed application state using react-query, reducing bugs in global state management.",
-        "Introduced a headless CMS to manage website content, making it faster and easier for operators to update the site."
+        "Migrated legacy UmiJS code to NextJS and performed refactoring, optimizing SEO through SSR; reduced package size by 10%; and improved development experience.",
+        "Introduced Directus CMS and NextJS Preview Mode features, reducing backend development workload by 10%; streamlined the process for updating copy and images, reducing the time from 1 day to 10 minutes.",
+        "Implemented react-query, reducing the complexity of state management and enhancing both user experience and development experience."
       ],
       "keywords": ["React", "NextJS", "React Query", "Emotion", "DirectusCMS"],
       "startDate": "2021-03-01",
@@ -124,11 +116,11 @@
     },
     {
       "name": "Dragonfly",
-      "description": "A decentralized docker image storage service developed as an entry to the Filecoin Slingshot Program.",
+      "description": "A docker image storage service.",
       "highlights": [
-        "Awarded Phase 1 first prize in the Filecoin Slingshot Program.",
-        "Modified Powergate to support importing cold deals into its database.",
-        "Presented the project at the Closing Ceremony, link available here: https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s"
+        "The project won the first prize in the first phase of the Filecoin Slingshot competition.",
+        "Modified Powergate's source code to enable the import of offline transactions into the database.",
+        "Delivered a project presentation at the Closing Ceremony ([video link](https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s))."
       ],
       "keywords": ["Vue", "NodeJS", "Go", "Powergate", "IPFS", "Lotus"],
       "startDate": "2020-10-01",
@@ -139,9 +131,9 @@
     },
     {
       "name": "Matrix",
-      "description": "A miner management system for Filecoin that includes a mobile app and WeChat mini-program.",
+      "description": "A mining equipment management system client.",
       "highlights": [
-        "Built multi-platform mobile applications using Flutter.",
+        "Built a multi-platform mobile application using Flutter.",
         "Automated the release process using Fastlane."
       ],
       "keywords": ["Flutter", "Taro", "React", "Fastlane"],
@@ -153,10 +145,10 @@
     },
     {
       "name": "Arc",
-      "description": "A design system focus on accessibility and usability.",
+      "description": "A design system focusing on user experience and usability.",
       "highlights": [
-        "Researched over 10 design systems.",
-        "Developed over 10 components and successfully launched in production."
+        "Researched and analyzed over 10 design systems.",
+        "Developed more than 10 components, which have been successfully used in production environments."
       ],
       "keywords": [
         "TypeScript",
