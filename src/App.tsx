@@ -1,4 +1,5 @@
-import initEn from '~/public/i18n/en.json'
+import en from '~/i18n/en.json'
+import zh from '~/i18n/zh.json'
 import Link from '@/components/Link'
 import {
     MaterialSymbolsMail,
@@ -76,21 +77,23 @@ function deepMerge(target: any, source: any): any {
         typeof source === 'object' &&
         source !== null
     ) {
-        if (Array.isArray(target) && Array.isArray(source)) {
+        const newTarget = Array.isArray(target) ? [...target] : { ...target }
+
+        if (Array.isArray(newTarget) && Array.isArray(source)) {
             for (let i = 0; i < source.length; i++) {
-                target[i] = deepMerge(target[i], source[i])
+                newTarget[i] = deepMerge(newTarget[i], source[i])
             }
         } else {
             for (const key in source) {
                 if (source.hasOwnProperty(key)) {
-                    target[key] = deepMerge(target[key], source[key])
+                    newTarget[key] = deepMerge(newTarget[key], source[key])
                 }
             }
         }
+        return Object.freeze(newTarget)
     } else {
         return source !== undefined ? source : target
     }
-    return target
 }
 
 function Markdown({ children }: { children: string }) {
@@ -113,79 +116,18 @@ function Markdown({ children }: { children: string }) {
     )
 }
 
-const cache = new Map<string, any>()
-
-function useFetch(url: string, init?: RequestInit) {
-    const [data, setData] = useState(initEn)
-
-    useEffect(() => {
-        if (!cache.has(url)) {
-            setData(cache.get(url))
-        }
-        fetch(url, init)
-            .then((res) => res.json())
-            .then((data) => {
-                setData(data)
-                cache.set(url, data)
-            })
-    }, [url, init])
-
-    return data
-}
+const cache = new Map<string, typeof en>([
+    ['en', en],
+    ['zh', deepMerge(en, zh)],
+])
 
 function App() {
     const search = new URLSearchParams(window.location.search)
     const [lang, setLang] = useState(search.get('lang') ?? 'en')
-    const data = useFetch(`/i18n/${lang}.json`)
-    const [cv, setCv] = useState(data ?? initEn)
+    const [cv, setCv] = useState(cache.get(lang) ?? en)
 
     useEffect(() => {
-        fetch('/i18n/en.json').then((res) => {
-            res.json().then((en) => {
-                cache.set('en', en)
-            })
-        })
-
-        fetch('/i18n/zh.json').then((res) => {
-            res.json().then((zh) => {
-                cache.set('zh', deepMerge(initEn, zh))
-            })
-        })
-    }, [])
-
-    useEffect(() => {
-        if (lang === 'zh') {
-            if (cache.has('zh')) {
-                console.log('zh cached')
-                setCv(cache.get('zh'))
-            } else {
-                console.log('zh not cached')
-                fetch('/i18n/en.json').then((res) => {
-                    res.json().then((en) => {
-                        fetch('/i18n/zh.json').then((res) => {
-                            res.json().then((zh) => {
-                                const v = deepMerge(en, zh)
-                                setCv(v)
-                                cache.set('zh', v)
-                            })
-                        })
-                    })
-                })
-            }
-        } else {
-            if (cache.has('en')) {
-                console.log('en cached')
-                setCv(cache.get('en'))
-            } else {
-                console.log('en not cached')
-                fetch('/i18n/en.json').then((res) => {
-                    res.json().then((en) => {
-                        setCv(en)
-                        cache.set('en', en)
-                    })
-                })
-            }
-        }
+        setCv(cache.get(lang) ?? en)
     }, [lang])
 
     const switchLang = () => {
@@ -249,6 +191,34 @@ function App() {
                 <section>
                     <h2>About</h2>
                     <p>{cv.basics.summary}</p>
+                </section>
+                <section>
+                    <h2>Skills</h2>
+                    <div>
+                        {cv.skills.map((skill) => (
+                            <div
+                                key={skill.name}
+                                className='mb-4 flex gap-8 items-start justify-between'
+                            >
+                                <div className='flex flex-col'>
+                                    <h4>{skill.name}</h4>
+                                    <small className='text-gray-500'>
+                                        {skill.level}
+                                    </small>
+                                </div>
+                                <div>
+                                    {skill.keywords.map((item) => (
+                                        <span
+                                            key={item}
+                                            className='border border-black px-2 py-0.5 mr-2 text-sm'
+                                        >
+                                            {item}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </section>
                 <section>
                     <h2>Experience</h2>
@@ -360,34 +330,6 @@ function App() {
                             </div>
                         </div>
                     ))}
-                </section>
-                <section>
-                    <h2>Skills</h2>
-                    <div>
-                        {cv.skills.map((skill) => (
-                            <div
-                                key={skill.name}
-                                className='mb-4 flex justify-between items-center'
-                            >
-                                <div className='flex gap-2 items-baseline'>
-                                    <h4>{skill.name}</h4>
-                                    <small className='text-gray-500'>
-                                        {skill.level}
-                                    </small>
-                                </div>
-                                <div>
-                                    {skill.keywords.map((item) => (
-                                        <span
-                                            key={item}
-                                            className='border border-black px-2 py-0.5 mr-2 text-sm'
-                                        >
-                                            {item}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
                 </section>
                 <section>
                     <h2>Languages</h2>
