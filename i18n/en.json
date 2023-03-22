@@ -1,48 +1,77 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "郑力可",
-    "label": "软件工程师 || 产品经理",
-    "summary": "5 年的工作生涯中，前 3 年做的是软件工程，后 2 年主要是做产品经理，对于 UI 设计略知一二。业余时间会自己写写代码，尝试些新的技术。相较于后端，更加擅长前端开发，非常在意用户体验，这也是我为什么会去学习产品设计和 UI 设计的原因。注重团队协作，曾经从 0 到 1 建立了一个拥有敏捷文化的 6 人前端团队。"
+    "name": "Like Zheng",
+    "label": "Software Engineer || Product Manager",
+    "email": "like@ekil.sh",
+    "summary": "Hi, my name is Like Zheng. Throughout my 5-year career, I have spent the first 3 years as a software engineer and the latter 2 years primarily working as a product manager, with a decent understanding of UI design. In my spare time, I enjoy writing code and experimenting with new technologies. My expertise leans more towards front-end development as opposed to back-end, and I have a strong focus on user experience, which is why I've taken up learning about product design and UI design. I value teamwork and have successfully built a 6-member front-end team from scratch, fostering an agile culture along the way.",
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "ekil1100",
+        "url": "https://github.com/ekil1100/"
+      },
+      {
+        "network": "Twitter",
+        "username": "ekil1100",
+        "url": "https://twitter.com/ekil1100/"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "likezheng",
+        "url": "https://www.linkedin.com/in/likezheng/"
+      },
+      {
+        "network": "Blog",
+        "username": "like",
+        "url": "https://blog.ekil.io/"
+      }
+    ]
   },
   "work": [
     {
-      "name": "杭州字节方舟科技有限公司",
-      "location": "远程",
-      "position": "社区产品经理",
-      "summary": "主要工作是处理和收集 Filecoin 社区信息，以及 Filecoin 应用的产品设计。",
+      "name": "ByteArk Tech Ltd.",
+      "location": "Remote",
+      "position": "Community & Product Manager",
+      "startDate": "2022-08-01",
+      "url": "https://byteark.cn/",
+      "summary": "Manage and compile information from the Filecoin community, as well as engage in the design of applications based on Filecoin.",
       "highlights": [
-        "设计并参与开发了一个 Filecoin 远程封装平台。",
-        "公司内部发布 Filecoin Weekly 周刊，内容包括 Filecoin 的相关新闻、活动、代码更新、文章、视频等。已发布 10 期，累计阅读量超过 200。"
-      ]
-    },
-    {
-      "name": "杭州字节方舟科技有限公司",
-      "location": "杭州",
-      "position": "产品经理",
-      "summary": "处理和收集 Filecoin 社区信息，以及基于 Filecoin 的应用设计。",
-      "highlights": [
-        "管理 5 人的小团队，2 个前端，2 个后端和 1 个 UI 设计师。",
-        "Build a cloud storage application based on Filecoin and IPFS.",
-        "一个基于 Filecoin 和 IPFS 的云存储 Demo。",
-        "设计并参与开发了一个 Filecoin 远程封装平台。"
-      ]
-    },
-    {
-      "name": "杭州慕锐科技有限公司",
-      "location": "杭州",
-      "position": "前端负责人",
-      "summary": "试用期期间帮助团队优化了 Git 流程，并推进了设计体系的建设，因此提前转正并被提拔为前端负责人。",
-      "highlights": [
-        "带领 5 人的前端团队，负责开发和维护 Web 应用。",
-        "把代码从 UmiJS 迁移到 NextJS 并进行了重构，优化了 SEO，包体积减少了 10%，提升了开发体验。",
-        "基于 Trunk-Based Development 制定了 Git 流程，并书写了文档。"
+        "Designed and took part in the development of a Filecoin remote sealing (Sealing-as-a-Service) platform.",
+        "Publish the internal Filecoin Weekly newsletter, which covers topics such as Filecoin-related news, events, code updates, articles, and videos. Successfully released 10 issues, accumulating views of over 200."
       ]
     },
     {
       "name": "ByteArk Tech Ltd.",
       "location": "Hangzhou, China",
-      "position": "Front-End Leader",
+      "position": "Product Manager",
+      "startDate": "2021-08-01",
+      "endDate": "2022-07-01",
+      "url": "https://byteark.cn/",
+      "summary": "Led a team focused on developing applications based on Filecoin and IPFS.",
+      "highlights": [
+        "Managed a team of 5 people, including 2 Front-End Developers, 2 Back-End Developers, and 1 UI designer.",
+        "Build a prototype of cloud storage application based on Filecoin and IPFS."
+      ]
+    },
+    {
+      "name": "Muri Tech Ltd.",
+      "location": "Hangzhou, China",
+      "position": "Front-End Lead",
+      "startDate": "2021-03-01",
+      "endDate": "2021-07-01",
+      "url": "https://www.meprint.com/",
+      "summary": "During the probationary period, assisted the team in optimizing Git workflow and advancing the development of design systems, leading to an early promotion to Front-End Team Lead.",
+      "highlights": [
+        "Led a 5-member front-end team, responsible for developing and maintaining web applications.",
+        "Migrated code from UmiJS to NextJS and conducted refactoring, improving SEO, reducing package size by 10%, and enhancing the development experience.",
+        "Developed Git workflow based on Trunk-Based Development and authored documentation."
+      ]
+    },
+    {
+      "name": "ByteArk Tech Ltd.",
+      "location": "Hangzhou, China",
+      "position": "Front-End Lead",
       "startDate": "2019-02-01",
       "endDate": "2021-02-01",
       "url": "https://byteark.cn/",
@@ -69,11 +98,9 @@
   "projects": [
     {
       "name": "Pandarua",
-      "description": "Filecoin sealing-as-a-service platform.",
+      "description": "A Filecoin sealing-as-a-service platform.",
       "roles": ["Product Manager"],
-      "highlights": [
-        "Designed a resource management system to manage the platform's underlying resources and provide a unified interface for the platform."
-      ],
+      "highlights": ["Designed the prototype."],
       "keywords": ["Figma", "Product Map"],
       "startDate": "2022-08-01",
       "endDate": "2022-09-01",
@@ -88,7 +115,7 @@
         "Managed application state using react-query, reducing bugs in global state management.",
         "Introduced a headless CMS to manage website content, making it faster and easier for operators to update the site."
       ],
-      "keywords": ["React", "NextJS", "React Query", "Emotion", "Directus"],
+      "keywords": ["React", "NextJS", "React Query", "Emotion", "DirectusCMS"],
       "startDate": "2021-03-01",
       "endDate": "2021-07-01",
       "roles": ["Front-End Lead"],
@@ -112,7 +139,7 @@
     },
     {
       "name": "Matrix",
-      "description": "Developed a miner management system for Filecoin that includes a mobile app and WeChat mini-program.",
+      "description": "A miner management system for Filecoin that includes a mobile app and WeChat mini-program.",
       "highlights": [
         "Built multi-platform mobile applications using Flutter.",
         "Automated the release process using Fastlane."
@@ -158,25 +185,17 @@
   ],
   "skills": [
     {
-      "name": "Front-end Development",
+      "name": "Front-end",
       "level": "Senior",
       "keywords": ["JavaScript", "TypeScript", "NextJS", "ReactJS", "Graphql"]
     },
     {
-      "name": "Back-end Development",
+      "name": "Back-end",
       "level": "Senior",
-      "keywords": [
-        "NodeJS",
-        "PostgreSQL",
-        "Prisma",
-        "NextJS",
-        "Serverless",
-        "Docker",
-        "Graphql"
-      ]
+      "keywords": ["NodeJS", "PostgreSQL", "Prisma", "NextJS", "Graphql"]
     },
     {
-      "name": "Mobile Development",
+      "name": "Mobile",
       "level": "Intermediate",
       "keywords": ["Flutter", "Dart"]
     },
@@ -187,12 +206,12 @@
     },
     {
       "name": "Project Management",
-      "level": "Senior",
+      "level": "Intermediate",
       "keywords": ["Agile", "Scrum", "Linear"]
     },
     {
       "name": "Design",
-      "level": "Junior",
+      "level": "Intermediate",
       "keywords": ["Figma"]
     }
   ],
@@ -207,8 +226,6 @@
     }
   ],
   "meta": {
-    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
-    "version": "v1.0.0",
-    "lastModified": "2017-12-24T15:53:00"
+    "lastModified": "2023-03-16T15:57:31.546Z"
   }
 }

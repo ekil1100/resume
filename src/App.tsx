@@ -1,4 +1,5 @@
-import cv from '~/resume.json'
+import en from '~/i18n/en.json'
+import zh from '~/i18n/zh.json'
 import Link from '@/components/Link'
 import {
     MaterialSymbolsMail,
@@ -7,8 +8,12 @@ import {
     MdiTwitter,
     MdiWeb,
     CarbonGeneratePdf,
+    IconParkOutlineChinese,
+    IconParkOutlineEnglish,
+    PrimeExternalLink,
 } from '@/icons'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useMemo, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 const icons: Record<string, ReactNode> = {
     mail: <MaterialSymbolsMail className='text-xl' />,
@@ -18,41 +23,145 @@ const icons: Record<string, ReactNode> = {
     blog: <MdiWeb className='text-xl' />,
 }
 
-function Time({ startDate, endDate }: { startDate: string; endDate?: string }) {
+function dateString(
+    options?: Intl.DateTimeFormatOptions,
+    lang?: string,
+    date?: string,
+): string {
+    const l = lang === 'zh' ? 'zh-CN' : 'en-US'
+    const right = /([\u4e00-\u9fa5]+)([0-9a-zA-Z]+)/gm
+    const left = /([0-9a-zA-Z]+)([\u4e00-\u9fa5]+)/gm
+    return new Date(date ?? Date.now())
+        .toLocaleDateString(l, options)
+        .replace(right, '$1 $2')
+        .replace(left, '$1 $2')
+}
+
+function Time({
+    startDate,
+    endDate,
+    lang,
+}: {
+    startDate: string
+    endDate?: string
+    lang?: string
+}) {
+    const options: Intl.DateTimeFormatOptions = {
+        year: 'numeric',
+        month: 'short',
+    }
+
     return (
-        <time dateTime={startDate}>
-            {new Date(startDate).toLocaleDateString('en-US', {
-                month: 'short',
-                year: 'numeric',
-            })}
+        <>
+            <time dateTime={startDate}>
+                {dateString(options, lang, startDate)}
+            </time>
             {' - '}
             {endDate ? (
                 <time dateTime={endDate}>
-                    {new Date(endDate).toLocaleDateString('en-US', {
-                        month: 'short',
-                        year: 'numeric',
-                    })}
+                    {dateString(options, lang, endDate)}
                 </time>
+            ) : lang === 'zh' ? (
+                '现在'
             ) : (
                 'Present'
             )}
-        </time>
+        </>
     )
 }
 
+function deepMerge(target: any, source: any): any {
+    if (
+        typeof target === 'object' &&
+        target !== null &&
+        typeof source === 'object' &&
+        source !== null
+    ) {
+        const newTarget = Array.isArray(target) ? [...target] : { ...target }
+
+        if (Array.isArray(newTarget) && Array.isArray(source)) {
+            for (let i = 0; i < source.length; i++) {
+                newTarget[i] = deepMerge(newTarget[i], source[i])
+            }
+        } else {
+            for (const key in source) {
+                if (source.hasOwnProperty(key)) {
+                    newTarget[key] = deepMerge(newTarget[key], source[key])
+                }
+            }
+        }
+        return Object.freeze(newTarget)
+    } else {
+        return source !== undefined ? source : target
+    }
+}
+
+function Markdown({ children }: { children: string }) {
+    return (
+        <ReactMarkdown
+            components={{
+                a: (props) => (
+                    <Link
+                        href={props.href}
+                        target='_blank'
+                        className='underline-offset-4'
+                    >
+                        {props.children}
+                    </Link>
+                ),
+            }}
+        >
+            {children}
+        </ReactMarkdown>
+    )
+}
+
+const cache = new Map<string, typeof en>([
+    ['en', en],
+    ['zh', deepMerge(en, zh)],
+])
+
 function App() {
+    const search = new URLSearchParams(window.location.search)
+    const [lang, setLang] = useState(search.get('lang') ?? 'en')
+    const [cv, setCv] = useState(cache.get(lang) ?? en)
+
+    useEffect(() => {
+        setCv(cache.get(lang) ?? en)
+    }, [lang])
+
+    const switchLang = () => {
+        setLang((pre) => {
+            if (pre === 'en') {
+                return 'zh'
+            } else {
+                return 'en'
+            }
+        })
+    }
+
     return (
         <div className='w-[52rem] p-12 mx-auto print:p-0'>
             <main className='relative mb-4'>
                 <div className='absolute top-0 right-0 print:hidden'>
                     <a
-                        href='/resume.pdf'
-                        download={`Like_Resume_${cv.meta.lastModified}.pdf`}
+                        href={`/resume_${lang}.pdf`}
+                        download={`Like_Resume_${lang}_${cv.meta.lastModified}.pdf`}
                     >
                         <button className='p-2 rounded-sm hover:bg-gray-200 active:bg-gray-300'>
                             <CarbonGeneratePdf className='text-xl' />
                         </button>
                     </a>
+                    <button
+                        className='p-2 rounded-sm hover:bg-gray-200 active:bg-gray-300'
+                        onClick={switchLang}
+                    >
+                        {lang === 'en' ? (
+                            <IconParkOutlineChinese className='text-xl' />
+                        ) : (
+                            <IconParkOutlineEnglish className='text-xl' />
+                        )}
+                    </button>
                 </div>
                 <section className='-ml-6 flex flex-col gap-4 print:items-center'>
                     <div className='flex flex-col gap-2 print:items-center'>
@@ -84,6 +193,34 @@ function App() {
                     <p>{cv.basics.summary}</p>
                 </section>
                 <section>
+                    <h2>Skills</h2>
+                    <div>
+                        {cv.skills.map((skill) => (
+                            <div
+                                key={skill.name}
+                                className='mb-4 flex gap-8 items-start justify-between'
+                            >
+                                <div className='flex flex-col'>
+                                    <h4>{skill.name}</h4>
+                                    <small className='text-gray-500'>
+                                        {skill.level}
+                                    </small>
+                                </div>
+                                <div>
+                                    {skill.keywords.map((item) => (
+                                        <span
+                                            key={item}
+                                            className='border border-black px-2 py-0.5 mr-2 text-sm'
+                                        >
+                                            {item}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+                <section>
                     <h2>Experience</h2>
                     {cv.work.map((job) => (
                         <div key={job.startDate} className='mb-6'>
@@ -100,6 +237,7 @@ function App() {
                                     <Time
                                         startDate={job.startDate}
                                         endDate={job.endDate}
+                                        lang={lang}
                                     />
                                 </div>
                             </div>
@@ -110,7 +248,9 @@ function App() {
                             <p className='text-gray-900'>{job.summary}</p>
                             <ul>
                                 {job.highlights.map((highlight) => (
-                                    <li key={highlight}>{highlight}</li>
+                                    <li key={highlight}>
+                                        <Markdown>{highlight}</Markdown>
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -131,6 +271,7 @@ function App() {
                                     <Time
                                         startDate={project.startDate}
                                         endDate={project.endDate}
+                                        lang={lang}
                                     />
                                 </div>
                             </div>
@@ -153,7 +294,9 @@ function App() {
                             </p>
                             <ul>
                                 {project.highlights.map((highlight) => (
-                                    <li key={highlight}>{highlight}</li>
+                                    <li key={highlight}>
+                                        <Markdown>{highlight}</Markdown>
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -176,42 +319,17 @@ function App() {
                                     <Time
                                         startDate={school.startDate}
                                         endDate={school.endDate}
+                                        lang={lang}
                                     />
                                 </div>
                             </div>
                             <div className='text-gray-500'>
-                                {school.studyType} of {school.area}
+                                {lang === 'zh'
+                                    ? `${school.area}${school.studyType}`
+                                    : `${school.studyType} of ${school.area}`}
                             </div>
                         </div>
                     ))}
-                </section>
-                <section>
-                    <h2>Skills</h2>
-                    <div>
-                        {cv.skills.map((skill) => (
-                            <div
-                                key={skill.name}
-                                className='mb-4 flex justify-between items-center'
-                            >
-                                <div className='flex gap-2 items-baseline'>
-                                    <h4>{skill.name}</h4>
-                                    <small className='text-gray-500'>
-                                        {skill.level}
-                                    </small>
-                                </div>
-                                <div>
-                                    {skill.keywords.map((item) => (
-                                        <span
-                                            key={item}
-                                            className='border border-black px-2 py-0.5 mr-2 text-sm'
-                                        >
-                                            {item}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
                 </section>
                 <section>
                     <h2>Languages</h2>
@@ -239,13 +357,12 @@ function App() {
                 </Link>
                 <Link
                     className='text-sm text-gray-500 hidden print:block'
-                    href='https://resume.ekil.io'
+                    href={`https://resume.ekil.io?lang=${lang}`}
                 >
                     https://resume.ekil.io
                 </Link>
                 <small className='text-gray-500'>
-                    {new Date(cv.meta.lastModified).toLocaleDateString(
-                        'en-US',
+                    {dateString(
                         {
                             day: 'numeric',
                             month: 'long',
@@ -254,6 +371,8 @@ function App() {
                             minute: 'numeric',
                             second: 'numeric',
                         },
+                        lang,
+                        cv.meta.lastModified,
                     )}
                 </small>
             </footer>

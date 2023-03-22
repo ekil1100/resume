@@ -1,5 +1,79 @@
 import { SVGProps } from 'react'
 
+export function PrimeExternalLink(props: SVGProps<SVGSVGElement>) {
+    return (
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='1em'
+            height='1em'
+            viewBox='0 0 24 24'
+            {...props}
+        >
+            <path
+                fill='currentColor'
+                d='M18 20.75H6A2.75 2.75 0 0 1 3.25 18V6A2.75 2.75 0 0 1 6 3.25h6a.75.75 0 0 1 0 1.5H6A1.25 1.25 0 0 0 4.75 6v12A1.25 1.25 0 0 0 6 19.25h12A1.25 1.25 0 0 0 19.25 18v-6a.75.75 0 0 1 1.5 0v6A2.75 2.75 0 0 1 18 20.75Zm2-12a.76.76 0 0 1-.75-.75V4.75H16a.75.75 0 0 1 0-1.5h4a.76.76 0 0 1 .75.75v4a.76.76 0 0 1-.75.75Z'
+            ></path>
+            <path
+                fill='currentColor'
+                d='M13.5 11.25A.74.74 0 0 1 13 11a.75.75 0 0 1 0-1l6.5-6.5a.75.75 0 1 1 1.06 1.06L14 11a.74.74 0 0 1-.5.25Z'
+            ></path>
+        </svg>
+    )
+}
+
+export function IconParkOutlineEnglish(props: SVGProps<SVGSVGElement>) {
+    return (
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='1em'
+            height='1em'
+            viewBox='0 0 48 48'
+            {...props}
+        >
+            <g
+                fill='none'
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='4'
+            >
+                <rect width='36' height='36' x='6' y='6' rx='3'></rect>
+                <path d='M13 31V17h8m-8 7h7.5M13 31h7.5m5.5 0V19m0 12v-6.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5V31'></path>
+            </g>
+        </svg>
+    )
+}
+
+export function IconParkOutlineChinese(props: SVGProps<SVGSVGElement>) {
+    return (
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='1em'
+            height='1em'
+            viewBox='0 0 48 48'
+            {...props}
+        >
+            <g
+                fill='none'
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeWidth='4'
+            >
+                <rect
+                    width='36'
+                    height='36'
+                    x='6'
+                    y='6'
+                    strokeLinejoin='round'
+                    rx='3'
+                ></rect>
+                <path strokeLinejoin='round' d='M14 18h20v10H14z'></path>
+                <path d='M24 14v21'></path>
+            </g>
+        </svg>
+    )
+}
+
 export function CarbonGeneratePdf(props: SVGProps<SVGSVGElement>) {
     return (
         <svg width='1em' height='1em' viewBox='0 0 32 32' {...props}>

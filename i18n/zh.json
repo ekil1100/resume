@@ -1,0 +1,166 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "郑力可",
+    "label": "软件工程师",
+    "summary": "有 5 年的软件开发经验，更擅长前端开发。有产品设计经验，对 UX 和 UI 设计都有涉猎。我非常重视用户体验，这也促使我去学习设计的相关知识。我也很注重团队协作，曾经从 0 到 1 打造了一个拥有敏捷文化的 6 人前端团队。"
+  },
+  "work": [
+    {
+      "name": "杭州字节方舟科技有限公司",
+      "location": "远程",
+      "position": "技术负责人",
+      "summary": "收集和处理 Filecoin 社区信息，Filecoin 相关的产品设计。",
+      "highlights": [
+        "设计并参与开发了 Filecoin 远程封装平台（Sealing-as-a-Service）。",
+        "发布 Filecoin Weekly 周刊（公司内部），内容包括 Filecoin 的相关新闻、线下活动、代码更新、文章、视频等。已发布 10 期，有超过 200 的累计阅读量。"
+      ]
+    },
+    {
+      "name": "杭州字节方舟科技有限公司",
+      "location": "杭州",
+      "position": "技术负责人",
+      "summary": "设计和开发基于 Filecoin 和 IPFS 的应用产品。",
+      "highlights": [
+        "管理 5 人的敏捷团队，2 个前端，2 个后端和 1 个 UI 设计师。",
+        "设计并开发了一个基于 Filecoin 和 IPFS 的网盘原型。"
+      ]
+    },
+    {
+      "name": "杭州慕锐科技有限公司",
+      "location": "杭州",
+      "position": "前端负责人",
+      "summary": "制定优化 Git 流程，推进了前端设计体系的建设，因此提前转正并晋升为前端负责人。",
+      "highlights": [
+        "管理 5 人的前端团队负责开发和维护 Web 应用。",
+        "制定了新的 Git 流程（基于 Trunk-Based Development），减少了代码冲突所产生的 Bug。",
+        "迁移老的 UmiJS 代码到 NextJS，并进行了重构，通过 SSR 优化了 SEO；减少了 10% 的包体积；提升了开发体验。",
+        "引入了 Directus CMS 和 NextJS 的 Preview Mode 功能，减少了 10% 的后端开发工作量；简化了更新文案和图片的流程，时间从原来的 1 天减少到了 10 分钟。"
+      ]
+    },
+    {
+      "name": "杭州字节方舟科技有限公司",
+      "location": "杭州",
+      "position": "前端负责人",
+      "summary": "试用期后晋升为前端负责人，负责制定前端规范以及架构设计。",
+      "highlights": [
+        "管理 8 人的前端团队，负责开发和维护网页应用，手机应用，微信小程序。",
+        "制定开发流程和标准，包括 Git 流程规范，代码 Lint 规范，代码审查指南，前端设计体系。",
+        "研究敏捷开发方法，并进行实践，提升团队效率，产出超过 10,000 字的文档。"
+      ]
+    },
+    {
+      "name": "宁波港信息通信有限公司",
+      "location": "宁波",
+      "position": "前端开发",
+      "summary": "开发和维护港口报单系统网站，使用的技术栈是 Java + ExtJS。",
+      "highlights": [
+        "引入了 grid 和 flex 的 polyfills，兼容 IE11 的同时优化了开发体验。"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Pandarua",
+      "description": "Filecoin 远程封装平台（Sealing-as-a-Service）。",
+      "roles": ["项目负责人", "产品设计"],
+      "highlights": ["通过资源包管理扇区的方式，减缓了底层算力供给的压力。"],
+      "keywords": ["Figma", "Product Map"],
+      "entity": "杭州字节方舟科技有限公司"
+    },
+    {
+      "name": "米绘",
+      "description": "基于 AI 的服装花型设计平台。",
+      "highlights": [
+        "迁移老的 UmiJS 代码到 NextJS，并进行了重构，通过 SSR 优化了 SEO；减少了 10% 的包体积；提升了开发体验。",
+        "引入了 Directus CMS 和 NextJS 的 Preview Mode 功能，减少了 10% 的后端开发工作量；简化了更新文案和图片的流程，时间从原来的 1 天减少到了 10 分钟。",
+        "引入了 react-query，降低了状态管理的复杂度，提高了用户体验和开发体验。"
+      ],
+      "roles": ["前端负责人"],
+      "entity": "杭州慕锐科技有限公司"
+    },
+    {
+      "name": "Dragonfly",
+      "description": "Docker 镜像储存服务。",
+      "highlights": [
+        "项目获得 Filecoin Slingshot 第一阶段的一等奖。",
+        "修改 Powergate 的源码，使其可以导入离线交易到数据库中。",
+        "在 Closing Ceremony 上做了项目演讲（[视频链接](https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s)）。"
+      ],
+      "roles": ["前端负责人", "产品设计"],
+      "entity": "杭州字节方舟科技有限公司"
+    },
+    {
+      "name": "Matrix",
+      "description": "矿机设备管理系统客户端。",
+      "highlights": [
+        "使用 Flutter 构建多平台的移动应用程序。",
+        "使用 Fastlane 自动化了发布流程。"
+      ],
+      "roles": ["前端负责人"],
+      "entity": "杭州字节方舟科技有限公司"
+    },
+    {
+      "name": "Arc",
+      "description": "注重用户体验和可用性的设计系统。",
+      "highlights": [
+        "调研了 10 个以上的设计系统。",
+        "开发了 10 个以上的组件，并成功的在生产环境中使用。"
+      ],
+      "roles": ["前端负责人"],
+      "entity": "杭州字节方舟科技有限公司"
+    }
+  ],
+  "education": [
+    {
+      "institution": "圭尔夫大学（University of Guelph）",
+      "area": "计算机工程",
+      "studyType": "学士"
+    }
+  ],
+  "skills": [
+    {
+      "name": "前端开发",
+      "level": "Senior",
+      "keywords": ["JavaScript", "TypeScript", "NextJS", "ReactJS", "Graphql"]
+    },
+    {
+      "name": "后端开发",
+      "level": "Senior",
+      "keywords": ["NodeJS", "PostgreSQL", "Prisma", "NextJS", "Graphql"]
+    },
+    {
+      "name": "移动开发",
+      "level": "Intermediate",
+      "keywords": ["Flutter", "Dart"]
+    },
+    {
+      "name": "DevOps",
+      "level": "Intermediate",
+      "keywords": ["Docker", "AWS", "AliCloud", "Vercel", "Serverless"]
+    },
+    {
+      "name": "项目管理",
+      "level": "Intermediate",
+      "keywords": ["Agile", "Scrum", "Linear"]
+    },
+    {
+      "name": "UI 设计",
+      "level": "Intermediate",
+      "keywords": ["Figma"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "中文",
+      "fluency": "母语"
+    },
+    {
+      "language": "英文",
+      "fluency": "够用"
+    }
+  ],
+  "meta": {
+    "lastModified": "2023-03-22T17:33:43+08:00"
+  }
+}
