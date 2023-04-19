@@ -141,19 +141,19 @@ function App() {
     }
 
     return (
-        <div className='w-[52rem] p-12 mx-auto print:p-0'>
+        <div className='mx-auto max-w-[52rem] p-12 print:p-0 max-sm:p-10'>
             <main className='relative mb-4'>
                 <div className='absolute top-0 right-0 print:hidden'>
                     <a
                         href={`/resume_${lang}.pdf`}
                         download={`Like_Resume_${lang}_${cv.meta.lastModified}.pdf`}
                     >
-                        <button className='p-2 rounded-sm hover:bg-gray-200 active:bg-gray-300'>
+                        <button className='rounded-sm p-2 hover:bg-gray-200 active:bg-gray-300'>
                             <CarbonGeneratePdf className='text-xl' />
                         </button>
                     </a>
                     <button
-                        className='p-2 rounded-sm hover:bg-gray-200 active:bg-gray-300'
+                        className='rounded-sm p-2 hover:bg-gray-200 active:bg-gray-300'
                         onClick={switchLang}
                     >
                         {lang === 'en' ? (
@@ -168,9 +168,9 @@ function App() {
                         <h1>{cv.basics.name}</h1>
                         <div className='text-gray-500'>{cv.basics.label}</div>
                     </div>
-                    <div className='flex gap-4 items-center'>
+                    <div className='flex flex-wrap items-center gap-4'>
                         <Link
-                            className='text-sm text-gray-600 w-max flex gap-1 items-center'
+                            className='flex w-max items-center gap-1 text-sm text-gray-600'
                             href={`mailto:${cv.basics.email}`}
                         >
                             {icons.mail}
@@ -180,7 +180,7 @@ function App() {
                             <Link
                                 key={profile.network}
                                 href={profile.url}
-                                className='text-sm text-gray-600 w-max flex gap-1 items-center'
+                                className='flex w-max items-center gap-1 text-sm text-gray-600'
                             >
                                 {icons[profile.network.toLowerCase()]}
                                 {profile.username}
@@ -198,19 +198,19 @@ function App() {
                         {cv.skills.map((skill) => (
                             <div
                                 key={skill.name}
-                                className='mb-4 flex gap-8 items-start justify-between'
+                                className='mb-4 flex flex-wrap items-start justify-between gap-2'
                             >
-                                <div className='flex flex-col'>
+                                <div className='flex flex-col max-sm:w-full'>
                                     <h4>{skill.name}</h4>
                                     <small className='text-gray-500'>
                                         {skill.level}
                                     </small>
                                 </div>
-                                <div>
+                                <div className='flex flex-wrap gap-2'>
                                     {skill.keywords.map((item) => (
                                         <span
                                             key={item}
-                                            className='border border-black px-2 py-0.5 mr-2 text-sm'
+                                            className='border border-black px-2 py-0.5 text-sm'
                                         >
                                             {item}
                                         </span>
@@ -224,16 +224,16 @@ function App() {
                     <h2>Experience</h2>
                     {cv.work.map((job) => (
                         <div key={job.startDate} className='mb-6'>
-                            <div className='flex justify-between items-center mb-1'>
-                                <h3>
+                            <div className='mb-2 flex flex-wrap items-baseline justify-between gap-1 max-sm:mb-1'>
+                                <h3 className='max-sm:w-full'>
                                     <Link
                                         href={job.url}
-                                        className='underline-offset-4 text-with-slashes'
+                                        className='text-with-slashes underline-offset-4'
                                     >
                                         {job.name}
                                     </Link>
                                 </h3>
-                                <div className='text-gray-500 text-sm'>
+                                <div className='text-sm text-gray-500'>
                                     <Time
                                         startDate={job.startDate}
                                         endDate={job.endDate}
@@ -241,9 +241,11 @@ function App() {
                                     />
                                 </div>
                             </div>
-                            <div className='text-gray-500 flex justify-between'>
-                                <p>{job.position}</p>
-                                <p className='text-sm'>{job.location}</p>
+                            <div className='mb-2 flex flex-wrap items-baseline justify-between gap-1 text-gray-500'>
+                                <div className='max-sm:w-full max-sm:text-sm'>
+                                    {job.position}
+                                </div>
+                                <div className='text-sm'>{job.location}</div>
                             </div>
                             <p className='text-gray-900'>{job.summary}</p>
                             <ul>
@@ -263,11 +265,11 @@ function App() {
                             key={project.startDate + project.name}
                             className='mb-6'
                         >
-                            <div className='flex justify-between items-center mb-1'>
-                                <h3 className='text-with-slashes'>
+                            <div className='mb-2 flex flex-wrap items-baseline justify-between gap-1 max-sm:mb-1'>
+                                <h3 className='text-with-slashes max-sm:w-full'>
                                     {project.name}
                                 </h3>
-                                <div className='text-gray-500 text-sm'>
+                                <div className='text-sm text-gray-500'>
                                     <Time
                                         startDate={project.startDate}
                                         endDate={project.endDate}
@@ -275,20 +277,22 @@ function App() {
                                     />
                                 </div>
                             </div>
-                            <div className='text-gray-500 flex justify-between'>
-                                <p>{project.roles.join(' & ')}</p>
-                                <p className='text-sm'>{project.entity}</p>
+                            <div className='mb-2 flex flex-wrap items-baseline justify-between gap-1 text-gray-500'>
+                                <div className='max-sm:w-full max-sm:text-sm'>
+                                    {project.roles.join(' & ')}
+                                </div>
+                                <div className='text-sm'>{project.entity}</div>
                             </div>
-                            <p>
+                            <div className='mb-2 flex flex-wrap gap-2'>
                                 {project.keywords.map((item) => (
                                     <span
                                         key={item}
-                                        className='border border-black px-2 py-0.5 mr-2 text-sm'
+                                        className='border border-black px-2 py-0.5 text-xs'
                                     >
                                         {item}
                                     </span>
                                 ))}
-                            </p>
+                            </div>
                             <p className='text-gray-900'>
                                 {project.description}
                             </p>
@@ -306,16 +310,16 @@ function App() {
                     <h2>Education</h2>
                     {cv.education.map((school) => (
                         <div key={school.institution} className='mb-6'>
-                            <div className='flex justify-between items-center mb-2'>
-                                <h3 className='text-with-slashes'>
+                            <div className='mb-2 flex flex-wrap items-baseline justify-between gap-1 max-sm:mb-1'>
+                                <h3 className='max-sm:w-full'>
                                     <Link
                                         href={school.url}
-                                        className='underline-offset-4 text-with-slashes'
+                                        className='text-with-slashes underline-offset-4'
                                     >
                                         {school.institution}
                                     </Link>
                                 </h3>
-                                <div className='text-gray-500 text-sm'>
+                                <div className='text-sm text-gray-500'>
                                     <Time
                                         startDate={school.startDate}
                                         endDate={school.endDate}
@@ -323,7 +327,7 @@ function App() {
                                     />
                                 </div>
                             </div>
-                            <div className='text-gray-500'>
+                            <div className='text-gray-500 max-sm:text-sm'>
                                 {lang === 'zh'
                                     ? `${school.area}${school.studyType}`
                                     : `${school.studyType} of ${school.area}`}
@@ -333,11 +337,11 @@ function App() {
                 </section>
                 <section>
                     <h2>Languages</h2>
-                    <div className='flex gap-4'>
+                    <div className='flex flex-wrap items-center gap-4 max-sm:gap-2'>
                         {cv.languages.map((language) => (
                             <div
                                 key={language.language}
-                                className='flex gap-2 items-baseline mb-2'
+                                className='flex items-baseline gap-2 max-sm:w-full'
                             >
                                 <h4>{language.language}</h4>
                                 <small className='text-gray-500'>
@@ -348,7 +352,7 @@ function App() {
                     </div>
                 </section>
             </main>
-            <footer className='flex flex-col justify-center items-center gap-1'>
+            <footer className='flex flex-col items-center justify-center gap-1'>
                 <Link
                     className='text-sm text-gray-500 print:hidden'
                     href='https://github.com/ekil1100/resume'
@@ -356,7 +360,7 @@ function App() {
                     Source Code
                 </Link>
                 <Link
-                    className='text-sm text-gray-500 hidden print:block'
+                    className='hidden text-sm text-gray-500 print:block'
                     href={`https://resume.ekil.io?lang=${lang}`}
                 >
                     https://resume.ekil.io
