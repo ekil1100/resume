@@ -192,32 +192,35 @@ function App() {
                     <h2>About</h2>
                     <p>{cv.basics.summary}</p>
                 </section>
+                {/* Skills */}
                 <section>
                     <h2>Skills</h2>
                     <div>
-                        {cv.skills.map((skill) => (
-                            <div
-                                key={skill.name}
-                                className='mb-4 flex flex-wrap items-start justify-between gap-2'
-                            >
-                                <div className='flex flex-col max-sm:w-full'>
-                                    <h4>{skill.name}</h4>
-                                    <small className='text-gray-500'>
-                                        {skill.level}
-                                    </small>
+                        {cv.skills
+                            .filter((v) => v.show ?? true)
+                            .map((skill) => (
+                                <div
+                                    key={skill.name}
+                                    className='mb-4 flex flex-wrap items-start justify-between gap-2'
+                                >
+                                    <div className='flex flex-col max-sm:w-full'>
+                                        <h4>{skill.name}</h4>
+                                        <small className='text-gray-500'>
+                                            {skill.level}
+                                        </small>
+                                    </div>
+                                    <div className='flex flex-wrap gap-2'>
+                                        {skill.keywords.map((item) => (
+                                            <span
+                                                key={item}
+                                                className='border border-black px-2 py-0.5 text-sm'
+                                            >
+                                                {item}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
-                                <div className='flex flex-wrap gap-2'>
-                                    {skill.keywords.map((item) => (
-                                        <span
-                                            key={item}
-                                            className='border border-black px-2 py-0.5 text-sm'
-                                        >
-                                            {item}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
+                            ))}
                     </div>
                 </section>
                 <section>
