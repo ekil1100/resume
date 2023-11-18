@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer'
 import path from 'path'
 
 async function printPage(url: string, outputPath: string): Promise<void> {
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({ headless: 'new' })
     const page = await browser.newPage()
 
     await page.goto(url, { waitUntil: 'networkidle2' })
@@ -32,5 +32,5 @@ const generatePDF = (lang: string) =>
         .then(() => console.log(`resume_${lang}.pdf generated successfully`))
         .catch((error) => console.error('Error generating PDF:', error))
 
-generatePDF('en')
+// generatePDF('en')
 generatePDF('zh')

@@ -3,13 +3,44 @@
   "basics": {
     "name": "郑力可",
     "label": "软件工程师",
-    "summary": "有 5 年的软件开发经验，更擅长前端开发。有产品设计经验，对 UX 和 UI 设计都有涉猎。我非常重视用户体验，这也促使我去学习设计的相关知识。我也很注重团队协作，曾经从 0 到 1 打造了一个拥有敏捷文化的 6 人前端团队。"
+    "summary": "有 5 年的软件开发经验，更擅长前端开发。有产品设计经验，对 UX 和 UI 设计都有涉猎。我非常重视用户体验，这也促使我去学习设计的相关知识。我也很注重团队协作，曾经从 0 到 1 打造了一个拥有敏捷文化的 6 人前端团队。",
+    "email": "like@ekil.sh",
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "Github",
+        "url": "https://github.com/ekil1100/"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "LinkedIn",
+        "url": "https://www.linkedin.com/in/likezheng/"
+      },
+      {
+        "network": "Blog",
+        "username": "Blog",
+        "url": "https://ekil.io/"
+      }
+    ]
   },
   "work": [
+    {
+      "name": "华为 - OpenHarmony",
+      "location": "杭州",
+      "position": "JS 运行时域",
+      "startDate": "2023-08-29",
+      "endDate": "",
+      "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
+      "summary": "开发 JS 引擎相关需求。",
+      "highlights": ["globalThis 对象的 IR 优化。", "定位和处理安全性问题。"]
+    },
     {
       "name": "杭州字节方舟科技有限公司",
       "location": "杭州｜远程办公",
       "position": "技术负责人",
+      "startDate": "2021-08-09",
+      "endDate": "2023-04-11",
+      "url": "https://byteark.cn/",
       "summary": "参与 Filecoin 社区交流并收集和处理社区信息；设计和开发基于 Filecoin 和 IPFS 的应用。",
       "highlights": [
         "管理 5 人的敏捷团队，2 个前端，2 个后端和 1 个 UI 设计师。",
@@ -22,6 +53,9 @@
       "name": "杭州慕锐科技有限公司",
       "location": "杭州",
       "position": "前端负责人",
+      "startDate": "2021-03-01",
+      "endDate": "2021-07-01",
+      "url": "https://www.meprint.com/",
       "summary": "制定优化 Git 流程，推进了前端设计体系的建设，因此提前转正并晋升为前端负责人。",
       "highlights": [
         "管理 5 人的前端团队负责开发和维护 Web 应用。",
@@ -34,6 +68,9 @@
       "name": "杭州字节方舟科技有限公司",
       "location": "杭州",
       "position": "前端负责人",
+      "startDate": "2019-02-01",
+      "endDate": "2021-02-01",
+      "url": "https://byteark.cn/",
       "summary": "试用期后晋升为前端负责人，负责制定前端规范以及架构设计。",
       "highlights": [
         "管理 8 人的前端团队，负责开发和维护网页应用，手机应用，微信小程序。",
@@ -45,6 +82,9 @@
       "name": "宁波港信息通信有限公司",
       "location": "宁波",
       "position": "前端开发",
+      "startDate": "2018-08-01",
+      "endDate": "2019-01-01",
+      "url": "https://www.nbport.com.cn/npic/",
       "summary": "开发和维护港口报单系统网站，使用的技术栈是 Java + ExtJS。",
       "highlights": [
         "引入了 grid 和 flex 的 polyfills，兼容 IE11 的同时优化了开发体验。"
@@ -53,11 +93,16 @@
   ],
   "projects": [
     {
-      "name": "Pandarua",
-      "description": "Filecoin 远程封装平台（Sealing-as-a-Service）。",
-      "highlights": ["通过资源包管理扇区的方式，减缓了底层算力供给的压力。"],
-      "roles": ["项目负责人", "产品设计"],
-      "entity": "杭州字节方舟科技有限公司"
+      "name": "方舟 eTS 运行时",
+      "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
+      "description": "方舟 eTS 运行时是 OpenHarmony 上默认的 ArkTS 语言运行时。支持 Ecmascript 规范定义的标准库和高效 container 容器库，提供完备的 C++ 交互 ArkTS NAPI 和各种高性能的垃圾回收器，驱动着万物互联时代的 OpenHarmony 应用程序。",
+      "highlights": ["globalThis 对象的 IR 优化。"],
+      "roles": ["AOT 开发"],
+      "entity": "华为 - OpenHarmony",
+      "keywords": ["C++"],
+      "startDate": "2023-08-29",
+      "endDate": "",
+      "type": "application"
     },
     {
       "name": "米绘",
@@ -68,7 +113,11 @@
         "引入了 react-query，降低了状态管理的复杂度，提高了用户体验和开发体验。"
       ],
       "roles": ["前端负责人"],
-      "entity": "杭州慕锐科技有限公司"
+      "entity": "杭州慕锐科技有限公司",
+      "keywords": ["React", "NextJS", "React Query", "Emotion", "DirectusCMS"],
+      "startDate": "2021-03-01",
+      "endDate": "2021-07-01",
+      "type": "application"
     },
     {
       "name": "Dragonfly",
@@ -79,7 +128,11 @@
         "在 Closing Ceremony 上做了项目演讲（[视频链接](https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s)）。"
       ],
       "roles": ["前端负责人", "产品设计"],
-      "entity": "杭州字节方舟科技有限公司"
+      "entity": "杭州字节方舟科技有限公司",
+      "keywords": ["Vue", "NodeJS", "Go", "Powergate", "IPFS", "Lotus"],
+      "startDate": "2020-10-01",
+      "endDate": "2020-11-01",
+      "type": "application"
     },
     {
       "name": "Matrix",
@@ -89,7 +142,11 @@
         "使用 Fastlane 自动化了发布流程。"
       ],
       "roles": ["前端负责人"],
-      "entity": "杭州字节方舟科技有限公司"
+      "entity": "杭州字节方舟科技有限公司",
+      "keywords": ["Flutter", "Taro", "React", "Fastlane"],
+      "startDate": "2019-09-01",
+      "endDate": "2020-01-01",
+      "type": "application"
     },
     {
       "name": "Arc",
@@ -99,17 +156,36 @@
         "开发了 10 个以上的组件，并成功的在生产环境中使用。"
       ],
       "roles": ["前端负责人"],
-      "entity": "杭州字节方舟科技有限公司"
+      "entity": "杭州字节方舟科技有限公司",
+      "keywords": [
+        "TypeScript",
+        "React",
+        "Rollup",
+        "Emotion",
+        "Storybook",
+        "Jest"
+      ],
+      "startDate": "2019-09-01",
+      "endDate": "2020-01-01",
+      "type": "application"
     }
   ],
   "education": [
     {
       "institution": "圭尔夫大学（University of Guelph）",
       "area": "计算机工程",
-      "studyType": "学士"
+      "studyType": "学士",
+      "url": "https://www.uoguelph.ca/",
+      "startDate": "2012-09-01",
+      "endDate": "2018-02-20"
     }
   ],
   "skills": [
+    {
+      "name": "系统开发",
+      "level": "Joniour",
+      "keywords": ["C++"]
+    },
     {
       "name": "前端开发",
       "level": "Senior",
@@ -136,6 +212,7 @@
       "keywords": ["Agile", "Scrum", "Linear"]
     },
     {
+      "show": false,
       "name": "UI 设计",
       "level": "Intermediate",
       "keywords": ["Figma"]
@@ -152,6 +229,6 @@
     }
   ],
   "meta": {
-    "lastModified": "2023-06-12T15:07:56+08:00"
+    "lastModified": "2023-11-18T04:51:35+08:00"
   }
 }

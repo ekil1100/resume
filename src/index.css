@@ -6,7 +6,7 @@
 
 html,
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans', MiSans, sans-serif;
 }
 
 h1 {
@@ -17,7 +17,7 @@ h2 {
     @apply text-lg font-semibold;
     @apply mb-6;
     @apply -ml-6;
-    @apply text-white bg-black w-max px-2;
+    @apply w-max bg-black px-2 text-white;
 }
 
 h3 {

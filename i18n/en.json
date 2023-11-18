@@ -3,18 +3,13 @@
   "basics": {
     "name": "Like Zheng",
     "label": "Software Engineer",
-    "email": "like@ekil.sh",
     "summary": "I have 5 years of software development experience, with a strong focus on front-end development. I also have experience in product design, and have dabbled in UX and UI design. I place great emphasis on user experience, which has driven me to learn more about design-related knowledge. I highly value teamwork and have successfully built a 6-person front-end team with an agile culture from scratch.",
+    "email": "like@ekil.sh",
     "profiles": [
       {
         "network": "Github",
         "username": "ekil1100",
         "url": "https://github.com/ekil1100/"
-      },
-      {
-        "network": "Twitter",
-        "username": "ekil1100",
-        "url": "https://twitter.com/ekil1100/"
       },
       {
         "network": "LinkedIn",
@@ -24,11 +19,21 @@
       {
         "network": "Blog",
         "username": "like",
-        "url": "https://blog.ekil.io/"
+        "url": "https://ekil.io/"
       }
     ]
   },
   "work": [
+    {
+      "name": "华为 - OpenHarmony",
+      "location": "杭州",
+      "position": "JS 运行时域",
+      "startDate": "2023-08-29",
+      "endDate": "",
+      "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
+      "summary": "开发 JS 引擎相关需求。",
+      "highlights": ["globalThis 对象的 IR 优化。", "定位和处理安全性问题。"]
+    },
     {
       "name": "ByteArk Tech Ltd.",
       "location": "Hangzhou, China | Remote",
@@ -88,16 +93,15 @@
   ],
   "projects": [
     {
-      "name": "Pandarua",
-      "description": "A Filecoin Remote Sealing (Sealing-as-a-Service) Platform.",
-      "highlights": [
-        "Alleviated the pressure on the underlying computational power supply by managing sectors using resource packs."
-      ],
-      "roles": ["Project Lead"],
-      "keywords": ["Figma", "Product Map"],
-      "startDate": "2022-08-01",
-      "endDate": "2022-09-01",
-      "entity": "ByteArk Tech Ltd.",
+      "name": "方舟 eTS 运行时",
+      "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
+      "description": "方舟 eTS 运行时是 OpenHarmony 上默认的 ArkTS 语言运行时。支持 Ecmascript 规范定义的标准库和高效 container 容器库，提供完备的 C++ 交互 ArkTS NAPI 和各种高性能的垃圾回收器，驱动着万物互联时代的 OpenHarmony 应用程序。",
+      "highlights": ["globalThis 对象的 IR 优化。"],
+      "roles": ["AOT 开发"],
+      "entity": "华为 - OpenHarmony",
+      "keywords": ["C++"],
+      "startDate": "2023-08-29",
+      "endDate": "",
       "type": "application"
     },
     {
@@ -108,11 +112,11 @@
         "Introduced Directus CMS and NextJS Preview Mode features, reducing backend development workload by 10%; streamlined the process for updating copy and images, reducing the time from 1 day to 10 minutes.",
         "Implemented react-query, reducing the complexity of state management and enhancing both user experience and development experience."
       ],
+      "roles": ["Front-End Lead"],
+      "entity": "Muri Tech Ltd.",
       "keywords": ["React", "NextJS", "React Query", "Emotion", "DirectusCMS"],
       "startDate": "2021-03-01",
       "endDate": "2021-07-01",
-      "roles": ["Front-End Lead"],
-      "entity": "Muri Tech Ltd.",
       "type": "application"
     },
     {
@@ -123,11 +127,11 @@
         "Modified Powergate's source code to enable the import of offline transactions into the database.",
         "Delivered a project presentation at the Closing Ceremony ([video link](https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s))."
       ],
+      "roles": ["Product Manager", "Front-End Lead"],
+      "entity": "ByteArk Tech Ltd.",
       "keywords": ["Vue", "NodeJS", "Go", "Powergate", "IPFS", "Lotus"],
       "startDate": "2020-10-01",
       "endDate": "2020-11-01",
-      "roles": ["Product Manager", "Front-End Lead"],
-      "entity": "ByteArk Tech Ltd.",
       "type": "application"
     },
     {
@@ -137,11 +141,11 @@
         "Built a multi-platform mobile application using Flutter.",
         "Automated the release process using Fastlane."
       ],
+      "roles": ["Front-End Lead"],
+      "entity": "ByteArk Tech Ltd.",
       "keywords": ["Flutter", "Taro", "React", "Fastlane"],
       "startDate": "2019-09-01",
       "endDate": "2020-01-01",
-      "roles": ["Front-End Lead"],
-      "entity": "ByteArk Tech Ltd.",
       "type": "application"
     },
     {
@@ -151,6 +155,8 @@
         "Researched and analyzed over 10 design systems.",
         "Developed more than 10 components, which have been successfully used in production environments."
       ],
+      "roles": ["Front-End Lead"],
+      "entity": "ByteArk Tech Ltd.",
       "keywords": [
         "TypeScript",
         "React",
@@ -161,22 +167,25 @@
       ],
       "startDate": "2019-09-01",
       "endDate": "2020-01-01",
-      "roles": ["Front-End Lead"],
-      "entity": "ByteArk Tech Ltd.",
       "type": "application"
     }
   ],
   "education": [
     {
       "institution": "University of Guelph",
-      "url": "https://www.uoguelph.ca/",
       "area": "Computer Engineering",
       "studyType": "Bachelor",
+      "url": "https://www.uoguelph.ca/",
       "startDate": "2012-09-01",
       "endDate": "2018-02-20"
     }
   ],
   "skills": [
+    {
+      "name": "系统开发",
+      "level": "Joniour",
+      "keywords": ["C++"]
+    },
     {
       "name": "Front-end",
       "level": "Senior",
