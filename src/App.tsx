@@ -127,6 +127,9 @@ function App() {
     const search = new URLSearchParams(window.location.search)
     const [lang, setLang] = useState(search.get('lang') ?? LANG)
     const [cv, setCv] = useState(cache.get(lang) ?? zh)
+    const name = useMemo(() => {
+        return lang === 'en' ? `ZhengLikeResume` : `郑力可简历`
+    }, [lang])
 
     useEffect(() => {
         setCv(cache.get(lang) ?? zh)
@@ -146,10 +149,7 @@ function App() {
         <div className='mx-auto max-w-[52rem] p-12 print:p-0 max-sm:p-10'>
             <main className='relative mb-4'>
                 <div className='absolute right-0 top-0 print:hidden'>
-                    <a
-                        href={`/resume_${lang}.pdf`}
-                        download={`Like_Resume_${lang}.pdf`}
-                    >
+                    <a href={`/${name}.pdf`} download={`${name}.pdf`}>
                         <button className='rounded-sm p-2 hover:bg-gray-200 active:bg-gray-300'>
                             <CarbonGeneratePdf className='text-xl' />
                         </button>

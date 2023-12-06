@@ -27,7 +27,7 @@
     {
       "name": "华为 - OpenHarmony",
       "location": "杭州",
-      "position": "JS 运行时域",
+      "position": "JS 运行时域工程师",
       "startDate": "2023-08-29",
       "endDate": "",
       "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
@@ -96,10 +96,17 @@
       "name": "方舟 eTS 运行时",
       "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
       "description": "方舟 eTS 运行时是 OpenHarmony 上默认的 ArkTS 语言运行时。支持 Ecmascript 规范定义的标准库和高效 container 容器库，提供完备的 C++ 交互 ArkTS NAPI 和各种高性能的垃圾回收器，驱动着万物互联时代的 OpenHarmony 应用程序。",
-      "highlights": ["globalThis 对象的 IR 优化。"],
-      "roles": ["AOT 开发"],
+      "highlights": ["优化 tryldglobalbyname 字节码。"],
+      "roles": ["运行时开发"],
       "entity": "华为 - OpenHarmony",
-      "keywords": ["C++"],
+      "keywords": [
+        "C++",
+        "ArkTS",
+        "Ecmascript",
+        "Compiler",
+        "AOT",
+        "JS Runtime"
+      ],
       "startDate": "2023-08-29",
       "endDate": "",
       "type": "application"
@@ -183,7 +190,7 @@
   "skills": [
     {
       "name": "系统开发",
-      "level": "Joniour",
+      "level": "Junior",
       "keywords": ["C++"]
     },
     {
@@ -229,6 +236,6 @@
     }
   ],
   "meta": {
-    "lastModified": "2023-11-18T04:51:35+08:00"
+    "lastModified": "2023-12-06T20:29:49+08:00"
   }
 }

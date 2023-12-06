@@ -25,14 +25,17 @@
   },
   "work": [
     {
-      "name": "华为 - OpenHarmony",
-      "location": "杭州",
-      "position": "JS 运行时域",
+      "name": "Huawei - OpenHarmony",
+      "location": "Hangzhou, China",
+      "position": "Runtime Developer",
       "startDate": "2023-08-29",
       "endDate": "",
       "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
-      "summary": "开发 JS 引擎相关需求。",
-      "highlights": ["globalThis 对象的 IR 优化。", "定位和处理安全性问题。"]
+      "summary": "Developer of ArkTS AOT compiler and its runtime.",
+      "highlights": [
+        "Optimized tryldglobalbyname bytecode using IR.",
+        "Fix bugs in the ArkTS AOT compiler."
+      ]
     },
     {
       "name": "ByteArk Tech Ltd.",
@@ -93,13 +96,20 @@
   ],
   "projects": [
     {
-      "name": "方舟 eTS 运行时",
+      "name": "Ark eTS runtime",
       "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
-      "description": "方舟 eTS 运行时是 OpenHarmony 上默认的 ArkTS 语言运行时。支持 Ecmascript 规范定义的标准库和高效 container 容器库，提供完备的 C++ 交互 ArkTS NAPI 和各种高性能的垃圾回收器，驱动着万物互联时代的 OpenHarmony 应用程序。",
-      "highlights": ["globalThis 对象的 IR 优化。"],
-      "roles": ["AOT 开发"],
-      "entity": "华为 - OpenHarmony",
-      "keywords": ["C++"],
+      "description": "The Ark eTS runtime is the default ArkTS language runtime on OpenHarmony. It supports standard libraries defined by the Ecmascript specification and efficient container libraries, provides full C++-interactive ArkTS NAPIs and a variety of high-performance garbage collectors, and drives OpenHarmony applications in the age of the Internet of Everything.",
+      "highlights": ["Optimized tryldglobalbyname bytecode using IR."],
+      "roles": ["Runtime Developer"],
+      "entity": "Huawei - OpenHarmony",
+      "keywords": [
+        "C++",
+        "ArkTS",
+        "Ecmascript",
+        "Compiler",
+        "AOT",
+        "JS Runtime"
+      ],
       "startDate": "2023-08-29",
       "endDate": "",
       "type": "application"
@@ -182,8 +192,8 @@
   ],
   "skills": [
     {
-      "name": "系统开发",
-      "level": "Joniour",
+      "name": "System Development",
+      "level": "Junior",
       "keywords": ["C++"]
     },
     {
@@ -229,6 +239,6 @@
     }
   ],
   "meta": {
-    "lastModified": "2023-06-12T15:07:56+08:00"
+    "lastModified": "2023-12-06T20:29:49+08:00"
   }
 }
