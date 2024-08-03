@@ -10,7 +10,7 @@ import {
     CarbonGeneratePdf,
     IconParkOutlineChinese,
     IconParkOutlineEnglish,
-    PrimeExternalLink,
+    Gitee,
 } from '@/icons'
 import { ReactNode, useEffect, useMemo, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
@@ -21,6 +21,7 @@ const icons: Record<string, ReactNode> = {
     linkedin: <MdiLinkedin className='text-xl' />,
     twitter: <MdiTwitter className='text-xl' />,
     blog: <MdiWeb className='text-xl' />,
+    gitee: <Gitee className='text-xl' />,
 }
 
 function dateString(
@@ -62,7 +63,7 @@ function Time({
                     {dateString(options, lang, endDate)}
                 </time>
             ) : lang === 'zh' ? (
-                '现在'
+                '至今'
             ) : (
                 'Present'
             )}
@@ -146,7 +147,7 @@ function App() {
     }
 
     return (
-        <div className='mx-auto max-w-[52rem] p-12 print:p-0 max-sm:p-10'>
+        <div className='mx-auto max-w-[52rem] p-12 max-sm:p-10 print:p-0'>
             <main className='relative mb-4'>
                 <div className='absolute right-0 top-0 print:hidden'>
                     <a href={`/${name}.pdf`} download={`${name}.pdf`}>
@@ -376,9 +377,6 @@ function App() {
                             day: 'numeric',
                             month: 'long',
                             year: 'numeric',
-                            hour: 'numeric',
-                            minute: 'numeric',
-                            second: 'numeric',
                         },
                         lang,
                         cv.meta.lastModified,
