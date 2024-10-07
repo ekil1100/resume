@@ -222,18 +222,14 @@
     {
       "name": "DevOps",
       "level": "Intermediate",
-      "keywords": ["Docker", "AWS", "AliCloud", "Vercel"]
+      "keywords": ["Docker", "AWS", "AliCloud", "Vercel"],
+      "show": false
     },
     {
       "name": "项目管理",
       "level": "Intermediate",
-      "keywords": ["Agile", "Scrum", "Linear"]
-    },
-    {
-      "show": false,
-      "name": "UI 设计",
-      "level": "Intermediate",
-      "keywords": ["Figma"]
+      "keywords": ["Agile", "Scrum", "Linear"],
+      "show": false
     }
   ],
   "languages": [

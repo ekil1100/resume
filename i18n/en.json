@@ -3,43 +3,49 @@
   "basics": {
     "name": "Like Zheng",
     "label": "Software Engineer",
-    "summary": "I have 5 years of software development experience, with a strong focus on front-end development. I also have experience in product design, and have dabbled in UX and UI design. I place great emphasis on user experience, which has driven me to learn more about design-related knowledge. I highly value teamwork and have successfully built a 6-person front-end team with an agile culture from scratch.",
+    "summary": "6 years of software development experience, with 3 years of team leadership. Proficient in front-end development, with experience in developing JS compilers. I place great emphasis on user experience, so I have also dabbled in product design. I also value teamwork and have experience in building agile teams from scratch.",
     "email": "like@ekil.sh",
     "profiles": [
       {
+        "network": "Gitee",
+        "username": "Gitee",
+        "url": "https://gitee.com/lastingman"
+      },
+      {
         "network": "Github",
-        "username": "ekil1100",
-        "url": "https://github.com/ekil1100/"
+        "username": "Github",
+        "url": "https://github.com/ekil1100"
       },
       {
         "network": "LinkedIn",
-        "username": "likezheng",
-        "url": "https://www.linkedin.com/in/likezheng/"
+        "username": "LinkedIn",
+        "url": "https://www.linkedin.com/in/likezheng"
       },
       {
         "network": "Blog",
-        "username": "like",
-        "url": "https://ekil.io/"
+        "username": "Blog",
+        "url": "https://ekil.io"
       }
     ]
   },
   "work": [
     {
-      "name": "Huawei - OpenHarmony",
-      "location": "Hangzhou, China",
-      "position": "Runtime Developer",
+      "name": "OpenHarmony, Huawei",
+      "location": "Hangzhou",
+      "position": "Software Engineer",
       "startDate": "2023-08-29",
       "endDate": "",
       "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
-      "summary": "Developer of ArkTS AOT compiler and its runtime.",
+      "summary": "Develop JS compiler and runtime, responsible for maintaining and optimizing the PGO module. Complete AOT instruction optimization requirements.",
       "highlights": [
-        "Optimized tryldglobalbyname bytecode using IR.",
-        "Fix bugs in the ArkTS AOT compiler."
+        "AOT IR optimization requirements.",
+        "Identify and address security issues.",
+        "PGO-related stability interface person."
       ]
     },
     {
       "name": "ByteArk Tech Ltd.",
-      "location": "Hangzhou, China | Remote",
+      "location": "Hangzhou | Remote",
       "position": "Technical Lead",
       "startDate": "2021-08-09",
       "endDate": "2023-04-11",
@@ -47,29 +53,26 @@
       "summary": "Participate in Filecoin community interactions and collect and process community information; design and develop applications based on Filecoin and IPFS.",
       "highlights": [
         "Managed an agile team of 5 members, including 2 front-end developers, 2 back-end developers, and 1 UI designer.",
-        "Designed and participated in the development of a cloud storage prototype based on Filecoin and IPFS.",
-        "Designed and participated in the development of a Filecoin Remote Sealing Platform (Sealing-as-a-Service).",
         "Published Filecoin Weekly newsletter (internal), featuring content such as Filecoin-related news, offline events, code updates, articles, and videos. Successfully released 15 issues, with over 500 cumulative views."
       ]
     },
     {
       "name": "Muri Tech Ltd.",
-      "location": "Hangzhou, China",
+      "location": "Hangzhou",
       "position": "Front-End Lead",
       "startDate": "2021-03-01",
       "endDate": "2021-07-01",
       "url": "https://www.meprint.com/",
       "summary": "Optimized Git workflow and advanced the construction of the front-end design system, which led to an early promotion to Front-End Lead.",
       "highlights": [
-        "Managed a 5-person front-end team responsible for developing and maintaining web applications.",
-        "Implemented a new Git workflow (based on Trunk-Based Development), reducing bugs caused by code conflicts.",
+        "Managed a 5-person front-end team responsible for developing and maintaining web applications. Implemented a new Git workflow (based on Trunk-Based Development), reducing bugs caused by code conflicts.",
         "Migrated legacy UmiJS code to NextJS and performed refactoring, optimizing SEO through SSR; reduced package size by 10%; and improved development experience.",
         "Introduced Directus CMS and NextJS Preview Mode features, reducing backend development workload by 10%; streamlined the process for updating copy and images, reducing the time from 1 day to 10 minutes."
       ]
     },
     {
       "name": "ByteArk Tech Ltd.",
-      "location": "Hangzhou, China",
+      "location": "Hangzhou",
       "position": "Front-End Lead",
       "startDate": "2019-02-01",
       "endDate": "2021-02-01",
@@ -77,13 +80,13 @@
       "summary": "Promoted to Front-End Lead after probation, responsible for formulating front-end standards and architectural design.",
       "highlights": [
         "Managed an 8-person front-end team, responsible for developing and maintaining web applications, mobile applications, and WeChat mini-programs.",
-        "Established development processes and standards, including Git workflow guidelines, code Lint rules, code review guides, and front-end design systems.",
+        "Established development processes and standards, including Git workflow guidelines, code Lint rules, code review guides, front-end design systems.",
         "Researched agile development methodologies and put them into practice, improving team efficiency and producing over 10,000 words of documentation."
       ]
     },
     {
       "name": "Ningbo Port Information and Communication Ltd.",
-      "location": "Ningbo, China",
+      "location": "Ningbo",
       "position": "Front-End Developer",
       "startDate": "2018-08-01",
       "endDate": "2019-01-01",
@@ -99,15 +102,20 @@
       "name": "Ark eTS runtime",
       "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
       "description": "The Ark eTS runtime is the default ArkTS language runtime on OpenHarmony. It supports standard libraries defined by the Ecmascript specification and efficient container libraries, provides full C++-interactive ArkTS NAPIs and a variety of high-performance garbage collectors, and drives OpenHarmony applications in the age of the Internet of Everything.",
-      "highlights": ["Optimized tryldglobalbyname bytecode using IR."],
-      "roles": ["Runtime Developer"],
-      "entity": "Huawei - OpenHarmony",
+      "highlights": [
+        "Implemented IR optimization for AOT tryldglobalbyname bytecode.",
+        "Implemented IR optimization for AOT stprivateproperty and ldprivateproperty.",
+        "Clarified the state relationship between PGO and GC, fixing potential multi-threading issues."
+      ],
+      "roles": ["Software Engineer"],
+      "entity": "OpenHarmony, Huawei",
       "keywords": [
         "C++",
         "ArkTS",
         "Ecmascript",
         "Compiler",
         "AOT",
+        "PGO",
         "JS Runtime"
       ],
       "startDate": "2023-08-29",
@@ -137,7 +145,7 @@
         "Modified Powergate's source code to enable the import of offline transactions into the database.",
         "Delivered a project presentation at the Closing Ceremony ([video link](https://www.youtube.com/watch?v=qheNJZ1DClM&t=1390s))."
       ],
-      "roles": ["Product Manager", "Front-End Lead"],
+      "roles": ["Front-End Lead", "Product Design"],
       "entity": "ByteArk Tech Ltd.",
       "keywords": ["Vue", "NodeJS", "Go", "Powergate", "IPFS", "Lotus"],
       "startDate": "2020-10-01",
@@ -192,8 +200,8 @@
   ],
   "skills": [
     {
-      "name": "System Development",
-      "level": "Junior",
+      "name": "System",
+      "level": "Intermediate",
       "keywords": ["C++"]
     },
     {
@@ -204,7 +212,7 @@
     {
       "name": "Back-end",
       "level": "Senior",
-      "keywords": ["NodeJS", "PostgreSQL", "Prisma", "NextJS", "Graphql"]
+      "keywords": ["NodeJS", "PostgreSQL", "Graphql"]
     },
     {
       "name": "Mobile",
@@ -214,18 +222,14 @@
     {
       "name": "DevOps",
       "level": "Intermediate",
-      "keywords": ["Docker", "AWS", "AliCloud", "Vercel", "Serverless"]
+      "keywords": ["Docker", "AWS", "AliCloud", "Vercel"],
+      "show": false
     },
     {
       "name": "Project Management",
       "level": "Intermediate",
-      "keywords": ["Agile", "Scrum", "Linear"]
-    },
-    {
-      "show": false,
-      "name": "Design",
-      "level": "Intermediate",
-      "keywords": ["Figma"]
+      "keywords": ["Agile", "Scrum", "Linear"],
+      "show": false
     }
   ],
   "languages": [
@@ -239,6 +243,6 @@
     }
   ],
   "meta": {
-    "lastModified": "2023-12-06T20:29:49+08:00"
+    "lastModified": "2024-08-03"
   }
 }
