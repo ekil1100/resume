@@ -117,9 +117,9 @@ function Markdown({ children }: { children: string }) {
     )
 }
 
-const cache = new Map<string, typeof zh>([
-    ['en', en],
+const cache = new Map<string, typeof zh | typeof en>([
     ['zh', zh],
+    ['en', en],
 ])
 
 const LANG = 'zh'

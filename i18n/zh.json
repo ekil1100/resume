@@ -3,7 +3,7 @@
   "basics": {
     "name": "郑力可",
     "label": "软件工程师",
-    "summary": "有 6 年的软件开发经验，带过 3 年的团队。擅长前端开发，有开发 JS 编译器的经验。我非常重视用户体验，所以产品设计也有涉猎。我也很注重团队协作，有从 0 到 1 打造敏捷团队的经验。",
+    "summary": "软件工程师，做过 JS 编译器后端，Web 开发，APP。带过 3 年前端团队。",
     "email": "like@ekil.sh",
     "profiles": [
       {
@@ -14,17 +14,12 @@
       {
         "network": "Github",
         "username": "Github",
-        "url": "https://github.com/ekil1100/"
-      },
-      {
-        "network": "LinkedIn",
-        "username": "LinkedIn",
-        "url": "https://www.linkedin.com/in/likezheng/"
+        "url": "https://github.com/ekil1100"
       },
       {
         "network": "Blog",
         "username": "Blog",
-        "url": "https://ekil.io/"
+        "url": "https://ekil.sh"
       }
     ]
   },
@@ -32,16 +27,12 @@
     {
       "name": "OpenHarmony，华为",
       "location": "杭州",
-      "position": "软件工程师",
+      "position": "软件工程师（OD)",
       "startDate": "2023-08-29",
       "endDate": "",
-      "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
-      "summary": "开发JS编译器和运行时，负责 PGO 模块的维护和优化。完成 AOT 的指令优化需求。",
-      "highlights": [
-        "AOT 的 IR 优化需求。",
-        "定位和处理安全性问题。",
-        "PGO 相关的稳定性接口人。"
-      ]
+      "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime",
+      "summary": "JS 引擎开发，负责 PGO 模块的维护和优化，以及 AOT 编译器的指令优化。",
+      "highlights": ["AOT 编译器的 IR 优化。", "PGO 模块的稳定性问题接口人。"]
     },
     {
       "name": "杭州字节方舟科技有限公司",
@@ -52,7 +43,7 @@
       "url": "https://byteark.cn/",
       "summary": "参与 Filecoin 社区交流并收集和处理社区信息；设计和开发基于 Filecoin 和 IPFS 的应用。",
       "highlights": [
-        "管理 5 人的敏捷团队，2 个前端，2 个后端和 1 个 UI 设计师。",
+        "管理 5 人团队，2 个前端，2 个后端和 1 个 UI 设计师。",
         "发布 Filecoin Weekly 周刊（公司内部），内容包括 Filecoin 的相关新闻、线下活动、代码更新、文章、视频等。已发布 15 期，有超过 500 的累计阅读量。"
       ]
     },
@@ -63,11 +54,11 @@
       "startDate": "2021-03-01",
       "endDate": "2021-07-01",
       "url": "https://www.meprint.com/",
-      "summary": "制定优化 Git 流程，推进了前端设计体系的建设，因此提前转正并晋升为前端负责人。",
+      "summary": "制定优化 Git 流程，推进了前端设计体系的建设。",
       "highlights": [
-        "管理 5 人的前端团队负责开发和维护 Web 应用。制定了新的 Git 流程（基于 Trunk-Based Development），减少了代码冲突所产生的 Bug。",
-        "迁移老的 UmiJS 代码到 NextJS，并进行了重构，通过 SSR 优化了 SEO；减少了 10% 的包体积；提升了开发体验。",
-        "引入了 Directus CMS 和 NextJS 的 Preview Mode 功能，减少了 10% 的后端开发工作量；简化了更新文案和图片的流程，时间从原来的 1 天减少到了 10 分钟。"
+        "管理 5 人的前端团队负责开发和维护 Web 应用。制定了新的 Git 流程（基于 Trunk-Based Development），减少了代码冲突所引入的问题。",
+        "迁移老的 UmiJS 代码到 NextJS，并进行了重构，通过 SSR 优化了 SEO；减少了 10% 的包体积；提升了开发体验和用户体验。",
+        "部署 Directus CMS，通过 NextJS 的 Preview Mode 功能实现了所见即所得，方便运营实时发布更新，同时减少了 10% 的后端开发工作量；简化了更新文案和图片的流程，时间从原来的 1 天减少到了 10 分钟。"
       ]
     },
     {
@@ -77,11 +68,11 @@
       "startDate": "2019-02-01",
       "endDate": "2021-02-01",
       "url": "https://byteark.cn/",
-      "summary": "试用期后晋升为前端负责人，负责制定前端规范以及架构设计。",
+      "summary": "负责制定前端规范以及架构设计。",
       "highlights": [
         "管理 8 人的前端团队，负责开发和维护网页应用，手机应用，微信小程序。",
-        "制定开发流程和标准，包括 Git 流程规范，代码 Lint 规范，代码审查指南，前端设计体系。",
-        "研究敏捷开发方法，并进行实践，提升团队效率，产出超过 10,000 字的文档。"
+        "制定开发流程和标准，Git 流程规范，Lint 规范，代码审查指南，构建前端设计体系。",
+        "调研敏捷开发方法，并进行实践，提升团队效率，产出超过 10,000 字的文档。"
       ]
     },
     {
@@ -100,7 +91,7 @@
   "projects": [
     {
       "name": "方舟 eTS 运行时",
-      "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime/tree/master",
+      "url": "https://gitee.com/openharmony/arkcompiler_ets_runtime",
       "description": "方舟 eTS 运行时是 OpenHarmony 上默认的 ArkTS 语言运行时。支持 Ecmascript 规范定义的标准库和高效 container 容器库，提供完备的 C++ 交互 ArkTS NAPI 和各种高性能的垃圾回收器，驱动着万物互联时代的 OpenHarmony 应用程序。",
       "highlights": [
         "实现 AOT 的 tryldglobalbyname 字节码的 IR 优化。",
@@ -207,17 +198,17 @@
     {
       "name": "前端开发",
       "level": "Senior",
-      "keywords": ["JavaScript", "TypeScript", "NextJS", "ReactJS", "Graphql"]
+      "keywords": ["JavaScript", "TypeScript", "NextJS", "ReactJS"]
     },
     {
       "name": "后端开发",
       "level": "Senior",
-      "keywords": ["NodeJS", "PostgreSQL", "Graphql"]
+      "keywords": ["NodeJS", "PostgreSQL", "Python"]
     },
     {
       "name": "移动开发",
       "level": "Intermediate",
-      "keywords": ["Flutter", "Dart"]
+      "keywords": ["Flutter"]
     },
     {
       "name": "DevOps",
@@ -243,6 +234,6 @@
     }
   ],
   "meta": {
-    "lastModified": "2024-08-03"
+    "lastModified": "2025-04-29"
   }
 }
